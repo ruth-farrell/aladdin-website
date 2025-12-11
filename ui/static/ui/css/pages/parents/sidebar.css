@@ -1,0 +1,22 @@
+.sidebar__card {
+  padding: 1rem;
+  background: var(--color-background-secondary);
+  box-shadow: var(--box-shadow-card);
+  border-radius: var(--border-radius-card);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 2;
+  font-size: var(--font-size-small);
+}
+
+.sidebar__card h2 {
+  border-bottom: var(--divider);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  color: var(--color-accent);
+}

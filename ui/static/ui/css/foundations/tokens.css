@@ -1,0 +1,46 @@
+:root {
+  /* Box Shadows */
+  --box-shadow-card: 0px 0px 9px 0px #00000040;
+  --box-shadow-header: 4px 4px 8px 0px #00000040;
+  --box-shadow-button: var(--box-shadow-header);
+  --box-shadow-inset: 0px 0px 5px 2px #00000040 inset;
+  --box-shadow-large: 0px 0px 25px 0px #00000040;
+  --box-shadow-medium: 0px 0px 10px 0px #00000040;
+  --box-shadow-dropdown: 0 6px 12px -4px #00000040;
+
+  --divider: 1px solid var(--color-background-tertiary);
+  --header-height: 90px;
+
+  /* Spacing */
+  --spacing-border-thick: 4px;
+
+  /* Border Radius */
+  --border-radius-card: 3.75px;
+  --border-radius-pill: 50px;
+  --border-radius-medium: 10px;
+  --border-radius-circle: 50%;
+  --border-radius-button: 25px;
+
+  /* Transition Durations */
+  --transition-duration-fast: 0.1s;
+  --transition-duration-normal: 0.3s;
+  --transition-duration-medium: 0.35s;
+  --transition-duration-slow: 0.5s;
+  --transition-duration-very-slow: 1s;
+
+  /* Transition Timing Functions */
+  --transition-timing-ease: ease;
+  --transition-timing-ease-in: ease-in;
+  --transition-timing-ease-out: ease-out;
+  --transition-timing-ease-in-out: ease-in-out;
+
+  /* Common Transition Combinations */
+  --transition-all-fast: all var(--transition-duration-fast) var(--transition-timing-ease-in);
+  --transition-all-normal: all var(--transition-duration-normal) var(--transition-timing-ease);
+  --transition-all-slow: all var(--transition-duration-slow) var(--transition-timing-ease-in-out);
+  --transition-opacity-normal: opacity var(--transition-duration-normal) var(--transition-timing-ease);
+  --transition-transform-slow: transform var(--transition-duration-slow) var(--transition-timing-ease-out);
+  --transition-grid-normal: grid-template-rows var(--transition-duration-medium) var(--transition-timing-ease);
+  --transition-top-fast: top var(--transition-duration-fast) var(--transition-timing-ease-in);
+  --transition-top-very-slow: top var(--transition-duration-very-slow) var(--transition-timing-ease-out);
+}

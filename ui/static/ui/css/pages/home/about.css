@@ -1,0 +1,118 @@
+.about {
+  background: var(--color-background-secondary);
+  position: relative;
+}
+
+.about__wrapper {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.about .shapes__oblong--yellow-green {
+  transform: rotate(-29.02deg);
+  top: 12%;
+  right: 3%;
+}
+
+.about .shapes__oblong--yellow-red {
+  right: 2%;
+  top: 8%;
+}
+
+.about__text {
+  flex: 1;
+}
+
+.about__media {
+  flex: 2;
+}
+
+.about__statistics {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.about__stat {  
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xxxlarge);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; 
+}
+
+.about__stat--lightblue-green {
+  background-image: var(--color-gradient-lightblue-green);
+}
+
+.about__stat--pink-red {
+  background-image: var(--color-gradient-pink-red);
+}
+
+.about__stat--yellow-red {
+  background-image: var(--color-gradient-yellow-red);
+}
+
+.about__stat--lightblue-pink {
+  background-image: var(--color-gradient-lightblue-pink);
+}
+
+.about__graphic {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about__caption {
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  font-size: var(--font-size-xsmall);
+  text-align: center;
+  max-width: 200px;
+  color: var(--color-accent);
+}
+
+.about__arrow {
+  position: absolute;
+  bottom: 2rem;
+  right: 0.5rem;
+}
+
+@media (width <= 1024px) {
+  .about__wrapper {
+    flex-direction: column;
+  }
+
+  .about__arrow {
+    transform: scaleX(-1);
+    left: -1rem;
+    right: auto;
+    max-width: 120px;
+    bottom: 3.5rem;
+  }
+
+  .about .shapes__oblong--yellow-green {
+    bottom: 3%;
+    top: auto;
+  }
+  
+  .about .shapes__oblong--yellow-red {
+    bottom: 4%;
+    top: auto;
+  }
+}
+
+@media (width <= 768px) { 
+  .about__image {
+    max-width: 80%;
+  }
+
+  .about__stat {
+    font-size: var(--font-size-xxlarge);
+  }
+}

@@ -1,0 +1,19 @@
+<li class="email__item">
+  <div class="email__desktop">
+    <div class="email__icon" aria-hidden="true">
+      <svg class="icon icon--large">
+        <use href="#email-duo"></use>
+      </svg>
+    </div>
+    <div class="email__wrapper">
+        <p class="email__subject">{{ subject }} </p>
+        <p class="email__content u-desktop-only">{{ content }}</p>
+    </div>
+    <div class="email__date">
+        <p>{{ date }}</p>
+    </div>
+  </div>
+  <div class="email__mobile u-mobile-tablet-only">
+    <p class="email__content">{{ content }}</p>
+  </div>
+</li>

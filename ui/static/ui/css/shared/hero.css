@@ -1,0 +1,25 @@
+.hero {
+  margin-top: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+
+.hero__title { 
+  margin-block: auto;
+  max-width: 800px;
+  text-align: center;
+  padding-block: 3rem;
+}
+
+.hero__content {
+  flex-direction: column;
+  margin-block: 2rem;
+  gap: 2rem;
+}
+
+@media (width <= 768px) {
+  .hero__title {
+    padding-block: 0;
+  }
+}

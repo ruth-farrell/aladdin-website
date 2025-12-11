@@ -1,0 +1,17 @@
+<div class="accordion">
+  <h3 class="accordion__heading">
+    <button class="accordion__button" type="button" {% if open %} aria-expanded="true" {% else %} aria-expanded="false" {% endif %} aria-controls="faq{{ id }}-answer" id="faq{{ id }}-question">
+      <span class="accordion__title">{{ title }}</span>
+      <span class="visually-hidden">Toggle FAQ open/closed</span>
+      <svg class="accordion__icon icon icon--small icon--chevron-down" aria-hidden="true">
+        <use href="#chevron-down"></use>     
+      </svg>
+    </button>
+  </h3>
+  <div class="accordion__panel" id="faq{{ id }}-answer" role="region" aria-labelledby="faq{{ id }}-question" {% if open %} aria-hidden="false" {% else %} aria-hidden="true" {% endif %}>
+    <div class="accordion__content"> 
+      <p class="accordion__paragraph">{{ description }}</p>
+    </div>
+  </div>
+</div>
+

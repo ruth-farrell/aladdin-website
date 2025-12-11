@@ -1,0 +1,87 @@
+@font-face {
+  font-family: PlutoSans;
+  src: url("https://aladdin.ie/files/fonts/plutosansregular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: PlutoSans;
+  src: url("https://aladdin.ie/files/fonts/plutosansmedium-webfont.woff") format("woff");
+  font-weight: 500; 
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: PlutoSans;
+  src: url("https://aladdin.ie/files/fonts/plutosansbold-webfont.woff") format("woff");
+  font-weight: 700; 
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-family: "PlutoSans", sans-serif;
+
+  --font-size-xxxlarge: 40px;
+  --font-size-xxlarge: 36px;
+  --font-size-xlarge: 24px;
+  --font-size-large: 18px;
+  --font-size-medium: 16px;
+  --font-size-small: 14px;
+  --font-size-xsmall: 12px;
+  --font-size-xxsmall: 10px;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --font-line-height: 1.5;
+
+  --font-letter-spacing-large: 0.25em;
+  --font-letter-spacing-small: 0.1em;
+}
+
+body {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-medium);
+  line-height: var(--font-line-height);
+  color: var(--color-font-primary);
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-medium);
+}
+
+h1 {
+  font-size: var(--font-size-xxlarge);
+  text-transform: uppercase;
+  letter-spacing: var(--font-letter-spacing-large);
+  text-align: center;
+  text-shadow: 3px 3px 6px #00000025;
+}
+
+p a { 
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+@media (width <= 768px) {
+  :root {
+    --font-size-xxxlarge:  36px;
+    --font-size-xxlarge:  24px;
+    --font-size-xlarge: 18px;
+    --font-size-large: 16px;
+    --font-size-medium: 14px;
+    --font-size-small: 12px;
+  }
+}

@@ -1,0 +1,17 @@
+<section class="hero">
+  <div class="hero__shapes hero__shapes--left" aria-hidden="true">
+    {% include "ui/components/shared/shape.html" with theme1="yellow-red" theme2="pink-blue" position="south-east" %}
+  </div>
+  <div class="hero__shapes hero__shapes--right" aria-hidden="true">
+    {% include "ui/components/shared/shape.html" with theme1="green-blue" theme2="pink-red" position="south" %}
+  </div>
+  <div class="hero__content u-container u-flex-center">
+    <h1 class="hero__title hero__title--rainbow-shimmer">The software supporting great schools</h1>
+    <ul class="hero__features">
+      {% include "ui/components/home/hero-feature-item.html" with icon="chart-up" text="Smarter school administration" %}
+      {% include "ui/components/home/hero-feature-item.html" with icon="chats" text="Better parent communication" %}
+      {% include "ui/components/home/hero-feature-item.html" with icon="calendar-star" text="Simplified daily management" %}
+      {% include "ui/components/home/hero-feature-item.html" with icon="person-arms-raised" text="A complete picture of every student" %}
+    </ul>
+  </div>
+</section>

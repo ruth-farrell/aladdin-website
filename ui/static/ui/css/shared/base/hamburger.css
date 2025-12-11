@@ -1,0 +1,61 @@
+.hamburger-wrapper {
+  height: 17px;
+  margin: 0;
+  transform: translateY(0);
+  width: 30px;
+}
+
+.hamburger {
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  left: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+  transform: rotate(0deg);
+  transition: var(--transition-transform-slow);
+  width: 100%;
+}
+
+.hamburger__line, .hamburger__line::before, 
+.hamburger__line::after {
+  display: block;
+  background-color: var(--color-font-primary);
+  border-radius: 1rem;
+  width: 100%;
+  height: .1rem;
+  position: relative;
+  left: 0;
+}
+
+.hamburger__line::before, 
+.hamburger__line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+}
+
+.hamburger__line::before {
+  transform: translateY(-0.5rem);
+}
+
+.hamburger__line::after {
+  transform: translateY(0.5rem);
+}
+
+.hamburger[aria-expanded="true"] {
+  transform: rotate(90deg);
+
+  .hamburger__line {
+    background-color: transparent;
+  }
+
+  .hamburger__line::after {
+    transform: rotate(-45deg);
+  }
+
+  .hamburger__line::before {
+    transform: rotate(-135deg);
+  }
+}

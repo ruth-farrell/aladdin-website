@@ -1,0 +1,30 @@
+
+.faqs {
+  display: flex;
+  gap: 4rem;
+}
+
+.faqs__text {
+  flex: 4.5;
+}
+
+.faqs__accordion {
+  flex: 5.5;
+}
+
+.faqs__arrow {
+  max-width: 320px;
+  margin-left: auto;
+  margin-top: 2rem;
+}
+
+@media (width <= 1024px) {
+  .faqs { 
+    flex-direction: column;
+  }
+
+  .faqs__text, 
+  .faqs__accordion {
+    flex: 1;
+  }
+}

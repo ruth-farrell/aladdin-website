@@ -1,0 +1,12 @@
+.tabs__panel[aria-hidden="true"] {
+  display: none;
+}
+
+.tabs__panels {
+  width: 100%;
+}
+
+.tabs__tab[aria-selected="false"]:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}

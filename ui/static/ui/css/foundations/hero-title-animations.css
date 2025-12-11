@@ -1,0 +1,99 @@
+.hero__title--rainbow-shimmer {
+  background: linear-gradient(
+    90deg,
+
+    /* Cycle 1 */
+    rgba(237, 43, 148, 0.75) 0%,     /* pink */
+    rgba(237, 33, 36, 0.75) 10%,     /* red */
+    rgba(253, 189, 44, 0.75) 20%,    /* yellow */
+    rgba(0, 173, 142, 0.75) 30%,     /* green */
+    rgba(0, 161, 228, 0.75) 40%,     /* blue */
+
+    /* Cycle 2 (repeated for seamless loop) */
+    rgba(237, 43, 148, 0.75) 50%,    
+    rgba(237, 33, 36, 0.75) 60%,     
+    rgba(253, 189, 44, 0.75) 70%,    
+    rgba(0, 173, 142, 0.75) 80%,     
+    rgba(0, 161, 228, 0.75) 90%,
+
+    /* Final fade into starting colour  */
+    rgba(237, 43, 148, 0.75) 100%
+  );
+  background-size: 200% 100%;
+  background-position: 0% 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shimmer 10s linear infinite;
+}
+
+.hero__title--pink-red-shimmer {
+  background: linear-gradient(
+    90deg,
+
+    /* Cycle 1 */
+    rgba(228, 0, 133, 0.75) 0%,    /* pink */
+    rgba(233, 0, 120, 0.75) 10%,   /* mid pink */
+    rgba(237, 0, 100, 0.75) 20%,   /* warm pink */
+    rgba(237, 16, 70, 0.75) 30%,   /* pink-red */
+    rgba(237, 33, 36, 0.75) 40%,   /* red */
+
+    /* Cycle 2 (repeated for seamless loop) */
+    rgba(228, 0, 133, 0.75) 50%,
+    rgba(233, 0, 120, 0.75) 60%,
+    rgba(237, 0, 100, 0.75) 70%,
+    rgba(237, 16, 70, 0.75) 80%,
+    rgba(237, 33, 36, 0.75) 90%,
+
+    /* Final fade into starting colour */
+    rgba(228, 0, 133, 0.75) 100%
+  );
+
+  background-size: 200% 100%;
+  background-position: 0% 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  animation: shimmerTwoTone 10s linear infinite;
+}
+
+.hero__title--green-blue-shimmer {
+  background: linear-gradient(
+    90deg,
+
+    /* Cycle 1 */
+    rgba(0, 173, 142, 0.75) 0%,      /* green */
+    rgba(0, 158, 168, 0.75) 10%,     /* teal-green */
+    rgba(0, 145, 196, 0.75) 20%,     /* teal–light blue transition */
+    rgba(0, 161, 228, 0.75) 30%,     /* light blue */
+    rgba(0, 143, 208, 0.75) 40%,     /* mid-blue */
+    rgba(0, 125, 179, 0.75) 50%,     /* deeper blue */
+
+    /* Cycle 2 (repeated for seamless loop) */
+    rgba(0, 173, 142, 0.75) 60%,
+    rgba(0, 158, 168, 0.75) 70%,
+    rgba(0, 145, 196, 0.75) 80%,
+    rgba(0, 161, 228, 0.75) 90%,
+    rgba(0, 173, 142, 0.75) 100%     /* Final fade into starting colour  */
+  );
+
+  background-size: 200% 100%;
+  background-position: 0% 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  animation: shimmerTwoTone 10s linear infinite;
+}
+
+
+@keyframes shimmer {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: -100% 50%; }
+}
+
+@keyframes shimmerTwoTone {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: -200% 50%; }
+}

@@ -1,0 +1,50 @@
+.add-ons {
+  background-color: var(--color-background-secondary);
+  position: relative;
+}
+
+.add-ons__shapes--left {
+  .shapes__oblong--pink-red {
+    transform: rotate(24.81deg);
+    bottom: 3%;
+    left: -1%;
+    opacity: 0.5;
+  }
+
+  .shapes__oblong--green-blue {
+    transform: rotate(156.78deg);
+    bottom: 5%;
+    left: -1%;
+    opacity: 0.5;
+  }
+}
+
+.add-ons__shapes--right {
+  .shapes__oblong--pink-red {
+    transform: rotate(24.81deg);
+    top: 6%;
+    right: 0%;
+    opacity: 0.5;
+  }
+
+  .shapes__oblong--green-blue {
+    transform: rotate(156.78deg);
+    top: 5%;
+    right: 0%;
+    opacity: 0.5;
+  }
+}
+
+.add-ons { 
+  .card--epayments .card__title  {
+    color: var(--color-epayments);
+  }
+
+  .card--library  .card__title {
+    color: var(--color-library);
+  }
+
+  .card--staff-absences .card__title  {
+    color: var(--color-staff-absences);
+  }
+}

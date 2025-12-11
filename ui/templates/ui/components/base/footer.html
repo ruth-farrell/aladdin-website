@@ -1,0 +1,87 @@
+{% load tz %}
+
+<footer class="footer u-container">
+  <div class="footer__wrapper">
+    <section class="footer__contact">
+      <div class="footer__logo">
+        <a href="/">
+          <img src="https://aladdin.ie/files/website/images/logo-long.webp" loading="lazy" width="200" height="50" alt="Aladdin Schools logo"/>
+        </a>
+      </div>
+      <address class="footer__address">
+        <div class="footer__address-lines">
+          <p class="footer__address-line1">Block 1</p>
+          <p class="footer__address-line2">Deansgrange Business Park</p>
+          <p class="footer__address-line3">Co Dublin, Ireland</p>
+        </div>
+        <div class="footer__address-contact">
+          <a class="footer__phone" href="tel:+35315547375"><span class="u-font-weight-medium">Phone: </span>(01) 554-7375</a>
+          <a class="footer__email" href="mailto:info@aladdin.ie"><span class="u-font-weight-medium">Email: </span>info@aladdin.ie</a>
+        </div>
+      </address>  
+    </section>
+
+    <nav class="footer__nav">
+      <section>
+        <h2 class="footer__nav-heading">Product</h2>
+        <ul class="footer__nav-list">
+          <li class="footer__nav-list-item"><a href="#packages">Packages</a></li>
+          <li class="footer__nav-list-item"><a href="#add-ons">Add-ons</a></li>
+          <li class="footer__nav-list-item"><a href="/parents">Parents</a></li>
+          <li class="footer__nav-list-item footer__nav-list-item--cta"><a href="/sign-in">Sign In</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2 class="footer__nav-heading"> Company</h2>
+        <ul class="footer__nav-list">
+          <li class="footer__nav-list-item"><a href="#about">About Us</a></li>
+          <li class="footer__nav-list-item"><a href="/careers">Careers</a></li>
+          <li class="footer__nav-list-item footer__nav-list-item--cta"><a href="#contact">Get in touch</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2 class="footer__nav-heading">Useful Links</h2>
+        <ul class="footer__nav-list">
+          <li class="footer__nav-list-item"><a href="https://aladdin.ie/files/pdf/GDPR-Press.pdf" target="_blank">GDPR</a></li>
+          <li class="footer__nav-list-item"><a href="/content/privacy" target="_blank">Privacy</a></li>
+          <li class="footer__nav-list-item"><a href="/content/terms" target="_blank">Terms</a></li>
+          <li class="footer__nav-list-item"><a href="/cookies">Cookies</a></li>
+          <li class="footer__nav-list-item"><a href="/dsa-point-of-contact">Digital Services Act</a></li>
+          <li class="footer__nav-list-item"><a href="/accessibility">Accessibility</a></li>
+        </ul>
+      </section>
+    </nav>
+  </div>
+  <section class="footer__social">
+    <ul>
+      <li>
+        <a class="footer__social-button u-flex-center" href="">
+          <svg class="icon icon--small" aria-hidden="true">
+            <use href="#facebook"></use>     
+          </svg>
+          <span class="visually-hidden">Facebook</span>
+        </a>
+      </li>
+      <li>
+        <a class="footer__social-button u-flex-center" href="">
+          <svg class="icon icon--small" aria-hidden="true">
+            <use href="#x"></use>     
+          </svg>
+          <span class="visually-hidden">X</span>
+        </a>
+      </li>
+      <li>
+        <a class="footer__social-button u-flex-center" href="">
+          <svg class="icon icon--small" aria-hidden="true">
+            <use href="#instagram"></use>     
+          </svg>
+          <span class="visually-hidden">Instagram</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+  <section class="footer__copyright">
+    <p class="footer__copyright-text">© Copyright<span class="u-font-weight-medium"> Aladdin Schools</span> {% now "Y" %}</p>
+  </section>
+</footer>
+  

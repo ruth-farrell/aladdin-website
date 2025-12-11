@@ -1,0 +1,29 @@
+<section class="inbox u-padding-md">
+  <div class="u-container">
+    <div class="inbox__heading">
+      {% include "ui/components/shared/headings/underlined.html" with align="center" title="A Peek inside our inbox" description="Like any inbox, ours sees its fair share of questions, queries, and forgotten passwords. But tucked in between are some very kind words and thank-yous from our schools. They never go unnoticed or unappreciated. Here are just a few that made our team smile recently." %}
+    </div>
+    <div class="emails">
+      <ul>
+        {% include "ui/components/home/inbox-item.html" with 
+          subject="Follow-up Query" 
+          content="Hi Sandra, It really was lovely speaking with you earlier. You were very helpful and patient, which I appreciated so much." date="May 24" %}
+        {% include "ui/components/home/inbox-item.html" with 
+          subject="Re: Thanks for attending our recent webinar" 
+          content="I have been using Aladdin as a Principal for the last 10 years and each year I am learning more and more about its potential and capacity to support my role, my teachers and our school community. It is an absolute game changer!" date="May 22" %}
+        {% include "ui/components/home/inbox-item.html" with 
+          subject="Just wanted to say..." 
+          content="Martin, just one complaint, Aladdin is marvellous - it just doesn't make me coffee!" date="May 12" %}
+        {% include "ui/components/home/inbox-item.html" with 
+          subject="Re: App Feedback" 
+          content="Thanks Aaron, Always appreciate how Aladdin listen to feedback and what its users need!" date="May 6" %}
+        {% include "ui/components/home/inbox-item.html" with 
+          subject="Re: How are things getting on?" 
+          content="Shirley, Thank you for your email. We are loving having Aladdin. We are adjusting nicely and the staff are finding the support wonderful when we get stuck!" date="Apr 27" %}
+        {% include "ui/components/home/inbox-item.html" with 
+          subject="Re: Support Query" 
+          content="Dear Grainne, Thanks so much for your time and attention and let me take this opportunity to say you are doing a fantastic job with this system. I have never worked on one before but yours is so user friendly." date="Apr 14" %}
+      </ul>
+    </div>
+  </div>
+</section>

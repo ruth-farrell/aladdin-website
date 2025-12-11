@@ -1,0 +1,19 @@
+<div class="heading-underlined {% if align %}heading-underlined--{{ align }}{% endif %}"> 
+  <h2 class="heading-underlined__title">{{ title }}
+    <span class="heading-underlined__line" aria-hidden="true"></span>
+  </h2>
+  {% if description %}
+    <p class="heading-underlined__description">{{ description }}</p>
+  {% endif %}
+  {% if bulletpoints %}
+    <ul class="heading-underlined__bulletpoints">
+      {% for bulletpoint in bulletpoints %}
+        <li class="heading-underlined__bulletpoint">
+          <svg class="icon icon--small" aria-hidden="true">
+            <use href="#double-tick"></use>
+          </svg>{{ bulletpoint }}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</div>

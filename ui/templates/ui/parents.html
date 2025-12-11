@@ -1,0 +1,11 @@
+{% extends "ui/base.html" %}
+{% load static %}
+{% block title %}Information for Parents | Aladdin Schools{% endblock %}
+{% block pageStyles %}
+  <link rel="stylesheet" href="{% static 'ui/css/pages/parents/styles.css' %}">
+{% endblock %}
+
+{% block content %}
+  {% include "ui/components/parents/hero.html" %}
+  {% include "ui/components/parents/tabs.html" %}
+{% endblock %}

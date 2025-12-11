@@ -1,0 +1,27 @@
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+header { 
+  .skip-link {
+    left: -1000px;
+    margin-top: .25rem;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    transition: var(--transition-top-very-slow);
+    z-index: 100;
+  }
+
+  .skip-link:focus {
+    left: 5px;
+    overflow: visible;
+    position: absolute;
+    top: 0;
+    transition: var(--transition-top-fast);
+  }
+}

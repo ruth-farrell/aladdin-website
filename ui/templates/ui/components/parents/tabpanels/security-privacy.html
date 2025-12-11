@@ -1,0 +1,25 @@
+<section class="security-privacy">
+  {% include "ui/components/shared/headings/tagline.html" with
+    title="Security, Privacy & Data Protection"
+    tagline="At Aladdin, the safety of your information — and your child's — is our top priority."
+    description="We use modern, trusted technologies to ensure that all data shared through Aladdin Connect is stored and transmitted securely, and handled in strict compliance with Irish and European data protection laws."
+  %}
+  {% include "ui/components/shared/headings/underlined.html" with
+    title="How your data is protected"
+  %}
+  {% include "ui/components/shared/headings/underlined.html" with
+    title="More about sharing and privacy"
+  %}
+  <div class="accordions" data-accordions>
+    {% include "ui/components/shared/accordion.html" with 
+      open=True 
+      title="Sharing Information within the Family Circle" 
+      id="1" 
+      description="Parents only have access to their own personal contact details in Aladdin Connect.<br>Before Connect is launched, schools will contact all parents to give time for any confidential discussions — especially in cases of separated parents, stepparents, guardianship, or other legal arrangements.<br>If necessary, the school can adjust or block family sharing access. For example, if you don't want another parent to view financial or contact information, the school can disable sharing. In that case, those details will be hidden from both parents." %}
+    {% include "ui/components/shared/accordion.html" with 
+      open=False 
+      title="Class Contact Details Sharing Option" 
+      id="2" 
+      description="Fill in description here..." %}
+  </div>
+</section>

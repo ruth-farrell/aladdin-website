@@ -1,0 +1,28 @@
+<div class="card {% if theme %}card--{{ theme }}{% endif %}">
+  <div class="card__heading">
+    {% if icon %}
+      <div class="card__icon u-flex-center" aria-hidden="true">
+        <svg class="icon icon--medium"><use href="#{{ icon }}"></use></svg>
+      </div>
+    {% endif %}
+    {% if image %}<div class="card__image-wrapper">
+      <img class="card__image" width="56" height="40" loading="lazy" alt="" src="{{ image }}"/>{% endif %}
+      <h3 class="card__title">{{ title }}</h3>
+    {% if image %}</div>{% endif %}
+  </div>
+  <p class="card__description">{{ description }}</p>
+  <div class="card__divider" aria-hidden="true"></div>
+  {% if email %}
+  <p class="card__email">
+    <svg class="icon icon--small" aria-hidden="true">
+      <use href="#email"></use>
+    </svg><a href="mailto:{{ email }}">{{ email }}</a></p>{% endif %}
+  {% if phone %}
+  <p class="card__phone">
+    <svg class="icon icon--small" aria-hidden="true">
+      <use href="#phone"></use>
+    </svg>{{ phone }}</p>{% endif %}
+  <div class="card__cta">
+    {% include "ui/components/shared/cta.html" with theme=cta_theme link=cta_link text=cta_text %}
+  </div>
+</div>
