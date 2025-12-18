@@ -3,7 +3,7 @@
 }
 
 .packages {
-  background: var(--color-background-secondary);
+  position: relative;
 
   .tabs__list {
     text-align: center;

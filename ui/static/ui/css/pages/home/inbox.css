@@ -58,12 +58,8 @@
   border-top: var(--divider);
 }
 
-.email__item:first-child {
-  padding: 0.5rem 0; 
-
-  .email__icon {
-    position: relative;
-  }
+.email__item:first-child .email__icon {
+  position: relative;
 }
 
 .email__item:not(:first-child) {
@@ -95,6 +91,10 @@
     background: var(--color-background-secondary);
     border-radius: var(--border-radius-medium);
     box-shadow: var(--box-shadow-large);
+  }
+
+  .email__item:first-child {
+    padding: 0.5rem 0; 
   }
 
   .email__item:not(:last-child) {

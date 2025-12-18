@@ -1,6 +1,4 @@
 .join {
-  position: relative;
-  background: var(--color-background-secondary);
   display: flex;
   flex-direction: column;
   gap: 6rem;

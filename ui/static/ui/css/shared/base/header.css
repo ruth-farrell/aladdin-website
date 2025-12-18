@@ -1,3 +1,7 @@
+.header {
+  z-index: 100;
+}
+
 .header__bar {
   background-color: var(--color-background-secondary);
   position: fixed;

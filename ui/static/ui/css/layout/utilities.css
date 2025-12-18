@@ -1,7 +1,9 @@
 .u-container {
   max-width: var(--container-width);
   margin: 0 auto;
-  padding-inline: 1rem; 
+  padding-inline: 1rem;
+  position: relative;
+  z-index: 2;
 }
 
 .u-padding-xl {
@@ -19,6 +21,7 @@
 .u-background-white {
   background-color: var(--color-background-secondary);
   position: relative;
+  overflow: hidden;
 }
 
 .u-flex-center { 

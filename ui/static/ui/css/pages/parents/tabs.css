@@ -1,8 +1,5 @@
 .parents-tabs {
   --color-accent: var(--color-connect);
-
-  position: relative;
-  background: var(--color-background-secondary);
 }
 
 .parents-tabs__wrapper {
