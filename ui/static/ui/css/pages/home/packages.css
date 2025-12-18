@@ -114,4 +114,8 @@
     order: 1;
     max-width: 150px;
   }
+
+  .packages__tab-content .cta {
+    margin: 0 auto;
+  }
 }
