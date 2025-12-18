@@ -6,7 +6,6 @@
 @import 'foundations/typography.css';
 @import 'foundations/buttons.css';
 @import 'foundations/tokens.css';
-@import 'foundations/hero-title-animations.css';
 
 /* Layout */
 @import 'layout/base.css';

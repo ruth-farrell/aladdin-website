@@ -3,6 +3,12 @@
   overflow: visible;
 }
 
+@media (width < 768px) {
+  .hero {
+    overflow: hidden;
+  }
+}
+
 /* Left side: Yellow-red moves down/up (vertical) */
 @keyframes yellow-red-move-vertical {
   0%, 100% {

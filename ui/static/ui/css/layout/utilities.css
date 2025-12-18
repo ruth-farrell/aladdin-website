@@ -18,6 +18,15 @@
   padding-block: 4rem;
 }
 
+/* Remove top padding when same padding class follows another (mobile only) */
+@media (width < 768px) {
+  .u-padding-md + .u-padding-md,
+  .u-padding-xl + .u-padding-xl,
+  .u-padding-xxl + .u-padding-xxl {
+    padding-top: 0;
+  }
+}
+
 .u-background-white {
   background-color: var(--color-background-secondary);
   position: relative;
