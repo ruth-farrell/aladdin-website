@@ -15,20 +15,6 @@ body {
   background-color: var(--color-background-primary);
 }
 
-.shapes__oblong {
-  position: absolute;
-  width: 107px; 
-  height: 532px;
-  opacity: 0.5;
-}
-
-@media (width <= 1024px) {
-  .shapes__oblong {
-    width: 65px;
-    height: 320px;
-  }
-}
-
 .back-to-top {
   position: fixed;
   z-index: 97;
@@ -38,7 +24,6 @@ body {
   height: 4.5rem;
   border-radius: var(--border-radius-circle);
   border: solid var(--color-background-tertiary) 5px;
-  background: rgb(133 169 174 / 10%)
 }
 
 .back-to-top .icon {
@@ -61,6 +46,7 @@ body {
   display: inline-block;
   fill: var(--color-font-primary);
   vertical-align: middle;
+  flex-shrink: 0;
 }
 
 .icon--small {
@@ -76,4 +62,9 @@ body {
 .icon--large {
   width: 2.5rem;
   height: 2.5rem;
+}
+
+.icon--xlarge {
+  width: 3.5rem;
+  height: 3.5rem;
 }

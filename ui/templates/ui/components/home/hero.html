@@ -1,9 +1,19 @@
 <section class="hero">
-  <div class="hero__shapes hero__shapes--left" aria-hidden="true">
-    {% include "ui/components/shared/shape.html" with theme1="yellow-red" theme2="pink-blue" position="south-east" %}
+  <div class="hero__shapes hero__shapes--left shapes--hero-left" aria-hidden="true">
+    <svg class="shapes__oblong shapes__oblong--yellow-red">
+      <use href="#oblong-yellow-red"></use>
+    </svg>
+    <svg class="shapes__oblong shapes__oblong--pink-blue">
+      <use href="#oblong-pink-blue"></use>
+    </svg>
   </div>
-  <div class="hero__shapes hero__shapes--right" aria-hidden="true">
-    {% include "ui/components/shared/shape.html" with theme1="green-blue" theme2="pink-red" position="south" %}
+  <div class="hero__shapes hero__shapes--right shapes--hero-right" aria-hidden="true">
+    <svg class="shapes__oblong shapes__oblong--green-blue">
+      <use href="#oblong-green-blue"></use>
+    </svg>
+    <svg class="shapes__oblong shapes__oblong--pink-red">
+      <use href="#oblong-pink-red"></use>
+    </svg>
   </div>
   <div class="hero__content u-container u-flex-center">
     <h1 class="hero__title hero__title--rainbow-shimmer">The software supporting great schools</h1>

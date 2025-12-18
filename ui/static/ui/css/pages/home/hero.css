@@ -2,7 +2,7 @@
   position: relative;
 }
 
-/* Left side: Yellow-red moves down/up (vertical) - opposite of pink-blue */
+/* Left side: Yellow-red moves down/up (vertical) */
 @keyframes yellow-red-move-vertical {
   0%, 100% {
     top: -23%;
@@ -13,10 +13,10 @@
   }
 }
 
-/* Left side: Pink-blue moves in/out (horizontal) - opposite of yellow-red */
+/* Left side: Pink-blue moves in/out (horizontal) */
 @keyframes pink-blue-move-horizontal {
   0%, 100% {
-    left: 3%;
+    left: 2%;
   }
 
   50% {
@@ -35,7 +35,7 @@
   }
 }
 
-/* Right side: Blue-green moves up/down (vertical) - opposite of pink-red */
+/* Right side: Blue-green moves up/down (vertical) */
 @keyframes blue-green-move-vertical {
   0%, 100% {
     top: -17%;
@@ -46,7 +46,7 @@
   }
 }
 
-/* Mobile: Yellow-red vertical animation (using top in rem) */
+/* Mobile: Yellow-red vertical animation */
 @keyframes yellow-red-move-vertical-mobile {
   0%, 100% {
     top: 8rem;
@@ -57,7 +57,7 @@
   }
 }
 
-/* Mobile: Pink-red vertical animation (using bottom) */
+/* Mobile: Pink-red vertical animation */
 @keyframes pink-red-move-vertical-mobile {
   0%, 100% {
     bottom: 2rem;
@@ -84,35 +84,22 @@
   z-index: -1;
 }
 
-
+/* Hero shapes - animations */
 .hero__shapes--left .shapes__oblong--yellow-red {
-  transform: rotate(137.64deg);
-  left: 2%;
-  top: -23%;
   animation: yellow-red-move-vertical 6s ease-in-out infinite;
   animation-delay: 0s;
 }
 
 .hero__shapes--left .shapes__oblong--pink-blue {
-  transform: rotate(90deg);
-  left: 3%;
-  top: -32.5%;
-  opacity: .75;
   animation: pink-blue-move-horizontal 6s ease-in-out infinite;
   animation-delay: 3s;
 }
 
 .hero__shapes--right .shapes__oblong--green-blue {
-  transform: rotate(49.66deg);
-  right: 4%;
-  top: -11%;
   animation: blue-green-move-vertical 6s ease-in-out infinite;
 }
 
 .hero__shapes--right .shapes__oblong--pink-red {
-  right: 5%;
-  top: -32%;
-  opacity: .75;
   animation: pink-red-move-vertical 6s ease-in-out infinite;
   animation-delay: 0.15s;
 }
@@ -148,9 +135,9 @@
   }
 }
 
-@media (width >= 768px) {
+@media (width > 1024px) {
   .hero {
-    height: calc(85dvh - var(--header-height));
+    height: calc(87.5dvh - var(--header-height));
   }
 }
 
@@ -181,7 +168,7 @@
     animation: yellow-red-move-vertical-mobile 6s ease-in-out infinite;
     animation-delay: 0s;
     left: -4%;
-  } 
+  }
 
   .hero__shapes--right .shapes__oblong--green-blue {
     bottom: -8rem;

@@ -55,3 +55,13 @@
 .accordion__button[aria-expanded="false"] .icon--chevron-down {
   transform: rotate(-90deg);
 }
+
+@media (width >= 768px) {
+  [data-accordions-mobile-only] .accordion__icon {
+    display: none;
+  }
+  
+  [data-accordions-mobile-only] .accordion__button {
+    pointer-events: none;
+  }
+}

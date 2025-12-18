@@ -66,12 +66,16 @@ h1 {
   text-shadow: 3px 3px 6px #00000025;
 }
 
+h3 {
+  font-size: var(--font-size-xlarge);
+}
+
 p a { 
   color: var(--color-accent);
   text-decoration: underline;
 }
 
-p a:hover {
+p a:hover, li a:hover {
   text-decoration: underline;
 }
 

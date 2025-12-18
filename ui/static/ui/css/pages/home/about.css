@@ -1,23 +1,7 @@
-.about {
-  background: var(--color-background-secondary);
-  position: relative;
-}
-
 .about__wrapper {
   display: flex;
   gap: 1rem;
   align-items: center;
-}
-
-.about .shapes__oblong--yellow-green {
-  transform: rotate(-29.02deg);
-  top: 12%;
-  right: 3%;
-}
-
-.about .shapes__oblong--yellow-red {
-  right: 2%;
-  top: 8%;
 }
 
 .about__text {
@@ -96,15 +80,6 @@
     bottom: 3.5rem;
   }
 
-  .about .shapes__oblong--yellow-green {
-    bottom: 3%;
-    top: auto;
-  }
-  
-  .about .shapes__oblong--yellow-red {
-    bottom: 4%;
-    top: auto;
-  }
 }
 
 @media (width <= 768px) { 

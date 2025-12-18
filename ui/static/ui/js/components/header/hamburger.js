@@ -39,8 +39,11 @@ export function initializeHamburger() {
     const link = event.target.closest('a');
     if (!link) return;
 
-    // Close menu when anchor link (starting with #) is clicked
-    if (link.getAttribute('href')?.startsWith('#')) {
+    const href = link.getAttribute('href');
+    if (!href) return;
+
+    // Close menu when anchor link (contains #) is clicked
+    if (href.includes('#')) {
       menuOpen = false;
       toggleMobileMenu();
     }

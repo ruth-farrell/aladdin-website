@@ -1,3 +1,35 @@
 .life {
   background: var(--color-background-secondary);
+  position: relative;
+}
+
+.life__wrapper {
+  display: flex;
+}
+
+.life__text {
+  flex: 5;
+}
+
+.life__media {
+  flex: 7;
+}
+
+.life__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.life__list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (width < 1024px) {
+  .life__wrapper {
+    flex-direction: column;
+  }
 }

@@ -1,6 +1,7 @@
 .parents-tabs {
   --color-accent: var(--color-connect);
 
+  position: relative;
   background: var(--color-background-secondary);
 }
 
@@ -9,45 +10,23 @@
   gap: 1rem;
 }
 
-.tabs__panels {
-  flex: 5;
+.benefits-families, 
+.getting-started {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.tabs__list {
-  display: flex;
-  flex-direction: column;
-  align-items: baseline;
-  gap: .5rem;
-}
-
-.tabs__tab {
-  padding: .75rem .5rem;
-  display: flex;
-  gap: .5rem;
-  width: 100%;
-  text-align: left;
-  border-radius: var(--border-radius-card);
-}
-
-.tabs__tab[aria-selected="true"] {
-  background: var(--color-connect);
-  color: var(--color-font-secondary);
-
-  .tabs__tab-icon .icon {
-    fill: var(--color-font-secondary);
+@media (width <= 1024px) {
+  .benefits-families, 
+  .getting-started {
+    grid-template-columns: 1fr;
   }
 }
 
-.heading-tagline {
-  padding-bottom: 3rem;
-}
-
-.tabs__tab-icon {
-  display: flex;
-  align-items: center;
-}
-
-.accordion {
-  box-shadow: var(--box-shadow-medium);
+@media (width <= 768px) {
+  .parents-tabs__wrapper {
+    flex-direction: column;
+  }
 }
 

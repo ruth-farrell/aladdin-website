@@ -3,9 +3,8 @@ export function initializeBackToTop() {
   const backToTopElement = document.getElementById('back-to-top');
   const backToContentElement = document.getElementById('back-to-content');
 
-  if (!backToTopButton || !backToTopElement || !backToContentElement) return;
+  if (!backToTopButton || !backToTopElement) return;
 
-  // Switch button to "up" mode
   function switchToUpMode() {
     backToTopButton.setAttribute('href', '#back-to-top');
     backToTopButton.classList.add('back-to-top--up');
@@ -16,7 +15,6 @@ export function initializeBackToTop() {
     }
   }
 
-  // Switch button to "down" mode
   function switchToDownMode() {
     backToTopButton.setAttribute('href', '#back-to-content');
     backToTopButton.classList.remove('back-to-top--up');
@@ -25,6 +23,11 @@ export function initializeBackToTop() {
     if (text) {
       text.textContent = 'Go to content';
     }
+  }
+
+  if (!backToContentElement) {
+    switchToUpMode();
+    return;
   }
 
   // Check which elements are in viewport and update button accordingly
@@ -44,10 +47,8 @@ export function initializeBackToTop() {
     // If neither is in viewport, don't change the current state
   }
 
-  // Set up Intersection Observer - only switch when elements ENTER viewport
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      // Only react when element enters viewport (isIntersecting becomes true)
       if (entry.isIntersecting) {
         updateButtonState();
       }
@@ -56,11 +57,9 @@ export function initializeBackToTop() {
     threshold: 0.1
   });
 
-  // Observe both elements
   observer.observe(backToTopElement);
   observer.observe(backToContentElement);
 
-  // Initialize button state on page load
   updateButtonState();
 }
 

@@ -16,6 +16,12 @@
   padding-block: 4rem;
 }
 
+.u-background-white {
+  background-color: var(--color-background-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
 .u-flex-center { 
   display: flex; 
   align-items: center; 
@@ -32,8 +38,20 @@
   font-weight: var(--font-weight-medium);
 }
 
+@media (width >= 768px) {
+  .u-mobile-only {
+    display: none!important;
+  }
+}
+
 @media (width >= 1024px) {
   .u-mobile-tablet-only {
+    display: none!important;
+  }
+}
+
+@media (width < 768px) {
+  .u-tablet-desktop-only {
     display: none!important;
   }
 }
@@ -45,7 +63,10 @@
 }
 
 @media (width <= 768px) {
-  .u-padding-xl, .u-padding-xxl, .u-padding-lg, .u-padding-md {
+  .u-padding-xxl,
+  .u-padding-xl, 
+  .u-padding-lg, 
+  .u-padding-md {
     padding-block: 3rem;
   }
 }

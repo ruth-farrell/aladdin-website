@@ -10,6 +10,12 @@
   max-width: calc(100% - var(--container-padding));
   box-shadow: var(--box-shadow-header);
   transition: var(--transition-all-slow);
+
+  .header__cta:hover,
+  .header__link:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
 }
 
 .header__logo {
@@ -41,17 +47,11 @@
   opacity: 1;
 }
 
-.header__bar .header__cta:hover,
-.header__bar .header__link:hover {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
 .header__link--active {
   color: var(--color-accent);
 }
 
-@media (width > 1024px) {
+@media (width >= 1024px) {
   .header__logo {
     width: 207px;
   }

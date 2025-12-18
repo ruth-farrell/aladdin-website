@@ -1,0 +1,162 @@
+/* Base styles for all oblong shapes */
+.shapes__oblong {
+  position: absolute;
+  width: 107px;
+  height: 532px;
+  opacity: 0.5;
+}
+
+@media (width <= 1024px) {
+  .shapes__oblong {
+    width: 65px;
+    height: 320px;
+  }
+}
+
+/* Base styles for shape containers */
+.shapes--yellow,
+.shapes--pink-blue,
+.shapes--hero-left,
+.shapes--hero-right {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.shapes--yellow {
+  top: 0;
+  right: 0;
+}
+
+/* Section shape containers */
+.about__shapes,
+.contact__shapes,
+.add-ons__shapes--left,
+.add-ons__shapes--right {
+  position: absolute;
+  inset: 0;
+}
+
+/* Yellow shapes - individual positioning */
+.shapes--yellow .shapes__oblong--yellow-green {
+  transform: rotate(-29.02deg);
+  top: 12%;
+  right: 3%;
+}
+
+.shapes--yellow .shapes__oblong--yellow-red {
+  right: 2%;
+  top: 8%;
+}
+
+/* Contact section - reposition container higher */
+.contact__shapes .shapes--yellow {
+  top: -3%;
+}
+
+/* Hero shapes - containers */
+.hero__shapes--left,
+.hero__shapes--right {
+  position: absolute;
+  inset: 0;
+}
+
+.hero__shapes--left.shapes--hero-left {
+  left: 0;
+  top: 0;
+}
+
+.hero__shapes--right.shapes--hero-right {
+  right: 0;
+  top: 0;
+}
+
+/* Hero shapes - individual positioning */
+.shapes--hero-left .shapes__oblong--yellow-red {
+  transform: rotate(137.64deg);
+  left: 2%;
+  top: -23%;
+}
+
+.shapes--hero-left .shapes__oblong--pink-blue {
+  transform: rotate(90deg);
+  left: 2%;
+  top: -32.5%;
+}
+
+.shapes--hero-right .shapes__oblong--green-blue {
+  transform: rotate(49.66deg);
+  right: 4%;
+  top: -11%;
+}
+
+.shapes--hero-right .shapes__oblong--pink-red {
+  right: 5%;
+  top: -32%;
+}
+
+/* Pink-blue shapes - individual positioning (same layout for both left and right) */
+.shapes--pink-blue .shapes__oblong--pink-red {
+  transform: rotate(24.81deg);
+  bottom: 3%;
+  left: -1%;
+}
+
+.shapes--pink-blue .shapes__oblong--green-blue {
+  transform: rotate(156.78deg);
+  bottom: 5%;
+  left: -1%;
+}
+
+/* Add-ons containers - position left lower, right higher */
+.add-ons__shapes--left .shapes--pink-blue {
+  bottom: 0;
+}
+
+.add-ons__shapes--right .shapes--pink-blue {
+  top: 4%;
+  right: 0;
+  left: auto;
+}
+
+/* Flip shapes to right side for right container (maintain same relative layout) */
+.add-ons__shapes--right .shapes--pink-blue .shapes__oblong--pink-red {
+  left: auto;
+  right: -1%;
+  bottom: auto;
+  top: 6%;
+}
+
+.add-ons__shapes--right .shapes--pink-blue .shapes__oblong--green-blue {
+  left: auto;
+  right: -1%;
+  bottom: auto;
+  top: 5%;
+}
+
+/* Mobile adjustments */
+@media (width <= 1024px) {
+  .about__shapes .shapes--yellow .shapes__oblong--yellow-green {
+    bottom: 3%;
+    top: auto;
+  }
+  
+  .about__shapes .shapes--yellow .shapes__oblong--yellow-red {
+    bottom: 4%;
+    top: auto;
+  }
+}
+
+@media (width <= 768px) {
+  .contact__shapes .shapes--yellow .shapes__oblong--yellow-green {
+    bottom: 15%;
+    top: auto; 
+  }
+
+  .contact__shapes .shapes--yellow .shapes__oblong--yellow-red {
+    bottom: 15%;
+    top: auto;
+  }
+}
+

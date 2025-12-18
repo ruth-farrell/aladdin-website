@@ -8,3 +8,6 @@ def careers(request):
 
 def parents(request):
     return render(request, "ui/parents.html")
+
+def misc(request):
+    return render(request, "ui/misc.html")

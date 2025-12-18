@@ -1,8 +1,11 @@
 <section class="sidebar__card" data-accordions data-accordions-mobile-only>
-  <button type="button" aria-expanded="true" aria-controls="further-faqs-region" id="further-faqs-button">
-    <h2>Further FAQs</h2>
+  <button class="sidebar__card-button accordion__button" type="button" aria-expanded="false" aria-controls="further-faqs-region" id="further-faqs-button" class="accordion__button">
+    <h2 class="sidebar__card-heading">Further FAQs</h2>
+    <svg class="accordion__icon icon icon--small icon--chevron-down" aria-hidden="true">
+      <use href="#chevron-down"></use>
+    </svg>
   </button>
-  <div id="further-faqs-region" role="region" aria-labelledby="further-faqs-button" aria-hidden="false">
+  <div class="sidebar__card-content accordion__panel" id="further-faqs-region" role="region" aria-labelledby="further-faqs-button" aria-hidden="true">
     <ul>
       <li><a href=""><svg class="icon icon--small"><use href="#arrow-up-right-from-square"></use></svg>About Aladdin</a></li>
       <li><a href=""><svg class="icon icon--small"><use href="#arrow-up-right-from-square"></use></svg>Registering for Connect</a></li>
@@ -16,10 +19,13 @@
 </section>
 
 <section class="sidebar__card" data-accordions data-accordions-mobile-only>
-  <button type="button" aria-expanded="true" aria-controls="helpful-downloads-region" id="helpful-downloads-button">
-    <h2>Helpful Downloads</h2>
+  <button class="sidebar__card-button accordion__button" type="button" aria-expanded="false" aria-controls="helpful-downloads-region" id="helpful-downloads-button" class="accordion__button">
+    <h2 class="sidebar__card-heading">Helpful Downloads</h2>
+    <svg class="accordion__icon icon icon--small icon--chevron-down" aria-hidden="true">
+      <use href="#chevron-down"></use>
+    </svg>
   </button>
-  <div id="helpful-downloads-region" role="region" aria-labelledby="helpful-downloads-button" aria-hidden="false">
+  <div class="sidebar__card-content accordion__panel" id="helpful-downloads-region" role="region" aria-labelledby="helpful-downloads-button" aria-hidden="true">
     <ul>
       <li><a href=""><svg class="icon icon--small"><use href="#file-pdf"></use></svg>Registering for Connect</a></li>
       <li><a href=""><svg class="icon icon--small"><use href="#file-pdf"></use></svg>Downloading the App</a></li>
@@ -34,13 +40,9 @@
   </div>
 </section>
 
-<section class="sidebar__cta">
-  <svg class="icon icon--large" aria-hidden="true">
-    <use href="#cloud-question-mark-duotone"></use>
-  </svg>
-  <h2>Have a Question?</h2>
-  <p>If you haven't found the answer you're looking for, please get in touch via the email below.</p>
-  <span class="sidebar__cta-divider" aria-hidden="true"></span>
-  <a href="mailto:parent@aladdin.ie">parent@aladdin.ie</a>
+<section class="u-tablet-desktop-only">
+  {% include "ui/components/parents/question-cta.html" %}
 </section>
+
+
 

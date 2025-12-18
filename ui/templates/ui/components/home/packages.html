@@ -7,13 +7,13 @@
   <div class="packages__tabs">
     <div class="tabs u-flex-center" data-tabs>
       <div class="tabs__list tabs__list--packages" role="tablist">
-        <button class="tabs__tab tabs__tab--start" id="start" tabindex="0" role="tab" aria-selected="true" aria-controls="panel-start">Start</button>
-        <button class="tabs__tab tabs__tab--connect" id="connect" tabindex="-1" role="tab" aria-selected="false" aria-controls="panel-connect">Connect</button>
-        <button class="tabs__tab tabs__tab--frame" id="frame" tabindex="-1" role="tab" aria-selected="false" aria-controls="panel-frame">Frame</button>
+        <button class="tabs__tab tabs__tab--start" id="button-start" tabindex="0" role="tab" aria-selected="true" aria-controls="start">Start</button>
+        <button class="tabs__tab tabs__tab--connect" id="button-connect" tabindex="-1" role="tab" aria-selected="false" aria-controls="connect">Connect</button>
+        <button class="tabs__tab tabs__tab--frame" id="button-frame" tabindex="-1" role="tab" aria-selected="false" aria-controls="frame">Frame</button>
       </div>
           
       <div class="tabs__panels">
-        <div class="tabs__panel tabs__panel--start" id="panel-start" aria-hidden="false" role="tabpanel" aria-labelledby="start">
+        <div class="tabs__panel tabs__panel--start" id="start" aria-hidden="false" role="tabpanel" aria-labelledby="button-start">
           {% include "ui/components/home/packages-tab-content.html" with 
             title="Designed to simplify the every day." 
             cta_theme="start-dark" 
@@ -27,7 +27,7 @@
             image_alt="Aladdin Start image" 
             image="https://aladdin.ie/files/website/images/start-image.webp" %}
         </div>
-        <div class="tabs__panel tabs__panel--connect" id="panel-connect" aria-hidden="true" role="tabpanel" aria-labelledby="connect">
+        <div class="tabs__panel tabs__panel--connect" id="connect" aria-hidden="true" role="tabpanel" aria-labelledby="button-connect">
           {% include "ui/components/home/packages-tab-content.html" with 
             title="Designed to keep families in the loop." 
             cta_theme="connect-dark" 
@@ -41,7 +41,7 @@
             image_alt="Aladdin Connect image" 
             image="https://aladdin.ie/files/website/images/connect-image.webp" %}
         </div>
-        <div class="tabs__panel tabs__panel--frame" id="panel-frame" aria-hidden="true" role="tabpanel" aria-labelledby="frame">
+        <div class="tabs__panel tabs__panel--frame" id="frame" aria-hidden="true" role="tabpanel" aria-labelledby="button-frame">
           {% include "ui/components/home/packages-tab-content.html" with 
             title="Designed to bring the classroom to life." 
             cta_theme="frame-dark" 

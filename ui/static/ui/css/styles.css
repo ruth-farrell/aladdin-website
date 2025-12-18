@@ -14,9 +14,13 @@
 
 /* Shared */
 @import 'shared/accordion.css';
-@import 'shared/hero.css';
 @import 'shared/tabs.css';
 @import 'shared/card.css';
+@import 'shared/shapes.css';
+
+/* Shared Hero */
+@import 'shared/hero/hero.css';
+@import 'shared/hero/hero-title-shimmer.css';
 
 /* Shared Header and Footer */
 @import 'shared/base/header.css';

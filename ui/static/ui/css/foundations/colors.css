@@ -1,24 +1,26 @@
 :root {
   /* Base Colors */
+  --color-white: #FFF;
   --color-pink: #E40085;
   --color-red: #ED2124;
   --color-orange: #F68E21;
   --color-yellow: #FDBD2C;
   --color-green: #00AD8E;
   --color-blue: #007DB3;
+  --color-blue-muted: #2A6B9820;
   --color-blue-light: #00A1E4;
   --color-blue-dark: #2A6B98;
   --color-blue-deep: #3C5D99;
 
   /* Typography Colors */
   --color-font-primary: #555;
-  --color-font-secondary: #FFF;
+  --color-font-secondary: var(--color-white);
   --color-font-link: var(--color-blue-dark);
   --color-font-muted: #AFAFAF;
 
   /* Background Colors */
   --color-background-primary: #CBCBCD59;
-  --color-background-secondary: #FFF;
+  --color-background-secondary: var(--color-white);
   --color-background-tertiary: #c8c8c9;
   
   /* Utility Colors */
@@ -41,16 +43,16 @@
   --color-gradient-orange-red: linear-gradient(93.69deg, var(--color-orange) -6.48%, var(--color-red) 100%);
 
   /* Product: Start */
-  --color-start: var(--color-accent);
+  --color-start: var(--color-blue);
   --color-start-light: #CCF0FF;
-  --color-start-gradient-two-tone: linear-gradient(278.46deg, var(--color-start) 9.27%, var(--color-accent-light) 86.45%);
-  --color-start-gradient-four-tone: linear-gradient(288.19deg, var(--color-blue-light) 6.84%, var(--color-start) 44.19%, #1E6DA6 44.19%, var(--color-blue-deep) 56.63%);
+  --color-start-gradient-two-tone: linear-gradient(278.46deg, var(--color-blue) 9.27%, var(--color-blue-light) 86.45%);
+  --color-start-gradient-four-tone: linear-gradient(288.19deg, var(--color-blue-light) 6.84%, var(--color-blue) 44.19%, #1E6DA6 44.19%, var(--color-blue-deep) 56.63%);
 
   /* Product: Connect */
   --color-connect: var(--color-pink);
   --color-connect-light: #FFBCE0;
   --color-connect-gradient-two-tone: var(--color-gradient-pink-red);
-  --color-connect-gradient-four-tone: linear-gradient(235.42deg, var(--color-connect) 12.64%, #ED265C 47.09%, #ED2440 47.09%, var(--color-red) 58.58%);
+  --color-connect-gradient-four-tone: linear-gradient(235.42deg, var(--color-pink) 12.64%, #ED265C 47.09%, #ED2440 47.09%, var(--color-red) 58.58%);
 
   /* Product: Frame */
   --color-frame: var(--color-orange);
@@ -72,5 +74,5 @@
 
   /* All Products/Packages */
   --color-packages: #CBCCCD;
-  --color-packages-gradient-two-tone: linear-gradient(93.69deg, #FFF -6.48%, var(--color-packages) 100%);
+  --color-packages-gradient-two-tone: linear-gradient(93.69deg, var(--color-white) -6.48%, var(--color-packages) 100%);
 }

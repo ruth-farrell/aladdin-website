@@ -16,10 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initializeActiveLinks();
   setupLinkClickHandlers();
 
-  // Inbox carousel
   initializeInbox();
 
-  // Back to top button
   initializeBackToTop();
 });
 

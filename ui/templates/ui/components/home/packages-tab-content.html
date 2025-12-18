@@ -1,41 +1,14 @@
 <div class="packages__tab-content u-container">
   <div class="packages__tab-content-text">
-    {% include "ui/components/shared/headings/underlined.html" with title=title description=description %}
-    <ul class="packages__tab-content-features">
-      {% if feature1 %}<li class="packages__tab-content-feature">
-        <svg class="icon icon--small" aria-hidden="true">
-          <use href="#double-tick"></use>
-        </svg>{{ feature1 }}</li>{% endif %}
-      {% if feature2 %}<li class="packages__tab-content-feature">
-        <svg class="icon icon--small" aria-hidden="true">
-          <use href="#double-tick"></use>
-        </svg>{{ feature2 }}</li>{% endif %}
-      {% if feature3 %}
-        <li class="packages__tab-content-feature">
-          <svg class="icon icon--small" aria-hidden="true">
-            <use href="#double-tick"></use>
-          </svg>{{ feature3 }}</li>
-      {% endif %}
-      {% if feature4 %}
-        <li class="packages__tab-content-feature">
-          <svg class="icon icon--small" aria-hidden="true">
-            <use href="#double-tick"></use>
-          </svg>{{ feature4 }}</li>
-      {% endif %}
-      {% if feature5 %}
-        <li class="packages__tab-content-feature">
-          <svg class="icon icon--small" aria-hidden="true">
-            <use href="#double-tick"></use>
-          </svg>{{ feature5 }}</li>
-      {% endif %}
-      {% if feature6 %}
-        <li class="packages__tab-content-feature">
-          <svg class="icon icon--small" aria-hidden="true">
-            <use href="#double-tick"></use>
-          </svg>{{ feature6 }}
-        </li>
-      {% endif %}
-    </ul>
+    {% include "ui/components/shared/headings/underlined.html" with 
+      title=title 
+      description=description 
+      bullet1=feature1
+      bullet2=feature2
+      bullet3=feature3
+      bullet4=feature4
+      bullet5=feature5
+    %}
     {% include "ui/components/shared/cta.html" with theme=cta_theme link=cta_link text="Learn more" %}
   </div>
   <div class="packages__tab-content-media">

@@ -1,19 +1,64 @@
-<div class="heading-underlined {% if align %}heading-underlined--{{ align }}{% endif %}"> 
+<div class="heading-underlined{% if align %} heading-underlined--{{ align }}{% endif %}"> 
+  {% if icon %}
+    <div class="heading-underlined__icon" aria-hidden="true">
+      <svg class="icon icon--large"><use href="#{{ icon }}"></use></svg>
+    </div>
+  {% endif %}
   <h2 class="heading-underlined__title">{{ title }}
     <span class="heading-underlined__line" aria-hidden="true"></span>
   </h2>
   {% if description %}
     <p class="heading-underlined__description">{{ description }}</p>
   {% endif %}
-  {% if bulletpoints %}
-    <ul class="heading-underlined__bulletpoints">
-      {% for bulletpoint in bulletpoints %}
-        <li class="heading-underlined__bulletpoint">
+  {% if bullet1 %}
+    <ul class="heading-underlined__list">
+      <li class="heading-underlined__list-item">
+        <svg class="icon icon--small" aria-hidden="true">
+          <use href="#double-tick"></use>
+        </svg>{{ bullet1 }}
+      </li>
+      {% if bullet2 %}
+        <li class="heading-underlined__list-item">
           <svg class="icon icon--small" aria-hidden="true">
             <use href="#double-tick"></use>
-          </svg>{{ bulletpoint }}
+          </svg>{{ bullet2 }}
         </li>
-      {% endfor %}
+      {% endif %}
+      {% if bullet3 %}
+        <li class="heading-underlined__list-item">
+          <svg class="icon icon--small" aria-hidden="true">
+            <use href="#double-tick"></use>
+          </svg>{{ bullet3 }}
+        </li>
+      {% endif %}
+      {% if bullet4 %}
+        <li class="heading-underlined__list-item">
+          <svg class="icon icon--small" aria-hidden="true">
+            <use href="#double-tick"></use>
+          </svg>{{ bullet4 }}
+        </li>
+      {% endif %}
+      {% if bullet5 %}
+        <li class="heading-underlined__list-item">
+          <svg class="icon icon--small" aria-hidden="true">
+            <use href="#double-tick"></use>
+          </svg>{{ bullet5 }}
+        </li>
+      {% endif %}
+      {% if bullet6 %}
+        <li class="heading-underlined__list-item">
+          <svg class="icon icon--small" aria-hidden="true">
+            <use href="#double-tick"></use>
+          </svg>{{ bullet6 }}
+        </li>
+      {% endif %}
+      {% if bullet7 %}
+        <li class="heading-underlined__list-item">
+          <svg class="icon icon--small" aria-hidden="true">
+            <use href="#double-tick"></use>
+          </svg>{{ bullet7 }}
+        </li>
+      {% endif %}
     </ul>
   {% endif %}
 </div>

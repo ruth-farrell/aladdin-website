@@ -89,24 +89,12 @@
 
 .packages__tabs {
   .heading-underlined {
-    padding-bottom: 0;
+    padding-bottom: 1rem;
   }
 
   .heading-underlined__title {
     text-transform: initial;
   }
-}
-
-.packages__tab-content-text {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.packages__tab-content-feature {
-  display: flex;
-  align-items: center;
-  gap: .5rem;
 }
 
 .packages__tab-content .cta {

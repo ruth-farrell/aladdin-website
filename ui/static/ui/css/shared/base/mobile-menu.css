@@ -1,4 +1,4 @@
-@media (width <= 1024px) {
+@media (width < 1024px) {
   body::before {
     content: "";
     position: fixed;
@@ -43,7 +43,9 @@
   body[data-mobile-menu-open="true"] {
     overflow: hidden;
 
-    .header__bar, .header__list, .header__actions {
+    .header__bar, 
+    .header__list, 
+    .header__actions {
       flex-direction: column;
       align-items: flex-start;
     }

@@ -1,8 +1,9 @@
-.hamburger-wrapper {
+.hamburger__wrapper {
   height: 17px;
   margin: 0;
   transform: translateY(0);
   width: 30px;
+  flex-shrink: 0;
 }
 
 .hamburger {

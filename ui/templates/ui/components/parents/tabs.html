@@ -1,28 +1,31 @@
 <section class="parents-tabs" data-tabs>
+  <div class="parents-tabs__shapes" aria-hidden="true">
+    {% include "ui/components/shared/shapes/yellow-shapes.html" %}
+  </div>
   <div class="parents-tabs__wrapper u-container u-padding-md">
     <div class="sidebar">
       <section class="sidebar__card">
-        <h2>Overview</h2>
-        <div class="tabs__list" role="tablist">
-          <button class="tabs__tab" id="tab-aladdin-connect" tabindex="0" role="tab" aria-selected="true" aria-controls="panel-aladdin-connect">
+        <h2 class="sidebar__card-heading">Overview</h2>
+        <div class="sidebar__card-content tabs__list" role="tablist">
+          <button class="tabs__tab" id="tab-aladdin-connect" tabindex="0" role="tab" aria-selected="true" aria-controls="aladdin-connect">
             <span class="tabs__tab-icon" aria-hidden="true">
               <svg class="icon icon--small"><use href="#circle-arrow-right"></use></svg>
             </span>
             <span class="tabs__tab-text">What is Aladdin Connect?</span>
           </button>
-          <button class="tabs__tab" id="tab-benefits-families" tabindex="-1" role="tab" aria-selected="false" aria-controls="panel-benefits-families">
+          <button class="tabs__tab" id="tab-benefits-families" tabindex="-1" role="tab" aria-selected="false" aria-controls="benefits-families">
             <span class="tabs__tab-icon" aria-hidden="true">
               <svg class="icon icon--small"><use href="#circle-arrow-right"></use></svg>
             </span>
             <span class="tabs__tab-text">Benefits for Families</span>
           </button>
-          <button class="tabs__tab" id="tab-getting-started" tabindex="-1" role="tab" aria-selected="false" aria-controls="panel-getting-started">
+          <button class="tabs__tab" id="tab-getting-started" tabindex="-1" role="tab" aria-selected="false" aria-controls="getting-started">
             <span class="tabs__tab-icon" aria-hidden="true">
               <svg class="icon icon--small"><use href="#circle-arrow-right"></use></svg>
             </span>
             <span class="tabs__tab-text">Getting Started</span>
           </button>
-          <button class="tabs__tab" id="tab-security-privacy" tabindex="-1" role="tab" aria-selected="false" aria-controls="panel-security-privacy">
+          <button class="tabs__tab" id="tab-security-privacy" tabindex="-1" role="tab" aria-selected="false" aria-controls="security-privacy">
             <span class="tabs__tab-icon" aria-hidden="true">
               <svg class="icon icon--small"><use href="#circle-arrow-right"></use></svg>
             </span>
@@ -34,18 +37,21 @@
     </div>
 
     <section class="tabs__panels">
-      <div class="tabs__panel" id="panel-aladdin-connect" aria-hidden="false" role="tabpanel" aria-labelledby="tab-aladdin-connect">
+      <div class="tabs__panel" id="aladdin-connect" aria-hidden="false" role="tabpanel" aria-labelledby="tab-aladdin-connect">
         {% include "ui/components/parents/tabpanels/aladdin-connect.html" %}
       </div>
-      <div class="tabs__panel" id="panel-benefits-families" aria-hidden="true" role="tabpanel" aria-labelledby="tab-benefits-families">
+      <div class="tabs__panel" id="benefits-families" aria-hidden="true" role="tabpanel" aria-labelledby="tab-benefits-families">
         {% include "ui/components/parents/tabpanels/benefits-families.html" %}
       </div>
-      <div class="tabs__panel" id="panel-getting-started" aria-hidden="true" role="tabpanel" aria-labelledby="tab-getting-started">
+      <div class="tabs__panel" id="getting-started" aria-hidden="true" role="tabpanel" aria-labelledby="tab-getting-started">
         {% include "ui/components/parents/tabpanels/getting-started.html" %}
       </div>
-      <div class="tabs__panel" id="panel-security-privacy" aria-hidden="true" role="tabpanel" aria-labelledby="tab-security-privacy">
+      <div class="tabs__panel" id="security-privacy" aria-hidden="true" role="tabpanel" aria-labelledby="tab-security-privacy">
         {% include "ui/components/parents/tabpanels/security-privacy.html" %}
       </div>
+    </section>
+    <section class="u-mobile-only"> 
+      {% include "ui/components/parents/question-cta.html" %} 
     </section>
   </div>
 </section>

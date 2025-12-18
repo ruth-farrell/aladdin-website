@@ -1,12 +1,27 @@
-<section class="life">
+<section class="life u-padding-md">
+  <div class="life__shapes life__shapes--left" aria-hidden="true">
+    {% include "ui/components/shared/shapes/pink-blue-shapes.html" %}
+  </div>
+  <div class="life__shapes life__shapes--right" aria-hidden="true">
+    {% include "ui/components/shared/shapes/pink-blue-shapes.html" %}
+  </div>
   <div class="life__wrapper u-container">
     <div class="life__text">
       {% include "ui/components/shared/headings/tagline.html" with 
         title="Life at Aladdin" 
         tagline="A supportive team, meaningful work, and a culture that values balance."
         description="We aim to create a workplace where people feel valued, trusted, and part of something meaningful.  From flexible work options to team events and learning support, we've built an environment that balances purpose with people." %}
+        <ul class="life__list">
+          {% include "ui/components/careers/life-item.html" with icon="briefcase-time" description="Flexible working hours to suit your individual needs" %}
+          {% include "ui/components/careers/life-item.html" with icon="house-laptop" description="Hybrid office policy (remote-first with monthly in-office days)" %}
+          {% include "ui/components/careers/life-item.html" with icon="headside-gear" description="Subsidised learning & development opportunities" %}    
+          {% include "ui/components/careers/life-item.html" with icon="hand-holding-heart" description="Employee Assistance Programme (EAP)" %}   
+          {% include "ui/components/careers/life-item.html" with icon="piggy-bank" description="Company pension contribution scheme" %}   
+          {% include "ui/components/careers/life-item.html" with icon="party-horn" description="Regular team social events & gatherings" %}
+        </ul>
     </div>
-
-    <div class="life__media"></div>
+    <div class="life__media">
+      <img src="" width="520" height="890" loading="lazy" alt="Images of the Aladdin team working together"/>
+    </div>
   </div>
 </section>

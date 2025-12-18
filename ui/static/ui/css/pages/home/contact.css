@@ -1,6 +1,27 @@
 .contact {
-  background-color: var(--color-background-secondary);
-  position: relative;
+  .card__title,
+  .icon {
+    color: var(--color-accent);
+    fill: var(--color-accent);
+  }
+
+  .card__email .icon,
+  .card__phone .icon {
+    fill: var(--color-green);
+  }
+
+  .card__heading, 
+  .card__description {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .card__cta {
+    min-width: 100%;
+  }
 }
 
 .contact__parents {
@@ -10,54 +31,17 @@
   padding-top: 4rem;
 }
 
-.contact .shapes__oblong--yellow-green {
-  transform: rotate(-29.02deg);
-  top: 5%;
-  right: 3%;
-  opacity: 0.5;
-}
-
-.contact .shapes__oblong--yellow-red {
-  right: 2%;
-  top: 4%;
-  opacity: 0.5;
-}
-
 .contact__parents-text {
   flex: 7;
+}
 
-  h4 {
-    color: var(--color-connect);
-    font-size: var(--font-size-xlarge);
-  }
+.contact__parents-heading {
+  color: var(--color-connect);
+  font-size: var(--font-size-xlarge);
 }
 
 .contact__parents-cta {
   flex: 3;
-}
-
-.contact .card__title,
-.contact .icon {
-  color: var(--color-accent);
-  fill: var(--color-accent);
-}
-
-.contact .card__email .icon,
-.contact .card__phone .icon {
-  fill: var(--color-green);
-}
-
-.contact .card__heading, 
-.contact .card__description {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  gap: 1rem;
-}
-
-.contact .card__cta {
-  min-width: 100%;
 }
 
 @media (width <= 768px) {
@@ -69,16 +53,6 @@
   .contact__parents-text, 
   .contact__parents-cta {
     flex: 1;
-  }
-
-  .contact .shapes__oblong--yellow-green {
-    bottom: 15%;
-    top: auto; 
-  }
-
-  .contact .shapes__oblong--yellow-red {
-    bottom: 15%;
-    top: auto;
   }
 }
 

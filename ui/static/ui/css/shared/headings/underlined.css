@@ -1,5 +1,13 @@
-.heading-underlined {
+.heading-underlined:has(.heading-underlined__list, .heading-underlined__description) {
   padding-bottom: 3rem;
+}
+
+.heading-underlined__icon {
+  margin-bottom: .5rem;
+}
+
+.heading-underlined .icon {
+  fill: var(--color-accent);
 }
 
 .heading-underlined__title {
@@ -25,4 +33,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.heading-underlined__list {
+  margin-top: .5rem;
+}
+
+.heading-underlined__list-item {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
 }

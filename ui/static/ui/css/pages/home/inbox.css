@@ -1,51 +1,6 @@
 .emails {
   font-size: var(--font-size-small);
-  mask-image: linear-gradient(to bottom, black, black 80%, transparent);
-  -webkit-mask-image: linear-gradient(to bottom, black, black 80%, transparent);
   overflow: hidden;
-}
-
-.email__item:first-child .email__icon {
-  position: relative;
-}
-
-.email__item:first-child {
-  padding: 0.5rem 0;
-}
-
-.email__item:not(:first-child) {
-  background: rgb(133 169 174 / 10%);
-}
-
-.email__item:first-child .email__subject {
-  font-weight: var(--font-weight-bold);
-}
-
-.email__item:first-child .email__icon::after {
-  position: absolute;
-  content: '1';
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: var(--font-size-xxsmall);
-  width: 1rem;
-  height: 1rem;
-  top: 0;
-  right: 0;
-  color: var(--color-font-secondary);
-  background: var(--color-red);
-  border-radius: var(--border-radius-circle);
-}
-
-.email__icon .icon {
-  color: var(--color-accent-dark);
-}
-
-.email__date {
-  color: var(--color-font-muted);
-  text-align: right;
-  text-wrap-mode: nowrap;
-  margin-left: auto;
 }
 
 .email__item {
@@ -80,6 +35,17 @@
   }
 }
 
+.email__icon .icon {
+  color: var(--color-accent-dark);
+}
+
+.email__date {
+  color: var(--color-font-muted);
+  text-align: right;
+  text-wrap-mode: nowrap;
+  margin-left: auto;
+}
+
 .email__item .email__desktop {
   display: flex;
   gap: 1rem;
@@ -90,6 +56,38 @@
 .email__mobile .email__content {
   padding: 1rem;
   border-top: var(--divider);
+}
+
+.email__item:first-child {
+  padding: 0.5rem 0; 
+
+  .email__icon {
+    position: relative;
+  }
+}
+
+.email__item:not(:first-child) {
+  background: var(--color-blue-muted);
+}
+
+.email__item:first-child .email__subject {
+  font-weight: var(--font-weight-bold);
+}
+
+.email__item:first-child .email__icon::after {
+  position: absolute;
+  content: '1';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xxsmall);
+  width: 1rem;
+  height: 1rem;
+  top: 0;
+  right: 0;
+  color: var(--color-font-secondary);
+  background: var(--color-red);
+  border-radius: var(--border-radius-circle);
 }
 
 @media (width >= 1024px) {
@@ -109,6 +107,11 @@
 }
 
 @media (width <= 1024px) {
+  .emails {
+    mask-image: linear-gradient(to bottom, black, black 80%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, black, black 80%, transparent);
+  }
+
   .email__item .email__desktop {
     padding-bottom: .25rem;
   }
