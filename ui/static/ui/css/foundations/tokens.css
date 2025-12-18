@@ -10,6 +10,7 @@
 
   --divider: 1px solid var(--color-background-tertiary);
   --header-height: 90px;
+  --header-height-mobile: 75px;
 
   /* Spacing */
   --spacing-border-thick: 4px;

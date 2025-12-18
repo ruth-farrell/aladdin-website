@@ -19,7 +19,6 @@
 .u-background-white {
   background-color: var(--color-background-secondary);
   position: relative;
-  overflow: hidden;
 }
 
 .u-flex-center { 
