@@ -6,6 +6,12 @@
   z-index: 2;
 }
 
+@media (width < 768px) {
+  .u-container {
+    padding-inline: 2rem;
+  }
+}
+
 .u-padding-xl {
   padding-block: 8rem;
 }

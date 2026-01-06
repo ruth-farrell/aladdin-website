@@ -34,6 +34,11 @@ export function initializeActiveLinks() {
     const matchingLink = document.querySelector(`.header__link[href="/${currentHash}"], .header__link[href="${currentHash}"]`);
     if (matchingLink) {
       matchingLink.classList.add('header__link--active');
+    } else {
+      // Hash doesn't exist in header, keep home active
+      if (homeLink) {
+        homeLink.classList.add('header__link--active');
+      }
     }
     return;
   }

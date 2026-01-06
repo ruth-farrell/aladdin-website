@@ -19,8 +19,6 @@
 .shapes--hero-left,
 .shapes--hero-right {
   position: absolute;
-  width: 100%;
-  height: 100%;
   pointer-events: none;
   z-index: 1;
 }
@@ -28,6 +26,12 @@
 .shapes--yellow {
   top: 0;
   right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.shapes--pink-blue {
+  inset: 0;
 }
 
 /* Section shape containers */
@@ -71,6 +75,18 @@
 .hero__shapes--right.shapes--hero-right {
   right: 0;
   top: 0;
+}
+
+@media (width >= 1750px) {
+  /* .hero__shapes--left.shapes--hero-left {
+    top: 50%;
+    transform: translateY(calc(-50% - var(--header-height)));
+  } */
+
+  .shapes__oblong {
+    width: 160.5px;
+    height: 798px;
+  }
 }
 
 /* Hero shapes - individual positioning */
@@ -136,7 +152,6 @@
   top: 5%;
 }
 
-/* Mobile adjustments */
 @media (width <= 1024px) {
   .about__shapes .shapes--yellow .shapes__oblong--yellow-green {
     bottom: 3%;

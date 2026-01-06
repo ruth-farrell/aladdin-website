@@ -61,12 +61,8 @@ function createTabs(instance) {
     activePanelId = panelId;
     updateTabs();
     
-    window.location.hash = panelId;
-    
-    const panel = document.getElementById(panelId);
-    if (panel) {
-      panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    // Update URL without triggering browser scroll
+    history.pushState(null, '', `#${panelId}`);
   }
 
   // Handle hash changes

@@ -3,6 +3,12 @@
   --container-padding: 2rem;
 }
 
+@media (width < 768px) {
+  :root {
+    --container-padding: 4rem;
+  }
+}
+
 /* Breakpoints
   desktop-up (min-width: 1024px);
   tablet-up (min-width: 768px);
