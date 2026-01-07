@@ -1,4 +1,8 @@
 :root {
+  /* Container */
+  --container-width: 1080px;
+  --container-padding: 2rem;
+
   /* Box Shadows */
   --box-shadow-card: 0px 0px 9px 0px #00000040;
   --box-shadow-header: 4px 4px 8px 0px #00000040;
@@ -8,7 +12,10 @@
   --box-shadow-medium: 0px 0px 10px 0px #00000040;
   --box-shadow-dropdown: 0 6px 12px -4px #00000040;
 
+  /* Divider */
   --divider: 1px solid var(--color-background-tertiary);
+
+  /* Header Heights */
   --header-height: 90px;
   --header-height-mobile: 75px;
 
@@ -45,3 +52,25 @@
   --transition-top-fast: top var(--transition-duration-fast) var(--transition-timing-ease-in);
   --transition-top-very-slow: top var(--transition-duration-very-slow) var(--transition-timing-ease-out);
 }
+
+@media (width < 768px) {
+  :root {
+    --container-padding: 4rem;
+  }
+}
+
+/* Breakpoints
+  Note: CSS custom properties cannot currently be used as media query values (e.g., @media (width >= var(--breakpoint))).
+  These values are documented here for reference when writing media queries.
+  
+  Standard Breakpoints:
+  - small-mobile-only: max-width: 375px (or width < 375px)
+  - mobile-only: max-width: 768px (or width < 768px)
+  - tablet-up: min-width: 768px (or width >= 768px)
+  - mobile-tablet-only: max-width: 1024px (or width < 1024px)
+  - desktop-up: min-width: 1024px (or width >= 1024px)
+  - ultra-wide-up: min-width: 1750px
+  
+  Special Breakpoints:
+  - hero-title-range: 768px <= width <= 1302px (used in hero.css)
+*/

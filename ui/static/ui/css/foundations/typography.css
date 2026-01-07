@@ -89,3 +89,9 @@ p a:hover, li a:hover {
     --font-size-small: 12px;
   }
 }
+
+@media (width >= 1750px) {
+  h1 {
+    font-size: var(--font-size-xxxlarge);
+  }
+}

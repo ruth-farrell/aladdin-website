@@ -1,11 +1,11 @@
 /* Foundations */
 @import 'foundations/normalize.css';
 @import 'foundations/accessibility.css';
-@import 'foundations/responsive.css';
 @import 'foundations/colors.css';
 @import 'foundations/typography.css';
 @import 'foundations/buttons.css';
 @import 'foundations/tokens.css';
+@import 'foundations/icons.css';
 
 /* Layout */
 @import 'layout/base.css';

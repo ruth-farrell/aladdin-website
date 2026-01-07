@@ -31,7 +31,7 @@
   box-shadow: var(--box-shadow-button);
   transition: var(--transition-all-normal);
   position: relative;
-  min-width: 250px;
+  min-width: 230px;
 }
 
 .cta__inner {

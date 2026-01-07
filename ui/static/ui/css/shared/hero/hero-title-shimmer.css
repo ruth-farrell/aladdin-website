@@ -97,3 +97,11 @@
   0%   { background-position: 0% 50%; }
   100% { background-position: -200% 50%; }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__title--rainbow-shimmer,
+  .hero__title--pink-red-shimmer,
+  .hero__title--green-blue-shimmer {
+    animation: none;
+  }
+}

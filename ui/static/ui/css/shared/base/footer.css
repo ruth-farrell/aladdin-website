@@ -64,7 +64,7 @@
   background: var(--color-background-tertiary);
 }
 
-.footer__social ul {
+.footer__social-list {
   display: flex;
   gap: 1rem;
   padding-block: 2rem;

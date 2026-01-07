@@ -1,12 +1,16 @@
 # Aladdin Schools Website
 
-A Django-based website for Aladdin Schools, featuring responsive design and modern UI components.
+A Django-based website for Aladdin Schools. 
+
+## Status
+
+Currently in development. Testing URL hosted on Railway: https://web-production-c01f0.up.railway.app/
 
 ## Technology Stack
 
 - **Backend**: Django 4.2.26
 - **Frontend**: HTML, CSS (with CSS Custom Properties), JavaScript (ES6 modules)
-- **Styling**: Custom CSS with BEM methodology
+- **Styling**: CSS with BEM methodology
 - **Icons**: SVG sprite system
 
 ## Project Structure
@@ -83,8 +87,4 @@ The project uses:
 - ES6 JavaScript modules
 - BEM naming convention for CSS classes
 - Stylelint for CSS linting
-
-## License
-
-[Add your license here]
 

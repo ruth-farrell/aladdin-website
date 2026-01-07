@@ -76,3 +76,9 @@
     margin-right: auto;
   }
 }
+
+@media (width < 375px) {
+  .header__bar-compact .header__cta {
+    display: none;
+  } 
+}

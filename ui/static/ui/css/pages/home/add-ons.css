@@ -1,11 +1,13 @@
-.add-ons .card--epayments .card__title {
-  color: var(--color-epayments);
-}
+.add-ons { 
+  .card--epayments .card__title {
+    color: var(--color-epayments);
+  }
 
-.add-ons .card--library .card__title {
-  color: var(--color-library);
-}
+  .card--library .card__title {
+    color: var(--color-library);
+  }
 
-.add-ons .card--staff-absences .card__title {
-  color: var(--color-staff-absences);
+  .card--staff-absences .card__title {
+    color: var(--color-staff-absences);
+  }
 }

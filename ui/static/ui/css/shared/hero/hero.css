@@ -7,7 +7,7 @@
 
 .hero__title { 
   margin-block: auto;
-  max-width: 800px;
+  max-width: 50rem;
   text-align: center;
   padding-block: 3rem;
 }
@@ -21,11 +21,5 @@
 @media (width <= 768px) {
   .hero__title {
     padding-block: 0;
-  }
-}
-
-@media (width >= 1750px) {
-  h1 {
-    font-size: var(--font-size-xxxlarge);
   }
 }

@@ -14,12 +14,6 @@
   max-width: calc(100% - var(--container-padding));
   box-shadow: var(--box-shadow-header);
   transition: var(--transition-all-slow);
-
-  .header__cta:hover,
-  .header__link:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
 }
 
 .header__logo {
@@ -40,15 +34,21 @@
   gap: 1rem;
 }
 
+.header__cta:hover,
+.header__link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .header__bar-compact {
   display: flex;
   align-items: center;
-}
 
-.header__bar-compact .header__cta {
-  transition: var(--transition-all-normal);
-  visibility: visible;
-  opacity: 1;
+  .header__cta {
+    transition: var(--transition-all-normal);
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 .header__link--active {

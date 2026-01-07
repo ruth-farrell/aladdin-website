@@ -1,9 +1,9 @@
-.tabs__panel[aria-hidden="true"] {
-  display: none;
-}
-
 .tabs__panels {
   width: 100%;
+}
+
+.tabs__panel[aria-hidden="true"] {
+  display: none;
 }
 
 .tabs__tab[aria-selected="false"]:hover {

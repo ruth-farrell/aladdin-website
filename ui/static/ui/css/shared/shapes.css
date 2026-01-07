@@ -1,23 +1,13 @@
-/* Base styles for all oblong shapes */
 .shapes__oblong {
   position: absolute;
-  width: 107px;
-  height: 532px;
+  width: 7vw;
+  aspect-ratio: 107 / 532;
   opacity: 0.5;
-}
-
-@media (width <= 1024px) {
-  .shapes__oblong {
-    width: 65px;
-    height: 320px;
-  }
 }
 
 /* Base styles for shape containers */
 .shapes--yellow,
-.shapes--pink-blue,
-.shapes--hero-left,
-.shapes--hero-right {
+.shapes--pink-blue {
   position: absolute;
   pointer-events: none;
   z-index: 1;
@@ -60,59 +50,6 @@
   top: -3%;
 }
 
-/* Hero shapes - containers */
-.hero__shapes--left,
-.hero__shapes--right {
-  position: absolute;
-  inset: 0;
-}
-
-.hero__shapes--left.shapes--hero-left {
-  left: 0;
-  top: 0;
-}
-
-.hero__shapes--right.shapes--hero-right {
-  right: 0;
-  top: 0;
-}
-
-@media (width >= 1750px) {
-  /* .hero__shapes--left.shapes--hero-left {
-    top: 50%;
-    transform: translateY(calc(-50% - var(--header-height)));
-  } */
-
-  .shapes__oblong {
-    width: 160.5px;
-    height: 798px;
-  }
-}
-
-/* Hero shapes - individual positioning */
-.shapes--hero-left .shapes__oblong--yellow-red {
-  transform: rotate(137.64deg);
-  left: 2%;
-  top: -23%;
-}
-
-.shapes--hero-left .shapes__oblong--pink-blue {
-  transform: rotate(90deg);
-  left: 2%;
-  top: -32.5%;
-}
-
-.shapes--hero-right .shapes__oblong--green-blue {
-  transform: rotate(49.66deg);
-  right: 4%;
-  top: -11%;
-}
-
-.shapes--hero-right .shapes__oblong--pink-red {
-  right: 5%;
-  top: -32%;
-}
-
 /* Pink-blue shapes - individual positioning (same layout for both left and right) */
 .shapes--pink-blue .shapes__oblong--pink-red {
   transform: rotate(24.81deg);
@@ -150,6 +87,12 @@
   right: -1%;
   bottom: auto;
   top: 5%;
+}
+
+@media (width <= 768px) {
+  .shapes__oblong {
+    width: 65px;
+  }
 }
 
 @media (width <= 1024px) {

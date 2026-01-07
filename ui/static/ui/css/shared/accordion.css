@@ -4,6 +4,12 @@
   gap: 1rem;
 }
 
+.accordion {
+  font-size: var(--font-size-small);
+  background: var(--color-background-secondary);
+  border-radius: var(--border-radius-medium);
+}
+
 .accordion__panel {
   display: grid;
   grid-template-rows: 1fr;
@@ -17,12 +23,6 @@
 
 .accordion__panel, .accordion__panel * {
   overflow: hidden;
-}
-
-.accordion {
-  font-size: var(--font-size-small);
-  background: var(--color-background-secondary);
-  border-radius: var(--border-radius-medium);
 }
 
 .accordion__title {

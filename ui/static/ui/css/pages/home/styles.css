@@ -1,5 +1,6 @@
 /* Layout Home */
 @import 'hero.css';
+@import 'hero-shapes.css';
 @import 'packages.css';
 @import 'about.css';
 @import 'inbox.css';

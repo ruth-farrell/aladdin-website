@@ -9,108 +9,6 @@
   }
 }
 
-/* Left side: Yellow-red moves down/up (vertical) */
-@keyframes yellow-red-move-vertical {
-  0%, 100% {
-    top: -23%;
-  }
-
-  50% {
-    top: -27%;
-  }
-}
-
-/* Left side: Pink-blue moves in/out (horizontal) */
-@keyframes pink-blue-move-horizontal {
-  0%, 100% {
-    left: 2%;
-  }
-
-  50% {
-    left: -1%;
-  }
-}
-
-/* Right side: Pink-red moves down/up (vertical) */
-@keyframes pink-red-move-vertical {
-  0%, 100% {
-    top: -32%;
-  }
-
-  50% {
-    top: -27%;
-  }
-}
-
-/* Right side: Blue-green moves up/down (vertical) */
-@keyframes blue-green-move-vertical {
-  0%, 100% {
-    top: -17%;
-  }
-
-  50% {
-    top: -22%;
-  }
-}
-
-/* Mobile: Yellow-red vertical animation */
-@keyframes yellow-red-move-vertical-mobile {
-  0%, 100% {
-    top: 8rem;
-  }
-
-  50% {
-    top: 6rem;
-  }
-}
-
-/* Mobile: Pink-red vertical animation */
-@keyframes pink-red-move-vertical-mobile {
-  0%, 100% {
-    bottom: 2rem;
-  }
-
-  50% {
-    bottom: 4rem;
-  }
-}
-
-/* Mobile: Green-blue horizontal animation */
-@keyframes blue-green-move-horizontal-mobile {
-  0%, 100% {
-    right: 4%;
-  }
-
-  50% {
-    right: 2%;
-  }
-}
-
-.hero .shapes__oblong {
-  opacity: 0.75;
-  z-index: -1;
-}
-
-/* Hero shapes - animations */
-.hero__shapes--left .shapes__oblong--yellow-red {
-  animation: yellow-red-move-vertical 6s ease-in-out infinite;
-  animation-delay: 0s;
-}
-
-.hero__shapes--left .shapes__oblong--pink-blue {
-  animation: pink-blue-move-horizontal 6s ease-in-out infinite;
-  animation-delay: 3s;
-}
-
-.hero__shapes--right .shapes__oblong--green-blue {
-  animation: blue-green-move-vertical 6s ease-in-out infinite;
-}
-
-.hero__shapes--right .shapes__oblong--pink-red {
-  animation: pink-red-move-vertical 6s ease-in-out infinite;
-  animation-delay: 0.15s;
-}
-
 .hero__content {
   height: 75%;
 }
@@ -154,6 +52,12 @@
   }
 }
 
+@media (width >= 1750px) {
+  .hero__title {
+    max-width: none;
+  }
+}
+
 @media (width <= 768px) { 
   .hero__features {
     flex-direction: column;
@@ -164,37 +68,13 @@
     gap: 6rem;
   }
 
-  .hero__shapes--left .shapes__oblong--pink-blue {
-    top: 2rem;
-    animation: pink-blue-move-horizontal 6s ease-in-out infinite;
-    animation-delay: 3s;
-  }
-
-  .hero__shapes--left .shapes__oblong--yellow-red {
-    transform: rotate(147.64deg);
-    animation: yellow-red-move-vertical-mobile 6s ease-in-out infinite;
-    animation-delay: 0s;
-    left: -4%;
-  }
-
-  .hero__shapes--right .shapes__oblong--green-blue {
-    bottom: -8rem;
-    top: auto;
-    right: 4%;
-    animation: blue-green-move-horizontal-mobile 6s ease-in-out infinite;
-    animation-delay: 0.15s;
-  }
-
-  .hero__shapes--right .shapes__oblong--pink-red {
-    bottom: 2rem;
-    top: auto;
-    animation: pink-red-move-vertical-mobile 6s ease-in-out infinite;
-    animation-delay: 0.15s;
-  }
-
   .hero__text {
     max-width: 10rem;
   }
 }
 
-
+@media (width < 375px) {
+  .hero__content {
+    gap: 2.5rem;
+  }
+}
