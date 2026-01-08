@@ -1,5 +1,7 @@
 # Component Library
 
+{% raw %}
+
 A reference guide for all reusable UI components available in the codebase.
 
 ## 📦 Available Components
@@ -387,4 +389,6 @@ All shared components are located in:
 For page-specific components:
 - **Templates:** `components/[page-name]/`
 - **CSS:** `css/pages/[page-name]/`
+
+{% endraw %}
 
