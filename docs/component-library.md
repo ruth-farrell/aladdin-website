@@ -1,7 +1,5 @@
 # Component Library
 
-{% raw %}
-
 A reference guide for all reusable UI components available in the codebase.
 
 ## 📦 Available Components
@@ -22,11 +20,13 @@ Display a hero section with a title and optional shimmer effect.
 
 ### Basic Usage
 
+{% raw %}
 ```django
 {% include "components/shared/hero.html" with 
   theme="rainbow-shimmer" 
   title="Your Page Title" %}
 ```
+{% endraw %}
 
 ### Available Font Shimmer Themes
 
@@ -36,11 +36,13 @@ Display a hero section with a title and optional shimmer effect.
 
 ### Example
 
+{% raw %}
 ```django
 {% include "components/shared/hero.html" with 
   theme="rainbow-shimmer" 
   title="The software supporting great schools" %}
 ```
+{% endraw %}
 
 **Output:**
 ```html
@@ -55,6 +57,7 @@ Display a hero section with a title and optional shimmer effect.
 
 For more control, create a custom hero:
 
+{% raw %}
 ```django
 <section class="hero">
   <div class="hero__content u-container u-flex-center">
@@ -63,6 +66,7 @@ For more control, create a custom hero:
   </div>
 </section>
 ```
+{% endraw %}
 
 **Location:** `components/shared/hero.html`  
 **CSS:** `css/shared/hero/hero.css`, `hero-title-shimmer.css`
@@ -75,6 +79,7 @@ Display content in a card layout with optional icon, image, heading, description
 
 ### Basic Usage
 
+{% raw %}
 ```django
 {% include "components/shared/card.html" with 
   title="Card Title"
@@ -84,6 +89,7 @@ Display content in a card layout with optional icon, image, heading, description
   cta_link="#contact"
   cta_text="Learn More" %}
 ```
+{% endraw %}
 
 ### Parameters
 
@@ -102,6 +108,7 @@ Display content in a card layout with optional icon, image, heading, description
 
 ### Example with Icon
 
+{% raw %}
 ```django
 {% include "components/shared/card.html" with 
   title="Feature Name"
@@ -111,9 +118,11 @@ Display content in a card layout with optional icon, image, heading, description
   cta_link="#contact"
   cta_text="Get Started" %}
 ```
+{% endraw %}
 
 ### Example with Image
 
+{% raw %}
 ```django
 {% include "components/shared/card.html" with 
   title="Contact Us"
@@ -125,6 +134,7 @@ Display content in a card layout with optional icon, image, heading, description
   cta_link="#contact"
   cta_text="Contact" %}
 ```
+{% endraw %}
 
 **Location:** `components/shared/card.html`  
 **CSS:** `css/shared/card.css`
@@ -137,12 +147,14 @@ Display content in a card layout with optional icon, image, heading, description
 
 Call-to-action buttons with multiple theme options.
 
+{% raw %}
 ```django
 {% include "components/shared/cta.html" with 
   theme="epayments"
   link="#contact"
   text="Get Started" %}
 ```
+{% endraw %}
 
 ### Available CTA Themes
 
@@ -159,6 +171,7 @@ Call-to-action buttons with multiple theme options.
 
 ### Examples
 
+{% raw %}
 ```django
 {# Regular gradient #}
 {% include "components/shared/cta.html" with 
@@ -172,6 +185,7 @@ Call-to-action buttons with multiple theme options.
   link="#packages"
   text="View Packages" %}
 ```
+{% endraw %}
 
 ### Header CTA Buttons
 
@@ -193,6 +207,7 @@ For header navigation buttons:
 
 Headings with an underline decoration, optional icon, description, and bullet points.
 
+{% raw %}
 ```django
 {% include "components/shared/headings/underlined.html" with 
   title="Section Title"
@@ -202,6 +217,7 @@ Headings with an underline decoration, optional icon, description, and bullet po
   bullet1="First bullet point"
   bullet2="Second bullet point" %}
 ```
+{% endraw %}
 
 ### Parameters
 
@@ -215,6 +231,7 @@ Headings with an underline decoration, optional icon, description, and bullet po
 
 ### Example
 
+{% raw %}
 ```django
 {% include "components/shared/headings/underlined.html" with 
   title="Our Features"
@@ -224,6 +241,7 @@ Headings with an underline decoration, optional icon, description, and bullet po
   bullet2="Feature two"
   bullet3="Feature three" %}
 ```
+{% endraw %}
 
 **Location:** `components/shared/headings/underlined.html`  
 **CSS:** `css/shared/headings/underlined.css`
@@ -232,12 +250,14 @@ Headings with an underline decoration, optional icon, description, and bullet po
 
 Simple heading with optional tagline and description.
 
+{% raw %}
 ```django
 {% include "components/shared/headings/tagline.html" with 
   title="Join Aladdin"
   tagline="A passionate, people-first team"
   description="Longer description text here." %}
 ```
+{% endraw %}
 
 ### Parameters
 
@@ -249,12 +269,14 @@ Simple heading with optional tagline and description.
 
 ### Example
 
+{% raw %}
 ```django
 {% include "components/shared/headings/tagline.html" with 
   title="Join Our Team"
   tagline="Supporting Irish primary schools"
   description="At Aladdin, everything we do is built around helping schools run smoothly." %}
 ```
+{% endraw %}
 
 **Location:** `components/shared/headings/tagline.html`  
 **CSS:** `css/shared/headings/tagline.css`
@@ -320,20 +342,25 @@ Decorative shape elements for sections.
 
 Yellow-green and yellow-red oblong shapes.
 
+{% raw %}
 ```django
 {% include "components/shared/shapes/yellow-shapes.html" %}
 ```
+{% endraw %}
 
 ### Pink-Blue Shapes
 
 Pink-red and green-blue oblong shapes.
 
+{% raw %}
 ```django
 {% include "components/shared/shapes/pink-blue-shapes.html" %}
 ```
+{% endraw %}
 
 ### Usage in Sections
 
+{% raw %}
 ```django
 <section class="about u-padding-xl">
   {% include "components/shared/shapes/yellow-shapes.html" %}
@@ -342,6 +369,7 @@ Pink-red and green-blue oblong shapes.
   </div>
 </section>
 ```
+{% endraw %}
 
 **Location:** `components/shared/shapes/`  
 **CSS:** `css/shared/shapes.css`
@@ -352,6 +380,7 @@ Pink-red and green-blue oblong shapes.
 
 ### Complete Section Example
 
+{% raw %}
 ```django
 <section class="features u-background-white u-padding-xl">
   {% include "components/shared/shapes/yellow-shapes.html" %}
@@ -382,6 +411,7 @@ Pink-red and green-blue oblong shapes.
   </div>
 </section>
 ```
+{% endraw %}
 
 ---
 
@@ -395,6 +425,3 @@ All shared components are located in:
 For page-specific components:
 - **Templates:** `components/[page-name]/`
 - **CSS:** `css/pages/[page-name]/`
-
-{% endraw %}
-

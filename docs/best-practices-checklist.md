@@ -18,6 +18,7 @@ A comprehensive checklist for SEO, performance, accessibility, and security best
 
 **Missing:** Add to `base.html` or page templates:
 
+{% raw %}
 ```html
 <!-- Meta Description (unique per page) -->
 <meta name="description" content="Brief description of the page (150-160 characters)">
@@ -36,6 +37,7 @@ A comprehensive checklist for SEO, performance, accessibility, and security best
 <meta name="twitter:description" content="Page description">
 <meta name="twitter:image" content="https://aladdin.ie/files/website/images/twitter-image.webp">
 ```
+{% endraw %}
 
 **Recommendation:** Create a template block for page-specific meta tags:
 {% raw %}
@@ -82,9 +84,11 @@ class StaticViewSitemap(Sitemap):
 
 **Missing:** Add canonical link to prevent duplicate content:
 
+{% raw %}
 ```html
 <link rel="canonical" href="https://www.aladdin.ie{{ request.path }}">
 ```
+{% endraw %}
 
 ## ⚡ Performance
 
