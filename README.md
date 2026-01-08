@@ -2,11 +2,13 @@
 
 A Django-based website for Aladdin Schools. 
 
-## Status
+## Deployment
 
-Currently in development (January 2026)
- 
-Testing URL hosted on Railway: https://web-production-c01f0.up.railway.app/
+Status: In development
+
+Railway (Website testing URL): https://web-production-c01f0.up.railway.app/
+
+Github Pages (Docs): https://ruth-farrell.github.io/aladdin-website/ 
 
 ## Technology Stack
 

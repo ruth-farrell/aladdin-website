@@ -11,13 +11,13 @@ Welcome to the Aladdin UI documentation. This guide will help you understand the
 - [Utility Classes](#utility-classes)
 
 ### Component Guides
+- [Component Library](./component-library.md)
 - [How to Add an Accordion](./guides/adding-accordions.md)
 - [How to Add Tabs](./guides/adding-tabs.md)
-- [How to Add a Product/Add-on](./guides/adding-product-addon.md)
-- [Component Library](./component-library.md)
 
-### Page Creation
+### Content Creation
 - [Creating a New Page](./guides/creating-new-pages.md)
+- [Adding a New Product/Add-on](./guides/adding-product-addon.md)
 
 ### Reference
 - [JavaScript Structure](./reference/javascript.md)
