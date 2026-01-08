@@ -16,6 +16,7 @@ This guide shows you how to create a new page using the `misc.html` template as 
 
 Copy `misc.html` as your new page. Here's what it contains:
 
+{% raw %}
 ```html
 {% extends "base.html" %}
 {% load static %}
@@ -29,14 +30,17 @@ Copy `misc.html` as your new page. Here's what it contains:
   {% include "components/misc/content.html" %}
 {% endblock %}
 ```
+{% endraw %}
 
 ### 2. Update the Page Title
 
 Change the title block:
 
+{% raw %}
 ```html
 {% block title %}Your Page Title | Aladdin Schools{% endblock %}
 ```
+{% endraw %}
 
 ### 3. Create Your Page Components
 
@@ -47,6 +51,7 @@ You can either:
 
 #### Option A: Use Shared Components Directly
 
+{% raw %}
 ```html
 {% block content %}
   {% include "components/shared/hero.html" with 
@@ -65,25 +70,30 @@ You can either:
   </section>
 {% endblock %}
 ```
+{% endraw %}
 
 #### Option B: Create Page-Specific Components
 
 Create `components/[your-page]/hero.html`:
 
+{% raw %}
 ```html
 {% include "components/shared/hero.html" with 
   theme="rainbow-shimmer" 
   title="Your Page Title" %}
 ```
+{% endraw %}
 
 Then use it in your page:
 
+{% raw %}
 ```html
 {% block content %}
   {% include "components/[your-page]/hero.html" %}
   {% include "components/[your-page]/content.html" %}
 {% endblock %}
 ```
+{% endraw %}
 
 ### 4. Add IDs for Navigation
 
@@ -123,6 +133,7 @@ Apply utility classes for consistent styling. See [Utility Classes](../README.md
 
 ## Complete Example: Services Page
 
+{% raw %}
 ```html
 {% extends "base.html" %}
 {% load static %}
@@ -172,6 +183,7 @@ Apply utility classes for consistent styling. See [Utility Classes](../README.md
   </section>
 {% endblock %}
 ```
+{% endraw %}
 
 ## Page Structure Best Practices
 
@@ -183,6 +195,7 @@ Leverage existing components instead of creating new ones. See [Component Librar
 
 Use this pattern for consistent sections:
 
+{% raw %}
 ```html
 <section class="section-name u-background-white u-padding-xl" id="section-name">
   {% include "components/shared/shapes/yellow-shapes.html" %}
@@ -195,6 +208,7 @@ Use this pattern for consistent sections:
   </div>
 </section>
 ```
+{% endraw %}
 
 ### 3. Add IDs for Navigation
 

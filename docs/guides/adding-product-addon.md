@@ -120,6 +120,7 @@ Open `components/home/packages.html` and add your new tab button and panel:
 ```
 
 **Add panel to the panels container:**
+{% raw %}
 ```html
 <div class="tabs__panels">
   <!-- Existing panels -->
@@ -141,6 +142,7 @@ Open `components/home/packages.html` and add your new tab button and panel:
   </div>
 </div>
 ```
+{% endraw %}
 
 **Important:** 
 - Use lowercase, hyphenated names for IDs (e.g., `analyze`, not `Analyze`)
@@ -170,6 +172,7 @@ Open `css/pages/home/packages.css` and add styles for your new tab:
 
 Open `components/home/add-ons.html` and add your new card:
 
+{% raw %}
 ```html
 <div class="card__wrapper">
   <!-- Existing cards -->
@@ -185,6 +188,7 @@ Open `components/home/add-ons.html` and add your new card:
     cta_link="#contact" %}
 </div>
 ```
+{% endraw %}
 
 **Parameters:**
 - `image` - URL to product/add-on logo

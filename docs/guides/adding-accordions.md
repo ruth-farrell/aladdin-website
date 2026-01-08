@@ -12,6 +12,7 @@ Accordions are collapsible content sections. They can be used individually or gr
 
 ### Single Accordion
 
+{% raw %}
 ```html
 {% include "components/shared/accordion.html" with 
   id="1"
@@ -19,9 +20,11 @@ Accordions are collapsible content sections. They can be used individually or gr
   description="Your answer content here"
   open=False %}
 ```
+{% endraw %}
 
 ### Multiple Accordions (FAQ Style)
 
+{% raw %}
 ```html
 <div data-accordions>
   {% include "components/shared/accordion.html" with 
@@ -37,11 +40,13 @@ Accordions are collapsible content sections. They can be used individually or gr
     open=False %}
 </div>
 ```
+{% endraw %}
 
 ## Mobile-Only Accordions
 
 For accordions that should only collapse on mobile (but not appear as an accordion on desktop):
 
+{% raw %}
 ```html
 <div data-accordions data-accordions-mobile-only>
   {% include "components/shared/accordion.html" with 
@@ -51,6 +56,7 @@ For accordions that should only collapse on mobile (but not appear as an accordi
     open=False %}
 </div>
 ```
+{% endraw %}
 
 **Features:**
 - Accordion behavior on mobile (< 768px)

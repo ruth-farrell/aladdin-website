@@ -219,11 +219,13 @@ Add to `ui/static/css/styles.css`:
 
 Or link directly in page template:
 
+{% raw %}
 ```django
 {% block pageStyles %}
   <link rel="stylesheet" href="{% static 'css/pages/[page]/styles.css' %}">
 {% endblock %}
 ```
+{% endraw %}
 
 ## 🎨 Media Query Syntax
 
