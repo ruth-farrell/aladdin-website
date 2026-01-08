@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Join our team | Aladdin Schools{% endblock %}
+{% block pageStyles %}
+  <link rel="stylesheet" href="{% static 'css/pages/careers/styles.css' %}">
+{% endblock %}
+
+{% block content %}
+  {% include "components/careers/hero.html" %}
+  {% include "components/careers/join.html" %}
+  {% include "components/careers/open-positions.html" %}
+  {% include "components/careers/life.html" %}
+{% endblock %}

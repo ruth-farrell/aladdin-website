@@ -1,0 +1,17 @@
+<div class="packages__tab-content u-container">
+  <div class="packages__tab-content-text">
+    {% include "components/shared/headings/underlined.html" with 
+      title=title 
+      description=description 
+      bullet1=feature1
+      bullet2=feature2
+      bullet3=feature3
+      bullet4=feature4
+      bullet5=feature5
+    %}
+    {% include "components/shared/cta.html" with theme=cta_theme link=cta_link text="Learn more" %}
+  </div>
+  <div class="packages__tab-content-media">
+    <img src="{{ image }}" alt="{{ image_alt }}" loading="lazy" width="370" height="370"/>
+  </div>
+</div>

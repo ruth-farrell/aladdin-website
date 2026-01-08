@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Miscelaneous Page Title | Aladdin Schools{% endblock %}
+{% block pageStyles %}
+  {# If extra styles needed include in a stylesheet linked here #}
+{% endblock %}
+
+{% block content %}
+  {% include "components/misc/hero.html" %}
+  {% include "components/misc/content.html" %}
+{% endblock %}
+

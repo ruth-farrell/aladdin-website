@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}The software supporting great schools | Aladdin Schools{% endblock %}
+{% block pageStyles %}
+  <link rel="stylesheet" href="{% static 'css/pages/home/styles.css' %}">
+{% endblock %}
+
+{% block content %}
+  {% include "components/home/hero.html" %}
+  {% include "components/home/about.html" %}
+  {% include "components/home/packages.html" %}
+  {% include "components/home/add-ons.html" %}
+  {% include "components/home/inbox.html" %}
+  {% include "components/home/faqs.html" %}
+  {% include "components/home/contact.html" %}
+{% endblock %}
+

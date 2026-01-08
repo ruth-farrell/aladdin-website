@@ -1,0 +1,61 @@
+<section class="packages u-background-white">
+  <div class="packages__heading-wrapper">
+    <div class="packages__heading u-container" id="packages">
+      {% include "components/shared/headings/underlined.html" with title="Packages" align="center" description="Aladdin offers powerful, purpose-built tools for Irish primary schools. Whether you're just getting started with digital admin or expanding how you communicate and manage information, Aladdin's packages let you build the right solution for your school." %}
+    </div>
+  </div>
+  <div class="packages__tabs">
+    <div class="tabs u-flex-center" data-tabs>
+      <div class="tabs__list tabs__list--packages" role="tablist">
+        <button class="tabs__tab tabs__tab--start" id="button-start" tabindex="0" role="tab" aria-selected="true" aria-controls="start">Start</button>
+        <button class="tabs__tab tabs__tab--connect" id="button-connect" tabindex="-1" role="tab" aria-selected="false" aria-controls="connect">Connect</button>
+        <button class="tabs__tab tabs__tab--frame" id="button-frame" tabindex="-1" role="tab" aria-selected="false" aria-controls="frame">Frame</button>
+      </div>
+          
+      <div class="tabs__panels">
+        <div class="tabs__panel tabs__panel--start" id="start" aria-hidden="false" role="tabpanel" aria-labelledby="button-start">
+          {% include "components/home/packages-tab-content.html" with 
+            title="Designed to simplify the every day." 
+            cta_theme="start-dark" 
+            description="Aladdin Start is the core platform that simplifies admin tasks, improves accuracy, and saves schools hours every week." 
+            feature1="Attendance (electronic roll books & roll returns)" 
+            feature2="Student & family information" 
+            feature3="Standardised test result tracking" 
+            feature4="Pupil end-of-year reports (NCCA compatible)" 
+            feature5="Class, Group, Intake, and Staff management" 
+            cta_link="#contact" 
+            image_alt="Aladdin Start image" 
+            image="https://aladdin.ie/files/website/images/start-image.webp" %}
+        </div>
+        <div class="tabs__panel tabs__panel--connect" id="connect" aria-hidden="true" role="tabpanel" aria-labelledby="button-connect">
+          {% include "components/home/packages-tab-content.html" with 
+            title="Designed to keep families in the loop." 
+            cta_theme="connect-dark" 
+            description="Aladdin Connect adds a secure, staff and parent accessible app for a stronger home-school communication—without phone calls or paperwork." 
+            feature1="Direct app messaging to parents and staff" 
+            feature2="Absence notes and permission slips in-app" 
+            feature3="Share report cards, homework and test results" 
+            feature4="Parent / Teacher meeting scheduler" 
+            feature5="Online enrolment forms" 
+            cta_link="#contact" 
+            image_alt="Aladdin Connect image" 
+            image="https://aladdin.ie/files/website/images/connect-image.webp" %}
+        </div>
+        <div class="tabs__panel tabs__panel--frame" id="frame" aria-hidden="true" role="tabpanel" aria-labelledby="button-frame">
+          {% include "components/home/packages-tab-content.html" with 
+            title="Designed to bring the classroom to life." 
+            cta_theme="frame-dark" 
+            description="Aladdin Frame helps teachers capture, organise, and share classroom moments — from sports day to spelling tests, showcase student growth in all its forms." 
+            feature1="Secure photo, video, and audio management" 
+            feature2="Create and share galleries with the whole community" 
+            feature3="Digital learning portfolios" 
+            feature4="Easy document uploads and sharing" 
+            feature5="Student profile photo management" 
+            cta_link="#contact" 
+            image_alt="Aladdin Frame image" 
+            image="https://aladdin.ie/files/website/images/frame-image.webp" %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

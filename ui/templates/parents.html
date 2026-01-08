@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Information for parents & guardians | Aladdin Schools{% endblock %}
+{% block pageStyles %}
+  <link rel="stylesheet" href="{% static 'css/pages/parents/styles.css' %}">
+{% endblock %}
+
+{% block content %}
+  {% include "components/parents/hero.html" %}
+  {% include "components/parents/tabs.html" %}
+{% endblock %}

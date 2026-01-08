@@ -1,0 +1,26 @@
+<section class="contact u-background-white u-padding-xxl">
+  <div class="contact__shapes" aria-hidden="true">
+    {% include "components/shared/shapes/yellow-shapes.html" %}
+  </div>
+  <div class="u-container">
+    <div class="contact__content">
+      <div class="contact__heading" id="contact">
+        {% include "components/shared/headings/underlined.html" with title="Get in Touch" align="center" description="We're here to assist you with any inquiries about Aladdin's services. Whether you're interested in a demo, need support, or have questions about upgrades, our team is ready to help. Let's get you to the right place first." %}
+      </div>
+      <div class="card__wrapper">
+        {% include "components/shared/card.html" with icon="cloud-plus" title="New to Aladdin" description="Looking to simplify admin and improve communication in your school? Let's chat." email="info@aladdin.ie" phone="(01) 554-7375" cta_text="I'm ready to get setup" cta_theme="epayments" cta_link="" %}
+        {% include "components/shared/card.html" with icon="cloud-up" title="Looking to Upgrade?" description="Interested in add-ons or package upgrades? We'll help you find the best fit." email="sales@aladdin.ie" phone="(01) 531-2681" cta_text="Go to my upgrades page" cta_theme="epayments" cta_link="" %}
+        {% include "components/shared/card.html" with icon="cloud-question" title="Technical Support" description="Having trouble with something? Our support team is ready to help with any issues or questions." email="support@aladdin.ie" phone="(01) 554-7375" cta_text="Visit Aladdin Help Centre" cta_theme="epayments" cta_link="" %}
+      </div>
+      <div class="contact__parents">
+        <div class="contact__parents-text">
+          <h4 class="contact__parents-heading">Parent or Guardian Using Aladdin?</h4>
+          <p>From general info, to checking messages, or making payments, our parents help page covers everything you need to get started. But if not, please email us at <a href="mailto:parent@aladdin.ie" class="">parent@aladdin.ie</a></p>
+        </div>
+        <div class="contact__parents-cta">
+          {% include "components/shared/cta.html" with theme="connect" link="/parents" text="Parents Help" %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

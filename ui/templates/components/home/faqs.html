@@ -1,0 +1,40 @@
+<section class="faqs u-container u-padding-md">
+    <div class="faqs__text" id="faqs">
+      {% include "components/shared/headings/tagline.html" with title="Still curious?" tagline="Here's a few of our most commonly asked questions." description="Choosing the right system for your school is a big decision. We've gathered the most common questions schools ask about Aladdin — from setup and support to key features." %}
+      <img class="faqs__arrow u-desktop-only" src="https://aladdin.ie/files/website/images/arrow-right.webp" alt="" loading="lazy" width="320" height="200">
+    </div>
+    <div class="faqs__accordion">
+      <div class="accordions" data-accordions>
+        {% include "components/shared/accordion.html" with 
+          open=True 
+          title="How do schools get started with Aladdin?" 
+          id="1" 
+          description="We offer a guided setup process and training. Most schools are fully operational within a few days, with dedicated support throughout." %}
+        {% include "components/shared/accordion.html" with 
+          open=False 
+          title="Is Aladdin compliant with Irish data protection laws?" 
+          id="2" 
+          description="The total security of your data is of the utmost importance to us and we partner with the global industry leaders to ensure this is the case. We use Google to store your school information in data centers within the EU that are independently audited and certified to international standards. Aladdin has superior data security with extended SSL encryption and this means that even if Aladdin is accessed across an unsecured wireless connection the data is fully protected. Aladdin eliminates the chance of physical loss and theft of your data and this, along with our other certified security measures, enhances your school's compliance with data protection law." %}
+        {% include "components/shared/accordion.html" with 
+          open=False 
+          title="How does the software work/is it difficult to use?" 
+          id="3" 
+          description="Aladdin is continually and automatically updated so there's no need to install, upgrade or maintain servers or software. Our future proof secure cloud based system is also accessible from any internet connection, on any device (such as laptops, PCs, smart phones, tablets etc.). With Aladdin, if your computer fails, your data is never lost as you simply sign in from another device and your data is there as normal.<br>Aladdin is also designed to be really intuitive to use. If you are able to use any basic computer program, you will have no difficulty mastering Aladdin. Our dedicated training and support team will resolve any questions you may have throughout the year and our 100% customer retention rate speaks to the quality of our customer care." %}
+        {% include "components/shared/accordion.html" with 
+          open=False 
+          title="Is it suitable for all sizes/types of primary schools?" 
+          id="4" 
+          description="The Aladdin team help school staff to guide the education of over 500,000 Irish primary school pupils. 90% of Irish primary schools, nationwide from Donegal to Cork use Aladdin daily. They range in size from 6 to 1,000+ students including Urban, Rural, DEIS, Special Schools, Model Schools and Gaelscoileanna. Aladdin is also the chosen system for Educate Together National Schools and Community National Schools." %}
+        {% include "components/shared/accordion.html" with 
+          open=False 
+          title="Who has access to what data on Aladdin?" 
+          id="5" 
+          description="Your unique username and password gives you secure access to information relevant to your role. The Principal, Deputy Principal and Secretary will have access to all student records and more advanced school wide functions. Class teachers will only see students in their own class and special education teachers will only see the students they teach. The school has complete control over each staff member's level of access with a variety of options to choose from such as non-academic access, special access to tests, special access to money, view all access... to name a few." %}
+        {% include "components/shared/accordion.html" with 
+          open=False 
+          title="What support is available for schools using Aladdin?" 
+          id="6" 
+          description="We pride ourselves on our training and ongoing support. Once your student information has been imported, we will organise personal 1:1 administrator induction training over the phone for yourself/your secretary to get started using the system. At this point we will discuss with you how best the system can be rolled out to staff in your school. Training and support is also provided online throughout the year via comprehensive manuals, FAQS, videos and live webinars for all staff. Our dedicated support team are available via telephone and email 9:30am-4pm Mon - Fri, throughout the year." %}
+      </div>
+    </div>
+</section>

@@ -4,7 +4,9 @@ A Django-based website for Aladdin Schools.
 
 ## Status
 
-Currently in development. Testing URL hosted on Railway: https://web-production-c01f0.up.railway.app/
+Currently in development (January 2026)
+ 
+Testing URL hosted on Railway: https://web-production-c01f0.up.railway.app/
 
 ## Technology Stack
 
@@ -63,28 +65,7 @@ aladdin/
 
 6. Open your browser and navigate to `http://127.0.0.1:8000/`
 
-## Features
+## Further Documentation 
 
-- Responsive navigation with mobile menu
-- Tabbed interfaces for packages and parent information
-- Accordion components for FAQs
-- Email carousel with animations
-- Dynamic active link highlighting
-- Back-to-top button with scroll detection
-- Hero section with animated shapes
-
-## Static Files
-
-Static files are organized using Django's static files system:
-- CSS files in `ui/static/ui/css/`
-- JavaScript files in `ui/static/ui/js/`
-- Images in `ui/static/ui/img/`
-
-## Development
-
-The project uses:
-- CSS Custom Properties (tokens) for consistent theming
-- ES6 JavaScript modules
-- BEM naming convention for CSS classes
-- Stylelint for CSS linting
+See /docs
 

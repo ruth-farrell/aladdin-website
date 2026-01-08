@@ -1,0 +1,36 @@
+.parents-tabs {
+  --color-accent: var(--color-connect);
+
+  .shapes__oblong {
+    bottom: 4rem;
+    top: auto;
+  }
+}
+
+.parents-tabs__wrapper {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 8rem;
+}
+
+.benefits-families, 
+.getting-started {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (width <= 1024px) {
+  .benefits-families, 
+  .getting-started {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (width <= 768px) {
+  .parents-tabs__wrapper {
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
+
