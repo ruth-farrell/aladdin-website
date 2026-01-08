@@ -18,7 +18,7 @@ Welcome to the Aladdin UI documentation. This guide will help you understand the
 - [Back-to-Top Button](./guides/back-to-top-button.md)
 - [How to Add an Icon](./guides/adding-icons.md)
 
-### Content Creation
+### Content Creation Guides
 - [Creating a New Page](./guides/creating-new-pages.md)
 - [Adding a New Product/Add-on](./guides/adding-product-addon.md)
 

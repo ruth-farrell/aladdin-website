@@ -38,10 +38,12 @@ A comprehensive checklist for SEO, performance, accessibility, and security best
 ```
 
 **Recommendation:** Create a template block for page-specific meta tags:
+{% raw %}
 ```django
 {% block metaDescription %}{% endblock %}
 {% block ogImage %}{% endblock %}
 ```
+{% endraw %}
 
 ### robots.txt
 
@@ -263,11 +265,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 **Current:** External favicon link
 
 **To Add:** Multiple sizes for different devices:
+{% raw %}
 ```html
 <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon-32x32.png' %}">
 <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon-16x16.png' %}">
 <link rel="apple-touch-icon" sizes="180x180" href="{% static 'apple-touch-icon.png' %}">
 ```
+{% endraw %}
 
 ### Preconnect/DNS Prefetch
 

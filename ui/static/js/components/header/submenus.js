@@ -18,13 +18,25 @@ export function initializeSubmenus() {
       const isHidden = !isOpen;
       menu.setAttribute('aria-hidden', isHidden);
       
-      // Make links non-focusable when menu is hidden (accessibility fix)
-      const links = menu.querySelectorAll('a');
-      links.forEach(link => {
+      // Make all focusable elements non-focusable when menu is hidden (WCAG requirement)
+      // This includes: a, button, input, select, textarea, [tabindex]
+      const focusableElements = menu.querySelectorAll('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])');
+      focusableElements.forEach(element => {
         if (isHidden) {
-          link.setAttribute('tabindex', '-1');
+          // Store original tabindex if it exists, otherwise it's naturally focusable
+          if (element.hasAttribute('tabindex')) {
+            element.setAttribute('data-original-tabindex', element.getAttribute('tabindex'));
+          }
+          element.setAttribute('tabindex', '-1');
         } else {
-          link.removeAttribute('tabindex');
+          // Restore original tabindex or remove it to restore natural focusability
+          if (element.hasAttribute('data-original-tabindex')) {
+            const originalTabindex = element.getAttribute('data-original-tabindex');
+            element.setAttribute('tabindex', originalTabindex);
+            element.removeAttribute('data-original-tabindex');
+          } else {
+            element.removeAttribute('tabindex');
+          }
         }
       });
     });

@@ -8,10 +8,10 @@ Status: In development
 
 Railway (Website testing URL): https://web-production-c01f0.up.railway.app/
 
-Homepage: https://web-production-c01f0.up.railway.app/
-Parents: https://web-production-c01f0.up.railway.app/parents
-Careers: https://web-production-c01f0.up.railway.app/careers
-Miscelaneous: https://web-production-c01f0.up.railway.app/misc
+- Homepage: https://web-production-c01f0.up.railway.app/
+- Parents: https://web-production-c01f0.up.railway.app/parents
+- Careers: https://web-production-c01f0.up.railway.app/careers
+- Misc: https://web-production-c01f0.up.railway.app/misc
 
 Github Pages **(Docs)**: https://ruth-farrell.github.io/aladdin-website/ 
 
