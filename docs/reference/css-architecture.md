@@ -110,29 +110,7 @@ All design values use custom properties:
 
 **Location:** `ui/static/css/foundations/tokens.css`
 
-### 3. Mobile-First Approach
-
-Write mobile styles first, then add breakpoints:
-
-```css
-.element {
-  /* Mobile styles (default) */
-}
-
-@media (width >= 768px) {
-  .element {
-    /* Tablet and above */
-  }
-}
-
-@media (width >= 1024px) {
-  .element {
-    /* Desktop */
-  }
-}
-```
-
-### 4. Utility Classes
+### 3. Utility Classes
 
 Common patterns use utility classes:
 
@@ -208,16 +186,7 @@ pages/
 @import 'details.css';
 ```
 
-### Import in Main Stylesheet
-
-Add to `ui/static/css/styles.css`:
-
-```css
-/* Pages */
-@import 'pages/[page]/styles.css';
-```
-
-Or link directly in page template:
+### Link directly in page template:
 
 {% raw %}
 ```django
@@ -280,7 +249,7 @@ Always use CSS custom properties from `tokens.css`:
 
 ### 2. BEM Naming
 
-Use BEM consistently:
+Use BEM consistently (excluding utility classes):
 
 ```css
 /* Good */
@@ -410,25 +379,4 @@ Or use utility:
   Centered content
 </div>
 ```
-
-## 🔍 Debugging
-
-### Check Specificity
-
-Use browser DevTools to inspect:
-1. Computed styles
-2. Active selectors
-3. Media query breakpoints
-
-### Common Issues
-
-1. **Styles not applying:** Check selector specificity
-2. **Media queries not working:** Verify breakpoint values
-3. **Tokens not working:** Ensure tokens.css is imported
-
-## 📚 See Also
-
-- [Main README](../README.md#css-tokens--variables)
-- [Media Queries](../README.md#media-queries--breakpoints)
-- [Utility Classes](../README.md#utility-classes)
 

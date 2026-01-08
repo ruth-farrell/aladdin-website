@@ -8,7 +8,12 @@ Status: In development
 
 Railway (Website testing URL): https://web-production-c01f0.up.railway.app/
 
-Github Pages (Docs): https://ruth-farrell.github.io/aladdin-website/ 
+Homepage: https://web-production-c01f0.up.railway.app/
+Parents: https://web-production-c01f0.up.railway.app/parents
+Careers: https://web-production-c01f0.up.railway.app/careers
+Miscelaneous: https://web-production-c01f0.up.railway.app/misc
+
+Github Pages **(Docs)**: https://ruth-farrell.github.io/aladdin-website/ 
 
 ## Technology Stack
 

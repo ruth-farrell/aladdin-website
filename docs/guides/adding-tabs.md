@@ -149,28 +149,6 @@ The JavaScript:
 
 See `ui/templates/components/home/packages.html` for a full example:
 
-```html
-<div class="tabs u-flex-center" data-tabs>
-  <div class="tabs__list tabs__list--packages" role="tablist">
-    <button class="tabs__tab" id="button-start" role="tab" 
-      aria-selected="true" aria-controls="start">Start</button>
-    <button class="tabs__tab" id="button-connect" role="tab" 
-      aria-selected="false" aria-controls="connect">Connect</button>
-  </div>
-  
-  <div class="tabs__panels">
-    <div class="tabs__panel" id="start" role="tabpanel" 
-      aria-labelledby="button-start" aria-hidden="false">
-      <!-- Content -->
-    </div>
-    <div class="tabs__panel" id="connect" role="tabpanel" 
-      aria-labelledby="button-connect" aria-hidden="true">
-      <!-- Content -->
-    </div>
-  </div>
-</div>
-```
-
 ## Multiple Tab Sets on Same Page
 
 You can have multiple tab sets on the same page. Each needs its own `data-tabs` container:
@@ -194,12 +172,19 @@ You can have multiple tab sets on the same page. Each needs its own `data-tabs` 
 - **URL updates:** Hash is updated on tab click (no page reload)
 - **Hash change:** Tab updates when URL hash changes
 
-## Accessibility
+## Styling
 
-- Full keyboard navigation support
-- Proper ARIA attributes
-- Screen reader friendly
-- Focus management
+The tabs component comes with **minimal built-in styling** in `css/shared/tabs.css`. This is intentional because tabs are used in different contexts with very different visual designs:
+
+- **Packages page:** Gradient backgrounds, pill-shaped buttons, positioned tabs
+- **Parents page:** Different color scheme and layout
+
+You'll need to add **custom CSS** for your specific use case. The base styles provide:
+- Basic structure and layout
+- ARIA state management
+- Accessibility features
+
+**Example:** See `css/pages/home/packages.css` and `css/pages/parents/tabs.css` for how tabs are styled differently on each page.
 
 ## See Also
 

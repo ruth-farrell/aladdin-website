@@ -14,6 +14,9 @@ Welcome to the Aladdin UI documentation. This guide will help you understand the
 - [Component Library](./component-library.md)
 - [How to Add an Accordion](./guides/adding-accordions.md)
 - [How to Add Tabs](./guides/adding-tabs.md)
+- [How to Add a Submenu](./guides/adding-submenu.md)
+- [Back-to-Top Button](./guides/back-to-top-button.md)
+- [How to Add an Icon](./guides/adding-icons.md)
 
 ### Content Creation
 - [Creating a New Page](./guides/creating-new-pages.md)
@@ -22,6 +25,7 @@ Welcome to the Aladdin UI documentation. This guide will help you understand the
 ### Reference
 - [JavaScript Structure](./reference/javascript.md)
 - [CSS Architecture](./reference/css-architecture.md)
+- [Best Practices Checklist](./best-practices-checklist.md)
 
 ---
 
@@ -62,9 +66,7 @@ aladdin/
 
 ## CSS Tokens & Variables
 
-All design tokens are defined in `ui/static/css/foundations/tokens.css`.
-
-### Using Tokens
+All design tokens are defined in `ui/static/css/foundations/tokens.css`. Use CSS custom properties for consistent styling:
 
 ```css
 .my-component {
@@ -74,7 +76,8 @@ All design tokens are defined in `ui/static/css/foundations/tokens.css`.
 }
 ```
 
-**Full list:** See `ui/static/css/foundations/tokens.css`
+**Full list:** See `ui/static/css/foundations/tokens.css`  
+**For more details:** See [CSS Architecture](./reference/css-architecture.md#-css-custom-properties-tokens)
 
 ---
 
@@ -93,33 +96,9 @@ Breakpoints are documented in `ui/static/css/foundations/tokens.css`.
 | `desktop-up` | `width >= 1024px` | Desktop and above |
 | `ultra-wide-up` | `width >= 1750px` | Large screens |
 
-### Special Breakpoints
-
-- `768px <= width <= 1302px` - Hero title specific range
-
-### Media Query Syntax
-
-```css
-/* Mobile first (recommended) */
-.my-element {
-  /* Mobile styles */
-}
-
-@media (width >= 768px) {
-  .my-element {
-    /* Tablet and above */
-  }
-}
-
-/* Desktop specific */
-@media (width >= 1024px) {
-  .my-element {
-    /* Desktop only */
-  }
-}
-```
-
 **Note:** CSS custom properties cannot be used in media query conditions. Use the literal values shown above.
+
+**For detailed media query syntax and examples:** See [CSS Architecture](./reference/css-architecture.md#-media-query-syntax)
 
 ---
 

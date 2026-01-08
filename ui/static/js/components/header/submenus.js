@@ -15,7 +15,18 @@ export function initializeSubmenus() {
   function updateSubmenus() {
     menus.forEach(menu => {
       const isOpen = submenuOpenId === menu.id;
-      menu.setAttribute('aria-hidden', !isOpen);
+      const isHidden = !isOpen;
+      menu.setAttribute('aria-hidden', isHidden);
+      
+      // Make links non-focusable when menu is hidden (accessibility fix)
+      const links = menu.querySelectorAll('a');
+      links.forEach(link => {
+        if (isHidden) {
+          link.setAttribute('tabindex', '-1');
+        } else {
+          link.removeAttribute('tabindex');
+        }
+      });
     });
 
     buttons.forEach(button => {

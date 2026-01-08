@@ -267,6 +267,7 @@ Collapsible content sections. See [Adding Accordions Guide](./guides/adding-acco
 
 ### Basic Usage
 
+{% raw %}
 ```django
 <div data-accordions>
   {% include "components/shared/accordion.html" with 
@@ -276,10 +277,13 @@ Collapsible content sections. See [Adding Accordions Guide](./guides/adding-acco
     open=False %}
 </div>
 ```
+{% endraw %}
 
 **Location:** `components/shared/accordion.html`  
 **CSS:** `css/shared/accordion.css`  
 **JS:** `js/components/accordions.js`
+
+**Note:** Accordions come with comprehensive built-in styling and will look consistent across all pages.
 
 ---
 
@@ -303,6 +307,8 @@ Tabbed interface for switching between content panels. See [Adding Tabs Guide](.
 **Location:** See [Adding Tabs Guide](./guides/adding-tabs.md)  
 **CSS:** `css/shared/tabs.css`  
 **JS:** `js/components/tabs.js`
+
+**Note:** Tabs come with minimal built-in styling. You'll need to add custom CSS for your specific design. See the Packages and Parents pages for examples of different tab styles.
 
 ---
 

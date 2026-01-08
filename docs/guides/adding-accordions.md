@@ -83,12 +83,20 @@ For a working example see the FAQs on the homepage.
 2. **JavaScript:** The `initializeAccordions()` function finds all `[data-accordions]` containers
 3. **Styling:** CSS in `ui/static/css/shared/accordion.css` handles the animations
 
-## Accessibility
+## Styling
 
-- Uses proper ARIA attributes (`aria-expanded`, `aria-hidden`, `role="region"`)
-- Keyboard navigation supported
-- Screen reader friendly
-- Focus management handled automatically
+The accordion component comes with **comprehensive built-in styling** in `css/shared/accordion.css`. This includes:
+- Button styles and hover states
+- Panel animations (slide open/close)
+- Chevron icon rotation
+- Spacing and typography
+- Responsive behavior
+
+You typically won't need to add custom CSS unless you want to override specific styles. The accordion will look consistent across all pages.
+
+### How the Open/Close Animation Works
+
+The accordion uses a **CSS Grid-based animation technique** for smooth open/close transitions. The panel uses `display: grid` with `grid-template-rows: 1fr` when open and `0fr` when closed. CSS transitions animate between these states, and `overflow: hidden` ensures clean clipping. This approach works with any content height without needing to calculate dimensions.
 
 ## See Also
 
