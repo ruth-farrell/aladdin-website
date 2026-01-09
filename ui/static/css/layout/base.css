@@ -10,6 +10,29 @@ html {
   }
 }
 
+/* Large screens: IDs inside padded sections need scroll-margin-top to account for section padding */
+/* scroll-padding-top already handles header + 3rem, so we only need the extra padding beyond that */
+/* Mobile sections all use 3rem padding (which matches scroll-padding), so this isn't needed there */
+
+@media (width >= 768px) {
+  /* Set scroll-margin based on padding class minus what scroll-padding-top already handles (3rem) */
+  .u-padding-xxl [id] {
+    scroll-margin-top: 9rem; /* 12rem - 3rem */
+  }
+
+  .u-padding-xl [id] {
+    scroll-margin-top: 5rem; /* 8rem - 3rem */
+  }
+
+  .u-padding-lg [id] {
+    scroll-margin-top: 3rem; /* 6rem - 3rem */
+  }
+
+  .u-padding-md [id] {
+    scroll-margin-top: 1rem; /* 4rem - 3rem */
+  }
+}
+
 html, body {
   overflow-x: hidden;
   width: 100%;

@@ -70,7 +70,9 @@ export function initializeSubmenus() {
     const link = event.target.closest('.header__submenu a');
     if (!link) return;
 
-    if (link.getAttribute('href')?.startsWith('#')) {
+    const href = link.getAttribute('href');
+    // Close submenu if link contains a hash (e.g., #about or /#about)
+    if (href && href.includes('#')) {
       submenuOpenId = null;
       updateSubmenus();
     }

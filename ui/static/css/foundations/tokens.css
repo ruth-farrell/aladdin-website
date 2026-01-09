@@ -23,10 +23,12 @@
   --spacing-border-thick: 4px;
 
   /* Border Radius */
+
+  --border-radius-medium: 10px;
+  --border-radius-large: 15px;
+  --border-radius-circle: 50%;
   --border-radius-card: 3.75px;
   --border-radius-pill: 50px;
-  --border-radius-medium: 10px;
-  --border-radius-circle: 50%;
   --border-radius-button: 25px;
 
   /* Transition Durations */

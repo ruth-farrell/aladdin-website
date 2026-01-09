@@ -1,0 +1,38 @@
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.image-gallery__item {
+  border-radius: var(--border-radius-large);
+  aspect-ratio: 185 / 209;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.image-gallery__item--wide {
+  grid-column: span 2;
+  aspect-ratio: 315 / 209;
+}
+
+.image-gallery__item--full {
+  grid-column: span 3;
+  aspect-ratio: 520 / 209;
+}
+
+@media (width < 768px) {
+  .image-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .image-gallery__item--wide,
+  .image-gallery__item--full {
+    grid-column: span 1;
+  }
+}
+

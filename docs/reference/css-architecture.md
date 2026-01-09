@@ -32,6 +32,13 @@ ui/static/css/
     └── headings/           # Heading components
 ```
 
+### Key Files
+
+- **`ui/templates/base.html`** - Base template extended by all pages
+- **`ui/static/css/styles.css`** - Main stylesheet (imports all CSS)
+- **`ui/static/js/script.js`** - Main JavaScript entry point
+- **`ui/static/css/foundations/tokens.css`** - CSS custom properties (tokens)
+
 ## 🎯 CSS Import Order
 
 **File:** `ui/static/css/styles.css`
@@ -98,7 +105,7 @@ Block Element Modifier (BEM) naming:
 
 ### 2. CSS Custom Properties (Tokens)
 
-All design values use custom properties:
+All design tokens are defined in `ui/static/css/foundations/tokens.css`. Use CSS custom properties for consistent styling:
 
 ```css
 .my-component {
@@ -108,20 +115,76 @@ All design values use custom properties:
 }
 ```
 
-**Location:** `ui/static/css/foundations/tokens.css`
+**Location:** `ui/static/css/foundations/tokens.css`  
+**Full list:** See `ui/static/css/foundations/tokens.css`
 
 ### 3. Utility Classes
 
-Common patterns use utility classes:
+Utility classes are defined in `ui/static/css/layout/utilities.css` for common patterns.
 
-```css
-.u-container      /* Centered container */
-.u-padding-xl     /* Large vertical padding */
-.u-background-white /* White background */
-.u-flex-center    /* Centered flex */
+#### Container & Spacing
+
+```html
+<!-- Centered container with max-width -->
+<div class="u-container">Content</div>
+
+<!-- Padding utilities -->
+<section class="u-padding-md">  <!-- 4rem vertical padding -->
+<section class="u-padding-xl">  <!-- 8rem vertical padding -->
+<section class="u-padding-xxl"> <!-- 12rem vertical padding -->
 ```
 
-**Location:** `ui/static/css/layout/utilities.css`
+#### Background
+
+```html
+<!-- White background section -->
+<section class="u-background-white">Content</section>
+```
+
+#### Flexbox
+
+```html
+<!-- Centered flex container -->
+<div class="u-flex-center">Content</div>
+
+<!-- Space between items -->
+<div class="u-flex-between">Items</div>
+```
+
+#### Typography
+
+```html
+<p class="u-font-weight-medium">Medium weight text</p>
+```
+
+#### Responsive Visibility
+
+```html
+<!-- Show only on mobile/tablet -->
+<div class="u-mobile-tablet-only">Visible < 1024px</div>
+
+<!-- Show only on desktop -->
+<div class="u-desktop-only">Visible >= 1024px</div>
+
+<!-- Show only on mobile -->
+<div class="u-mobile-only">Visible < 768px</div>
+
+<!-- Hide on mobile -->
+<div class="u-tablet-desktop-only">Visible >= 768px</div>
+```
+
+#### Mobile Padding Reduction
+
+When two adjacent sections share the same padding class and background, the top padding is automatically removed on mobile:
+
+```html
+<!-- Second section's padding-top is removed on mobile -->
+<section class="u-background-white u-padding-xl">Section 1</section>
+<section class="u-background-white u-padding-xl">Section 2</section>
+```
+
+**Location:** `ui/static/css/layout/utilities.css`  
+**Full list:** See `ui/static/css/layout/utilities.css`
 
 ## 📐 CSS Organization
 
@@ -214,18 +277,20 @@ pages/
 @media (768px <= width <= 1024px) { }
 ```
 
-### Available Breakpoints
+### Standard Breakpoints
 
-See `ui/static/css/foundations/tokens.css` for full list:
+Breakpoints are documented in `ui/static/css/foundations/tokens.css`:
 
-- `width < 375px` - Small mobile
-- `width < 768px` - Mobile
-- `width >= 768px` - Tablet up
-- `width < 1024px` - Mobile/tablet
-- `width >= 1024px` - Desktop up
-- `width >= 1750px` - Ultra-wide
+| Breakpoint | Value | Usage |
+|------------|-------|-------|
+| `small-mobile-only` | `width < 375px` | Very small devices |
+| `mobile-only` | `width < 768px` | Mobile devices |
+| `tablet-up` | `width >= 768px` | Tablets and above |
+| `mobile-tablet-only` | `width < 1024px` | Mobile and tablets |
+| `desktop-up` | `width >= 1024px` | Desktop and above |
+| `ultra-wide-up` | `width >= 1750px` | Large screens |
 
-**Note:** CSS custom properties cannot be used in media queries. Use literal values.
+**Note:** CSS custom properties cannot be used in media query conditions. Use the literal values shown above.
 
 ## 🔧 CSS Best Practices
 

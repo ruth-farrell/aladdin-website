@@ -25,41 +25,55 @@ export function initializeBackToTop() {
     }
   }
 
+  // If no back-to-content element exists, always show up button
   if (!backToContentElement) {
     switchToUpMode();
     return;
   }
 
-  // Check which elements are in viewport and update button accordingly
   function updateButtonState() {
-    const backToTopRect = backToTopElement.getBoundingClientRect();
-    const backToContentRect = backToContentElement.getBoundingClientRect();
+    const hash = window.location.hash;
     
-    const isBackToTopInViewport = backToTopRect.top >= 0 && backToTopRect.top <= window.innerHeight;
-    const isBackToContentInViewport = backToContentRect.top >= 0 && backToContentRect.top <= window.innerHeight;
-    
-    // If both are in viewport, back-to-top takes precedence (show down)
-    if (isBackToTopInViewport) {
-      switchToDownMode();
-    } else if (isBackToContentInViewport) {
+    // Rule 1: If navigating to any hash URL (except #back-to-top), always point up
+    if (hash && hash !== '#back-to-top') {
       switchToUpMode();
+      return;
     }
-    // If neither is in viewport, don't change the current state
+
+    // Rule 2: Check scroll position to determine button state
+    const scrollY = window.scrollY || window.pageYOffset;
+    const backToContentRect = backToContentElement.getBoundingClientRect();
+    const backToContentTop = backToContentRect.top + scrollY;
+    
+    // If we're scrolled past the back-to-content element, show up button
+    // Otherwise (at or before back-to-content), show down button
+    if (scrollY >= backToContentTop - 200) {
+      switchToUpMode();
+    } else {
+      switchToDownMode();
+    }
   }
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        updateButtonState();
-      }
-    });
+  // Update state on scroll (using IntersectionObserver for efficiency)
+  const observer = new IntersectionObserver(() => {
+    updateButtonState();
   }, {
-    threshold: 0.1
+    threshold: 0,
+    rootMargin: '-200px 0px'
   });
 
-  observer.observe(backToTopElement);
   observer.observe(backToContentElement);
 
-  updateButtonState();
+  // Update state when hash changes
+  window.addEventListener('hashchange', () => {
+    updateButtonState();
+  });
+
+  // Initial state - delay if hash present to allow scroll to complete
+  if (window.location.hash) {
+    setTimeout(updateButtonState, 300);
+  } else {
+    updateButtonState();
+  }
 }
 

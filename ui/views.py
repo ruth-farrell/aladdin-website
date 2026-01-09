@@ -11,3 +11,9 @@ def parents(request):
 
 def misc(request):
     return render(request, "misc.html")
+
+def home_testing(request):
+    return render(request, "home-testing.html")
+
+def set_up(request):
+    return render(request, "set-up.html")

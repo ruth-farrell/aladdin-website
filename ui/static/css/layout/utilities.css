@@ -12,6 +12,10 @@
   }
 }
 
+.u-padding-lg {
+  padding-block: 6rem;
+}
+
 .u-padding-xl {
   padding-block: 8rem;
 }
@@ -26,15 +30,15 @@
 
 /* Remove top padding when same padding class follows another with same background (mobile only) */
 @media (width < 768px) {
-  /* Both have u-background-white */
   .u-background-white.u-padding-md + .u-background-white.u-padding-md,
+  .u-background-white.u-padding-lg + .u-background-white.u-padding-lg,
   .u-background-white.u-padding-xl + .u-background-white.u-padding-xl,
   .u-background-white.u-padding-xxl + .u-background-white.u-padding-xxl {
     padding-top: 0;
   }
   
-  /* Both don't have u-background-white */
   section:not(.u-background-white).u-padding-md + section:not(.u-background-white).u-padding-md,
+  section:not(.u-background-white).u-padding-lg + section:not(.u-background-white).u-padding-lg,
   section:not(.u-background-white).u-padding-xl + section:not(.u-background-white).u-padding-xl,
   section:not(.u-background-white).u-padding-xxl + section:not(.u-background-white).u-padding-xxl {
     padding-top: 0;

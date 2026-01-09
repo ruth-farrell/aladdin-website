@@ -91,6 +91,56 @@
     </defs>
   </symbol>
 
+  <svg id="star-stroke-yellow-red" width="258" height="518" viewBox="0 0 258 518">
+    <rect x="154.303" y="-16.8116" width="126.71" height="539.277" rx="63.3549" transform="rotate(18.5 154.303 -16.8116)" fill="url(#paint0_linear_682_95)"/>
+    <defs>
+    <linearGradient id="paint0_linear_682_95" x1="217.658" y1="-16.8116" x2="217.658" y2="522.465" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#FDBD2C"/>
+    <stop offset="1" stop-color="#ED2124"/>
+    </linearGradient>
+    </defs>
+  </svg>
+
+  <symbol id="star-stroke-pink-red" width="465" height="364" viewBox="0 0 465 364">
+    <rect x="416.874" y="-24.8759" width="126.71" height="539.277" rx="63.3549" transform="rotate(55 416.874 -24.8759)" fill="url(#paint0_linear_682_89)"/>
+    <defs>
+    <linearGradient id="paint0_linear_682_89" x1="480.229" y1="-24.8759" x2="480.229" y2="514.401" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#ED2B94"/>
+    <stop offset="1" stop-color="#ED1C24"/>
+    </linearGradient>
+    </defs>
+  </symbol>
+
+  <symbol id="star-stroke-pink-blue" width="540" height="127" viewBox="0 0 540 127" fill="none">
+    <rect x="540" width="127" height="540" rx="63.5" transform="rotate(90 540 0)" fill="url(#paint0_linear_682_87)"/>
+    <defs>
+    <linearGradient id="paint0_linear_682_87" x1="603.5" y1="0" x2="603.5" y2="540" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#ED2B94"/>
+    <stop offset="1" stop-color="#00A1E4"/>
+    </linearGradient>
+    </defs>
+  </symbol>
+
+  <symbol id="star-stroke-green-blue" width="465" height="364" viewBox="0 0 465 364" fill="none">
+    <rect x="-24.8757" y="78.9188" width="126.71" height="539.277" rx="63.3549" transform="rotate(-55 -24.8757 78.9188)" fill="url(#paint0_linear_682_85)"/>
+    <defs>
+    <linearGradient id="paint0_linear_682_85" x1="38.4792" y1="78.9188" x2="38.4792" y2="618.196" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#00A1E4"/>
+    <stop offset="1" stop-color="#00AD8E"/>
+    </linearGradient>
+    </defs>
+  </symbol>
+
+  <symbol id="star-stroke-yellow-green" width="258" height="518" viewBox="0 0 258 518" fill="none">
+    <rect x="-16.8118" y="23.3939" width="126.71" height="539.277" rx="63.3549" transform="rotate(-18.5 -16.8118 23.3939)" fill="url(#paint0_linear_682_91)"/>
+    <defs>
+    <linearGradient id="paint0_linear_682_91" x1="46.5431" y1="23.3939" x2="46.5431" y2="562.671" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#FDBD2C"/>
+    <stop offset="1" stop-color="#00AD8E"/>
+    </linearGradient>
+    </defs>
+  </symbol>
+
 
   <!--Stars-->
   <symbol id="star-blue-green" viewBox="0 0 96 93">
@@ -201,4 +251,7 @@
   <symbol id="envelope-open-text" viewBox="0 0 512 512"><!--!Font Awesome Pro v6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d="M392 32L120 32c-13.3 0-24 10.7-24 24l0 166.5L77.5 207.2c-4.2-3.4-8.7-6.3-13.5-8.6L64 56C64 25.1 89.1 0 120 0L392 0c30.9 0 56 25.1 56 56l0 142.6c-4.8 2.3-9.3 5.2-13.4 8.6L416 222.5 416 56c0-13.3-10.7-24-24-24zM35 256c-1.6 0-3 1.3-3 3l0 189c0 17.7 14.3 32 32 32l384 0c17.7 0 32-14.3 32-32l0-189c0-1.6-1.3-3-3-3c-.7 0-1.3 .2-1.9 .7L294.5 405.1C283.7 414 270 418.9 256 418.9s-27.7-4.9-38.5-13.8L36.8 256.7c-.5-.4-1.2-.7-1.9-.7zM0 259c0-19.3 15.6-35 35-35c8.1 0 15.9 2.8 22.2 7.9L237.8 380.3c5.1 4.2 11.6 6.5 18.2 6.5s13.1-2.3 18.2-6.5L454.9 231.9c6.3-5.1 14.1-7.9 22.2-7.9c19.3 0 35 15.6 35 35l0 189c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 259zM176 128l160 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-160 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 96l160 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-160 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></symbol>
   <symbol id="globe-pointer" viewBox="0 0 576 512"><!--!Font Awesome Pro v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d="M320 480c15.5 0 39.4-15 61.5-59.9 19-38.6 32.1-91.3 34.2-148.1l-95.7 0 0-32 95.7 0C413.6 183.2 400.5 130.5 381.5 91.9 359.4 47 335.5 32 320 32s-39.4 15-61.5 59.9c-18.6 37.7-31.5 88.8-34 144l-122.6 36.1-5.3 0 .1 1.5-31.3 9.2C64.5 273.9 64 265 64 256 64 114.6 178.6 0 320 0S576 114.6 576 256 461.4 512 320 512c-22.8 0-45-3-66-8.6l17.7-60.2c18 27.1 35.9 36.7 48.3 36.7zM200.6 344.8l-.3-1.6 .9-.3-.6 1.9zM389.2 469.1c85-27.6 147.7-104.6 154.2-197.1l-95.7 0c-2.7 79.3-25.5 152.9-58.5 197.1zM447.7 240l95.7 0c-6.5-92.5-69.2-169.5-154.2-197.1 33 44.2 55.8 117.8 58.5 197.1zM250.8 42.9C165.8 70.5 103.1 147.5 96.6 240l95.7 0c2.7-79.3 25.5-152.9 58.5-197.1zM87.1 359.8L137.5 385c9.3 4.6 16.8 12.2 21.5 21.5l25.2 50.5 40.5-137.7-137.7 40.5zm156.8-79.5c12.1-3.6 23.4 7.7 19.9 19.9L203.5 505c-4.1 13.9-23.2 15.6-29.7 2.6l-38.3-76.5-92.2 92.2c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l92.2-92.2-76.5-38.3c-13-6.5-11.3-25.6 2.6-29.7l204.8-60.2z"/></symbol>
   <symbol id="mobile-screen" viewBox="0 0 384 512"><!--!Font Awesome Pro v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d="M48 448c0 17.7 14.3 32 32 32l224 0c17.7 0 32-14.3 32-32l0-96-288 0 0 96zm0-128l288 0 0-256c0-17.7-14.3-32-32-32L80 32C62.3 32 48 46.3 48 64l0 256zM16 64C16 28.7 44.7 0 80 0L304 0c35.3 0 64 28.7 64 64l0 384c0 35.3-28.7 64-64 64L80 512c-35.3 0-64-28.7-64-64L16 64zM160 400l64 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-64 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></symbol>
+
+  <!-- Setup Icons -->
+  <symbol id="rocket-launch" viewBox="0 0 512 512"><!--!Font Awesome Pro v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2026 Fonticons, Inc.--><path d="M504.1 20.9c-1.3-6.3-6.2-11.3-12.6-12.6-44.3-8.9-111.2-14.2-175.5 19-37.4 19.3-72.8 51.1-102.1 100.7l-90.4 0c-16.9 0-32.5 8.8-41.2 23.3L29.5 239.5C16.7 260.9 32 288 56.9 288l103.5 0c35.3 0 64 28.7 64 64l0 103.5c0 24.9 27.1 40.2 48.5 27.4L361.1 430c14.5-8.7 23.3-24.3 23.3-41.2l0-90.4c49.6-29.3 81.4-64.7 100.7-102.1 33.2-64.3 27.8-131.2 19-175.5zM352.4 315.3l0 73.5c0 5.6-2.9 10.8-7.8 13.7l-88.2 52.9 0-103.5c0-1.1 0-2.3-.1-3.4 36.8-9.2 68.6-20.5 96.1-33.3zm-102.5 1.9c-9.7-25.1-29.7-45-54.8-54.8 30.6-121.4 83.2-179.7 135.6-206.8 50.4-26 103.6-24.7 143.9-18 6.8 40.3 8 93.5-18 143.9-27.1 52.4-85.4 105-206.8 135.6zm-86.1-61.2c-1.1 0-2.2-.1-3.4-.1l-103.5 0 52.9-88.2c2.9-4.8 8.1-7.8 13.7-7.8l73.5 0c-12.9 27.4-24.1 59.3-33.3 96.1zM368.4 168a24 24 0 1 1 0-48 24 24 0 1 1 0 48zm-56-24a56 56 0 1 0 112 0 56 56 0 1 0 -112 0zM130.2 450.9c-9.5 9.5-25.8 17.1-46.8 22.1-17.5 4.2-35.7 6-50.6 6.6 .7-14.9 2.5-33.1 6.6-50.6 5-21 12.5-37.3 22.1-46.8 19-19 49.7-19 68.7 0s19 49.7 0 68.7zm22.6 22.6c31.5-31.5 31.5-82.5 0-114s-82.5-31.5-114 0c-31.3 31.3-37.5 92-38.3 126.4-.4 14.6 11.2 26.2 25.9 25.9 34.5-.8 95.1-7 126.4-38.3z"/></symbol>
 </svg>

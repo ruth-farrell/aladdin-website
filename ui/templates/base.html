@@ -21,13 +21,14 @@
     {% block content %}{% endblock %}
   </main>
 
-  <a class="back-to-top u-flex-center" href="#back-to-top">  
+  <a class="back-to-top back-to-top--up u-flex-center" href="#back-to-top">  
     <svg class="icon icon--medium" aria-hidden="true"><use href="#chevron-down-solid"></use></svg>
     <span class="visually-hidden">Go back to top</span>
   </a>
 
   {% include "components/base/footer.html" %}
   <script type="module" src="{% static 'js/script.js' %}"></script>
+  {% block scripts %}{% endblock %}
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",

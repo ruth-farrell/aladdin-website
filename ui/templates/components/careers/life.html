@@ -1,4 +1,4 @@
-<section class="life u-background-white u-padding-md">
+<section class="life u-background-white u-padding-xl">
   <div class="life__shapes life__shapes--left" aria-hidden="true">
     {% include "components/shared/shapes/pink-blue-shapes.html" %}
   </div>
@@ -21,7 +21,14 @@
         </ul>
     </div>
     <div class="life__media">
-      <img src="" width="520" height="890" loading="lazy" alt="Images of the Aladdin team working together"/>
+      {% include "components/shared/image-gallery.html" with 
+        image1Url="https://aladdin.ie/files/website/images/careers-7.webp" 
+        image2Url="https://aladdin.ie/files/website/images/careers-3.webp" 
+        image3Url="https://aladdin.ie/files/website/images/careers-2.webp" 
+        image4Url="https://aladdin.ie/files/website/images/careers-1.webp" 
+        image5Url="https://aladdin.ie/files/website/images/careers-5.webp" 
+        image6Url="https://aladdin.ie/files/website/images/careers-4.webp" 
+        image7Url="https://aladdin.ie/files/website/images/careers-6.webp" %}
     </div>
   </div>
 </section>

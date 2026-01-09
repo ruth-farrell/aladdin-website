@@ -4,6 +4,7 @@
 @import 'foundations/colors.css';
 @import 'foundations/typography.css';
 @import 'foundations/buttons.css';
+@import 'foundations/forms.css';
 @import 'foundations/tokens.css';
 @import 'foundations/icons.css';
 
@@ -16,6 +17,7 @@
 @import 'shared/tabs.css';
 @import 'shared/card.css';
 @import 'shared/shapes.css';
+@import 'shared/image-gallery.css';
 
 /* Shared Hero */
 @import 'shared/hero/hero.css';

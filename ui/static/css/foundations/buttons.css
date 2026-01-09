@@ -151,6 +151,11 @@
   background: var(--color-connect-gradient-two-tone);
 }
 
+.cta--start,
+.cta--start .cta__inner {
+  background: var(--color-start-gradient-two-tone);
+}
+
 /* Regular variant hover states */
 
 .cta--epayments:hover .cta__inner {
@@ -167,4 +172,8 @@
 
 .cta--connect:hover .cta__inner {
   color: var(--color-connect);
+}
+
+.cta--start:hover .cta__inner {
+  color: var(--color-start);
 }

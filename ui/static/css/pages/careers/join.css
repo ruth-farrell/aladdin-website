@@ -6,6 +6,8 @@
 
 .join__top-wrapper {
   display: flex;
+  gap: 3rem;
+  align-items: center;
 }
 
 .join__text,
