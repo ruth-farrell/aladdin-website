@@ -45,8 +45,12 @@
   }
 }
 
+.tabs__tab {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 .tabs__tab[aria-selected="true"] {
-  transition: background-color 0.5s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .tabs__tab[aria-selected="false"]:hover {

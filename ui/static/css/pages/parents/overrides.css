@@ -31,6 +31,15 @@
   border-radius: var(--border-radius-card);
 }
 
+.tabs__tab-icon {
+  display: flex;
+  align-items: center;
+}
+
+.tabs__tab-icon .icon {
+  transition: fill 0.3s ease;
+}
+
 .tabs__tab[aria-selected="true"] {
   background-color: var(--color-connect);
   color: var(--color-font-secondary);
@@ -38,10 +47,5 @@
   .tabs__tab-icon .icon {
     fill: var(--color-font-secondary);
   }
-}
-
-.tabs__tab-icon {
-  display: flex;
-  align-items: center;
 }
 

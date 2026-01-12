@@ -32,6 +32,12 @@
   flex-direction: column;
 }
 
+.footer__address-contact a {
+  text-decoration: none;
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-regular);
+}
+
 .footer__nav {
   display: flex;
   justify-content: space-around;

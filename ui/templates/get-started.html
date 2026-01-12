@@ -8,7 +8,13 @@
 
 {% block content %}
   {% include "components/shared/hero.html" with theme="green-blue" title="Get Started" %}
-  <section class="u-background-white u-padding-lg">
+  <section class="u-background-white u-padding-xl">
+    <div class="shapes__container--left" aria-hidden="true">
+      {% include "components/shared/shapes/pink-blue-shapes.html" %}
+    </div>
+    <div class="shapes__container--right" aria-hidden="true">
+      {% include "components/shared/shapes/pink-blue-shapes.html" %}
+    </div>
     <div class="u-container">
       {% include "components/shared/headings/underlined.html" with 
         icon="rocket-launch"
