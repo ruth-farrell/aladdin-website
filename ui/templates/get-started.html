@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Get Started | Aladdin Schools{% endblock %}
+{% block metaDescription %}Start your journey with Aladdin Schools by entering your setup code.{% endblock %}
+{% block pageStyles %}
+  {# If extra styles needed, include in a stylesheet linked here #}
+{% endblock %}
+
+{% block content %}
+  {% include "components/shared/hero.html" with theme="green-blue" title="Get Started" %}
+  <section class="u-background-white u-padding-lg">
+    <div class="u-container">
+      {% include "components/shared/headings/underlined.html" with 
+        icon="rocket-launch"
+        title="Have a setup code?" align="center" %}
+      <form action="/signup" method="get" class="form">
+        <label for="id_access_code">
+          Enter it here and click go:
+        </label>
+        <div class="form__input-group">
+          <input type="text" id="id_access_code" size="10" name="code" aria-required="true">
+          <button class="cta cta--start" type="submit" id="btnSubmit">
+            <span class="cta__inner">Go</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+{% endblock %}
+

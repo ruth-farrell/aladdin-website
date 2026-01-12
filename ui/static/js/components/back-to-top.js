@@ -1,9 +1,11 @@
 export function initializeBackToTop() {
   const backToTopButton = document.querySelector('.back-to-top');
   const backToTopElement = document.getElementById('back-to-top');
-  const backToContentElement = document.getElementById('back-to-content');
 
   if (!backToTopButton || !backToTopElement) return;
+
+  // Store initial viewport height (measured when page loads)
+  let initialViewportHeight = window.innerHeight;
 
   function switchToUpMode() {
     backToTopButton.setAttribute('href', '#back-to-top');
@@ -16,7 +18,8 @@ export function initializeBackToTop() {
   }
 
   function switchToDownMode() {
-    backToTopButton.setAttribute('href', '#back-to-content');
+    // Link to just below the initial viewport (use smooth scroll via JS)
+    backToTopButton.setAttribute('href', '#');
     backToTopButton.classList.remove('back-to-top--up');
     
     const text = backToTopButton.querySelector('.visually-hidden');
@@ -25,55 +28,65 @@ export function initializeBackToTop() {
     }
   }
 
-  // If no back-to-content element exists, always show up button
-  if (!backToContentElement) {
-    switchToUpMode();
-    return;
-  }
-
   function updateButtonState() {
-    const hash = window.location.hash;
-    
-    // Rule 1: If navigating to any hash URL (except #back-to-top), always point up
-    if (hash && hash !== '#back-to-top') {
-      switchToUpMode();
-      return;
-    }
-
-    // Rule 2: Check scroll position to determine button state
     const scrollY = window.scrollY || window.pageYOffset;
-    const backToContentRect = backToContentElement.getBoundingClientRect();
-    const backToContentTop = backToContentRect.top + scrollY;
     
-    // If we're scrolled past the back-to-content element, show up button
-    // Otherwise (at or before back-to-content), show down button
-    if (scrollY >= backToContentTop - 200) {
+    // If scrolled out of initial viewport, show "up" button
+    // Otherwise (within initial viewport), show "down" button
+    if (scrollY > 0) {
       switchToUpMode();
     } else {
       switchToDownMode();
     }
   }
 
-  // Update state on scroll (using IntersectionObserver for efficiency)
-  const observer = new IntersectionObserver(() => {
+  // Handle click for "down" button - scroll to just below viewport
+  function handleClick(event) {
+    if (!backToTopButton.classList.contains('back-to-top--up')) {
+      // It's in "down" mode, scroll to just below initial viewport
+      event.preventDefault();
+      window.scrollTo({
+        top: initialViewportHeight + 1,
+        behavior: 'smooth'
+      });
+    }
+    // If it's in "up" mode, let the default anchor link behavior handle it
+  }
+
+  // Initialize after page is fully loaded to get accurate viewport height
+  function initialize() {
+    // Re-measure viewport in case it changed (e.g., address bar on mobile)
+    initialViewportHeight = window.innerHeight;
+
+    // Handle initial scroll position
     updateButtonState();
-  }, {
-    threshold: 0,
-    rootMargin: '-200px 0px'
-  });
 
-  observer.observe(backToContentElement);
+    // Update on scroll (throttled with requestAnimationFrame)
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          updateButtonState();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
 
-  // Update state when hash changes
-  window.addEventListener('hashchange', () => {
-    updateButtonState();
-  });
+    // Handle resize (viewport height might change on mobile when address bar hides/shows)
+    window.addEventListener('resize', () => {
+      initialViewportHeight = window.innerHeight;
+      updateButtonState();
+    });
 
-  // Initial state - delay if hash present to allow scroll to complete
-  if (window.location.hash) {
-    setTimeout(updateButtonState, 300);
+    // Handle click for custom scroll target
+    backToTopButton.addEventListener('click', handleClick);
+  }
+
+  // Wait for page to fully load
+  if (document.readyState === 'complete') {
+    initialize();
   } else {
-    updateButtonState();
+    window.addEventListener('load', initialize);
   }
 }
-

@@ -1,12 +1,13 @@
 /* Hero Star Shape */
 .hero__star {
   position: absolute;
-  inset: 0;
-  margin: 0 auto;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   transform-origin: center center;
-  top: -64px;
+  transform: translateY(-64px);
   animation: star-bounce-in 1.5s ease-out forwards, star-scale-to-full 0.5s ease-out forwards;
   animation-delay: 0s, 2s;
   opacity: 0;
@@ -15,13 +16,13 @@
 /* Scale down star on smaller screens */
 @media (width < 768px) {
   .hero__star {
-    transform: scale(0.6);
+    transform: translateY(-64px) scale(0.6);
   }
 }
 
 @media (width < 480px) {
   .hero__star {
-    transform: scale(0.4);
+    transform: translateY(-64px) scale(0.4);
   }
 }
 
@@ -130,25 +131,23 @@
 @keyframes star-bounce-in {
   0% {
     opacity: 0;
-    transform: scale(0.05);
+    transform: translateY(-64px) scale(0.05);
   }
 
   100% {
     opacity: 1;
-    transform: scale(0.5);
+    transform: translateY(-64px) scale(0.5);
   }
 }
 
 /* Scale star back to full size when oblongs start moving */
 @keyframes star-scale-to-full {
   from {
-    transform: scale(0.5);
-    top: -64px;
+    transform: translateY(-64px) scale(0.5);
   }
 
   to {
-    transform: scale(1);
-    top: 0;
+    transform: translateY(0) scale(1);
   }
 }
 

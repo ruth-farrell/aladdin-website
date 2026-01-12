@@ -23,19 +23,7 @@ A comprehensive checklist for SEO, performance, accessibility, and security best
 <!-- Meta Description (unique per page) -->
 <meta name="description" content="Brief description of the page (150-160 characters)">
 
-<!-- Open Graph (Facebook, LinkedIn) -->
-<meta property="og:title" content="Page Title">
-<meta property="og:description" content="Page description">
-<meta property="og:image" content="https://aladdin.ie/files/website/images/og-image.webp">
-<meta property="og:url" content="https://www.aladdin.ie{{ request.path }}">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Aladdin Schools">
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Page Title">
-<meta name="twitter:description" content="Page description">
-<meta name="twitter:image" content="https://aladdin.ie/files/website/images/twitter-image.webp">
 ```
 {% endraw %}
 

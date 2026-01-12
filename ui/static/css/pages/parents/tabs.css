@@ -1,16 +1,28 @@
 .parents-tabs {
   --color-accent: var(--color-connect);
 
-  .shapes__oblong {
-    bottom: 4rem;
+  .shapes {
+    right: -12rem;
+    left: unset;
+    bottom: 180px;
+    top: unset;
+  }
+
+  .shapes .shapes__oblong--yellow-green {
+    bottom: 3%;
+    top: auto;
+  }
+
+  .shapes .shapes__oblong--yellow-red {
+    bottom: 4%;
     top: auto;
   }
 }
 
 .parents-tabs__wrapper {
+  position: relative;
   display: flex;
   gap: 1rem;
-  padding-bottom: 8rem;
 }
 
 .benefits-families, 
@@ -20,17 +32,66 @@
   grid-template-columns: repeat(2, 1fr);
 }
 
+.parents-tabs__image {
+  position: absolute;
+  right: 0;
+  bottom: 300px;
+  width: 100%;
+  max-width: 350px;
+}
+
 @media (width <= 1024px) {
   .benefits-families, 
   .getting-started {
     grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .parents-tabs .shapes {
+    right: -50px;
+    bottom: 275px;
+  }
+
+  .parents-tabs__image {
+    position: static;
+    margin: 2rem auto;
   }
 }
 
 @media (width <= 768px) {
   .parents-tabs__wrapper {
     flex-direction: column;
-    gap: 4rem;
+    gap: 3rem;
+  }
+
+  /* Allow tab panels to size to content on mobile */
+  .parents-tabs .tabs__panels {
+    display: block;
+    grid-template-rows: none;
+    min-height: auto;
+    overflow: visible;
+  }
+
+  .parents-tabs .tabs__panels > * {
+    grid-row: auto;
+    grid-column: auto;
+    position: relative;
+    height: auto;
+  }
+
+  /* Hidden panels should not affect layout */
+  .parents-tabs .tabs__panels .tabs__panel[aria-hidden="true"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .parents-tabs .tabs__panels .tabs__panel[aria-hidden="false"] {
+    position: relative;
+    width: 100%;
+    height: auto;
   }
 }
 

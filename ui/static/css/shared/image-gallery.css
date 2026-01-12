@@ -25,7 +25,7 @@
   aspect-ratio: 520 / 209;
 }
 
-@media (width < 768px) {
+@media (width < 375px) {
   .image-gallery {
     grid-template-columns: 1fr;
   }

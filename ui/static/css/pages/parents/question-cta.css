@@ -1,7 +1,7 @@
 .question-cta {
   background: var(--color-connect-gradient-two-tone);
   color: var(--color-font-secondary);
-  padding: 2rem 1rem;
+  padding: 2rem 1.5rem;
   border-radius: var(--border-radius-card);
   text-align: center;
 }
@@ -29,4 +29,5 @@
 
 .question-cta__description {
   font-size: var(--font-size-xsmall);
+  padding-inline: 1rem;
 }

@@ -15,5 +15,5 @@ def misc(request):
 def home_testing(request):
     return render(request, "home-testing.html")
 
-def set_up(request):
-    return render(request, "set-up.html")
+def get_started(request):
+    return render(request, "get-started.html")

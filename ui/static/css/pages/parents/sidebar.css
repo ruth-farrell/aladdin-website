@@ -17,6 +17,12 @@
   padding: 1rem;
 }
 
+.siderbar__card-divider {
+  border-top: var(--divider);
+  margin-bottom: .5rem;
+  width: 100%;
+}
+
 .sidebar__card-button {
   width: 100%;
   display: flex;
@@ -36,17 +42,18 @@
   padding-bottom: 1rem;
 }
 
-.sidebar__card-content li {
+.sidebar__card-list-item {
   border-top: var(--divider);
   padding-block: .5rem;
+  padding-inline: .25rem;
 }
 
-.sidebar__card-content li a {
+.sidebar__card-list-item a {
   display: flex;
   gap: 0.5rem;
   align-items: center;
 }
 
-.sidebar__card-content ul li:last-child {
+.sidebar__card-list-item:last-child {
   padding-bottom: 1rem;
 }

@@ -1,5 +1,6 @@
 .accordion {
   box-shadow: var(--box-shadow-medium);
+  margin-inline: 0.5rem;
 }
 
 .heading-underlined__title {

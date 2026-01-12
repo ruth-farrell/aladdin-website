@@ -27,8 +27,8 @@
 /* Section shape containers */
 .about__shapes,
 .contact__shapes,
-.add-ons__shapes--left,
-.add-ons__shapes--right {
+.shapes__container--left,
+.shapes__container--right {
   position: absolute;
   inset: 0;
 }
@@ -63,26 +63,28 @@
   left: -1%;
 }
 
-/* Add-ons containers - position left lower, right higher */
-.add-ons__shapes--left .shapes--pink-blue {
+/* Pink-blue shapes containers - position left lower, right higher */
+
+/* Reusable classes for sections with left/right pink-blue shapes layout */
+.shapes__container--left .shapes--pink-blue {
   bottom: 0;
 }
 
-.add-ons__shapes--right .shapes--pink-blue {
+.shapes__container--right .shapes--pink-blue {
   top: 4%;
   right: 0;
   left: auto;
 }
 
 /* Flip shapes to right side for right container (maintain same relative layout) */
-.add-ons__shapes--right .shapes--pink-blue .shapes__oblong--pink-red {
+.shapes__container--right .shapes--pink-blue .shapes__oblong--pink-red {
   left: auto;
   right: -1%;
   bottom: auto;
   top: 6%;
 }
 
-.add-ons__shapes--right .shapes--pink-blue .shapes__oblong--green-blue {
+.shapes__container--right .shapes--pink-blue .shapes__oblong--green-blue {
   left: auto;
   right: -1%;
   bottom: auto;
@@ -119,4 +121,3 @@
     top: auto;
   }
 }
-

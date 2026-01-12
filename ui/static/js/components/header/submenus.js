@@ -164,6 +164,9 @@ export function initializeSubmenus() {
   }
 
   function init() {
+    // Initialize submenus state on page load (set tabindex for hidden menus)
+    updateSubmenus();
+
     // Mobile handlers
     headerNav.addEventListener('click', onClickUpdateState);
     document.addEventListener('click', onClickOutside);
