@@ -33,7 +33,7 @@
         bullet4=reveal_bullet4
         buttonText=reveal_text %}
     </div>
-  {% elif cta_theme and cta_link and cta_text %}
+  {% else %}
     <div class="card__cta">
       {% include "components/shared/cta.html" with theme=cta_theme link=cta_link text=cta_text %}
     </div>

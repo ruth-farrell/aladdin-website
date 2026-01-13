@@ -33,9 +33,11 @@ function createReveal(instance) {
     const reveal = button.closest('.reveal');
     if (!reveal) return;
 
-    // Store scroll position to prevent jump
+    // Store scroll position and measure button before state change
     const scrollY = window.scrollY;
     const scrollX = window.scrollX;
+    const buttonHeight = button.offsetHeight;
+    const buttonBottom = button.getBoundingClientRect().bottom + scrollY;
 
     // Only blur on mouse clicks, not keyboard activation (to preserve focus visibility)
     if (event.pointerType === 'mouse' || event.type === 'click') {
@@ -47,9 +49,16 @@ function createReveal(instance) {
     panel.setAttribute('aria-hidden', 'false');
     reveal.setAttribute('data-button-hidden', 'true');
     
-    // Restore scroll position to prevent jump
+    // When button collapses, content below shifts up by button height
+    // If button bottom was above or at current scroll, adjust scroll to maintain position
+    const scrollAdjustment = buttonBottom <= scrollY ? buttonHeight : 0;
+    
+    // Restore scroll position after layout updates
+    // Use double RAF to ensure layout has recalculated
     requestAnimationFrame(() => {
-      window.scrollTo(scrollX, scrollY);
+      requestAnimationFrame(() => {
+        window.scrollTo(scrollX, scrollY - scrollAdjustment);
+      });
     });
   }
 

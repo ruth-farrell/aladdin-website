@@ -25,6 +25,8 @@
   animation-delay: 0s, 2s;
   opacity: 0;
   will-change: transform, opacity;
+  overflow-anchor: none;
+  contain: layout style paint;
 }
 
 /* Hide star for users who prefer reduced motion */
@@ -56,8 +58,12 @@
   left: 50%;
   transform-origin: center center;
   pointer-events: none;
-  aspect-ratio: 107 / 532;
+  aspect-ratio: 135 / 540;
   width: 4.5vw;
+  overflow-anchor: none;
+  contain: layout style paint;
+  display: block;
+  height: auto;
 }
 
 .hero__star-stroke--yellow-red {
