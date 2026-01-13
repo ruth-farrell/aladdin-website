@@ -1,8 +1,6 @@
 .hero {
   position: relative;
   overflow: visible;
-  overflow-anchor: none;
-  min-height: 0;
 }
 
 @media (width < 768px) {
