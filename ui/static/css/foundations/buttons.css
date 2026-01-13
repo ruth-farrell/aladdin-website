@@ -32,6 +32,9 @@
   transition: var(--transition-all-normal);
   position: relative;
   min-width: 230px;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
 }
 
 .cta__inner {
@@ -48,7 +51,9 @@
   transition: var(--transition-all-normal);
 }
 
-.cta:hover .cta__inner {
+.cta:hover .cta__inner,
+.cta:active .cta__inner,
+.cta:focus .cta__inner {
   background: var(--color-background-secondary);
 }
 
@@ -114,19 +119,43 @@
 
 /* Dark variant hover states */
 
-.cta--start-dark:hover .cta__inner {
+.cta--start-dark:hover .cta__inner,
+.cta--start-dark:active .cta__inner,
+.cta--start-dark:focus .cta__inner {
   background: var(--color-start-gradient-two-tone);
   color: var(--color-font-secondary);
 }
 
-.cta--connect-dark:hover .cta__inner {
+.cta--start-dark:hover .cta__inner .icon,
+.cta--start-dark:active .cta__inner .icon,
+.cta--start-dark:focus .cta__inner .icon {
+  fill: var(--color-font-secondary);
+}
+
+.cta--connect-dark:hover .cta__inner,
+.cta--connect-dark:active .cta__inner,
+.cta--connect-dark:focus .cta__inner {
   background: var(--color-connect-gradient-two-tone);
   color: var(--color-font-secondary);
 }
 
-.cta--frame-dark:hover .cta__inner {
+.cta--connect-dark:hover .cta__inner .icon,
+.cta--connect-dark:active .cta__inner .icon,
+.cta--connect-dark:focus .cta__inner .icon {
+  fill: var(--color-font-secondary);
+}
+
+.cta--frame-dark:hover .cta__inner,
+.cta--frame-dark:active .cta__inner,
+.cta--frame-dark:focus .cta__inner {
   background: var(--color-frame-gradient-two-tone);
   color: var(--color-font-secondary);
+}
+
+.cta--frame-dark:hover .cta__inner .icon,
+.cta--frame-dark:active .cta__inner .icon,
+.cta--frame-dark:focus .cta__inner .icon {
+  fill: var(--color-font-secondary);
 }
 
 /* Regular Variant CTAs (solid gradient backgrounds) */
@@ -158,22 +187,62 @@
 
 /* Regular variant hover states */
 
-.cta--epayments:hover .cta__inner {
+.cta--epayments:hover .cta__inner,
+.cta--epayments:active .cta__inner,
+.cta--epayments:focus .cta__inner {
   color: var(--color-epayments);
 }
 
-.cta--library:hover .cta__inner {
+.cta--epayments:hover .cta__inner .icon,
+.cta--epayments:active .cta__inner .icon,
+.cta--epayments:focus .cta__inner .icon {
+  fill: var(--color-epayments);
+}
+
+.cta--library:hover .cta__inner,
+.cta--library:active .cta__inner,
+.cta--library:focus .cta__inner {
   color: var(--color-library);
 }
 
-.cta--staff-absences:hover .cta__inner {
+.cta--library:hover .cta__inner .icon,
+.cta--library:active .cta__inner .icon,
+.cta--library:focus .cta__inner .icon {
+  fill: var(--color-library);
+}
+
+.cta--staff-absences:hover .cta__inner,
+.cta--staff-absences:active .cta__inner,
+.cta--staff-absences:focus .cta__inner {
   color: var(--color-staff-absences);
 }
 
-.cta--connect:hover .cta__inner {
+.cta--staff-absences:hover .cta__inner .icon,
+.cta--staff-absences:active .cta__inner .icon,
+.cta--staff-absences:focus .cta__inner .icon {
+  fill: var(--color-staff-absences);
+}
+
+.cta--connect:hover .cta__inner,
+.cta--connect:active .cta__inner,
+.cta--connect:focus .cta__inner {
   color: var(--color-connect);
 }
 
-.cta--start:hover .cta__inner {
+.cta--connect:hover .cta__inner .icon,
+.cta--connect:active .cta__inner .icon,
+.cta--connect:focus .cta__inner .icon {
+  fill: var(--color-connect);
+}
+
+.cta--start:hover .cta__inner,
+.cta--start:active .cta__inner,
+.cta--start:focus .cta__inner {
   color: var(--color-start);
+}
+
+.cta--start:hover .cta__inner .icon,
+.cta--start:active .cta__inner .icon,
+.cta--start:focus .cta__inner .icon {
+  fill: var(--color-start);
 }

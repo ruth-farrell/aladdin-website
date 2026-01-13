@@ -1,3 +1,16 @@
+/* Hero title fade-in animation */
+.hero__title {
+  opacity: 0;
+  animation: hero-title-fade-in 3.75s ease forwards;
+  animation-delay: 2s;
+}
+
+@keyframes hero-title-fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
 /* Hero Star Shape */
 .hero__star {
   position: absolute;
@@ -8,127 +21,21 @@
   height: 100%;
   transform-origin: center center;
   transform: translateY(-64px);
-  animation: star-bounce-in 1.5s ease-out forwards, star-scale-to-full 0.5s ease-out forwards;
+  animation: star-zoom-in 1.5s ease-out forwards, star-scale-to-full 0.5s ease-out forwards;
   animation-delay: 0s, 2s;
   opacity: 0;
+  will-change: transform, opacity;
 }
 
-/* Scale down star on smaller screens */
-@media (width < 768px) {
+/* Hide star for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
   .hero__star {
-    transform: translateY(-64px) scale(0.6);
-  }
-}
-
-@media (width < 480px) {
-  .hero__star {
-    transform: translateY(-64px) scale(0.4);
-  }
-}
-
-.hero__star-oblong {
-  --star-padding: 4rem;
-  --star-padding-negative: -4rem;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform-origin: center center;
-  pointer-events: none;
-  height: auto;
-}
-
-/* Point 1: Yellow-Red (Top) - 18.5deg */
-.hero__star-oblong--1 {
-  width: 258px;
-  transform: translate(-50%, -50%) translateX(-4.10rem);
-  z-index: 5;
-  animation: star-oblong-1-move 2s ease forwards, star-oblong-1-float 3s ease-in-out infinite;
-  animation-delay: 2s, 4s;
-}
-
-/* Point 2: Pink-Red (Top-Right) - 55deg */
-.hero__star-oblong--2 {
-  width: 465px;
-  transform: translate(-50%, -50%) translateY(4.90rem) translateX(2.7rem);
-  z-index: 3;
-  animation: star-oblong-2-move 2s ease forwards, star-oblong-2-float 3s ease-in-out infinite;
-  animation-delay: 2s, 4s;
-}
-
-/* Point 3: Green-Blue (Bottom-Right) - -55deg */
-.hero__star-oblong--3 {
-  width: 465px;
-  transform: translate(-50%, -50%) translateY(4.90rem) translateX(-2.5rem);
-  z-index: 4;
-  animation: star-oblong-3-move 2s ease forwards, star-oblong-3-float 3s ease-in-out infinite;
-  animation-delay: 2s, 4s;
-}
-
-/* Point 4: Pink-Blue (Bottom-Left) - 90deg */
-.hero__star-oblong--4 {
-  width: 540px;
-  transform: translate(-50%, -50%) translateY(-2.60rem);
-  z-index: 2;
-  animation: star-oblong-4-move 2s ease forwards, star-oblong-4-float 3s ease-in-out infinite;
-  animation-delay: 2s, 4s;
-  will-change: transform;
-}
-
-/* Point 5: Yellow-Green (Top-Left) - -18.5deg */
-.hero__star-oblong--5 {
-  width: 258px;
-  transform: translate(-50%, -50%) translateX(4.10rem);
-  animation: star-oblong-5-move 2s ease forwards;
-  animation-delay: 2s;
-}
-
-/* Oblong 1: Move to left (3%), rotate(115deg) */
-@keyframes star-oblong-1-move {
-  to {
-    transform: translate(calc(-50% - 45vw), -65%) rotate(115deg) scale(0.85);
-    opacity: 0.75;
-  }
-}
-
-/* Oblong 2: Move to right 0 */
-@keyframes star-oblong-2-move {
-  to {
-    transform: translate(calc(-50% + 40vw), -45%) rotate(-55deg) translateX(var(--star-padding)) scale(0.85);
-    top: 25%;
-    z-index: 5;
-    opacity: 0.75;
-  }
-}
-
-/* Oblong 3: Move to right and change rotation */
-@keyframes star-oblong-3-move {
-  to {
-    transform: translate(calc(-50% + 45vw), -50%) rotate(106deg) translateX(var(--star-padding)) scale(0.85);
-    top: 25%;
-    opacity: 0.75;
-  }
-}
-
-/* Oblong 4: Move to left */
-@keyframes star-oblong-4-move {
-  to {
-    transform: translate(calc(-50% - 45vw), -150%) scale(0.85);
-    z-index: 6;
-    opacity: 0.75;
-  }
-}
-
-/* Oblong 5: Move off screen and disappear */
-@keyframes star-oblong-5-move {
-  to {
-    transform: translate(calc(-50% + 100vw), -50%);
-    opacity: 0;
+    display: none;
   }
 }
 
 /* Star container zoom-in animation */
-@keyframes star-bounce-in {
+@keyframes star-zoom-in {
   0% {
     opacity: 0;
     transform: translateY(-64px) scale(0.05);
@@ -136,73 +43,308 @@
 
   100% {
     opacity: 1;
-    transform: translateY(-64px) scale(0.5);
+    transform: translateY(-64px) scale(1);
+  }
+}
+
+.hero__star-stroke {
+  --star-padding: 50%;
+  --star-padding-negative: -50%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  pointer-events: none;
+  aspect-ratio: 107 / 532;
+  width: 4.5vw;
+}
+
+.hero__star-stroke--yellow-red {
+  transform: translate(-50%, -50%) rotate(18.5deg) translateX(var(--star-padding-negative));
+  z-index: 5;
+  animation: star-stroke-yellow-red-move 2s ease forwards, star-stroke-yellow-red-float 3s ease-in-out infinite;
+  animation-delay: 2s, 4s;
+}
+
+.hero__star-stroke--pink-red {
+  transform: translate(-50%, -50%) rotate(55deg) translateX(var(--star-padding));
+  z-index: 3;
+  animation: star-stroke-pink-red-move 2s ease forwards, star-stroke-pink-red-float 3s ease-in-out infinite;
+  animation-delay: 2s, 4s;
+}
+
+.hero__star-stroke--green-blue {
+  transform: translate(-50%, -50%) rotate(-55deg) translateX(var(--star-padding-negative));
+  z-index: 4;
+  animation: star-stroke-green-blue-move 2s ease forwards, star-stroke-green-blue-float 3s ease-in-out infinite;
+  animation-delay: 2s, 4s;
+}
+
+.hero__star-stroke--pink-blue {
+  transform: translate(-50%, -50%) rotate(90deg) translateX(var(--star-padding-negative));
+  z-index: 2;
+  animation: star-stroke-pink-blue-move 2s ease forwards, star-stroke-pink-blue-float 3s ease-in-out infinite;
+  animation-delay: 2s, 4s;
+  will-change: transform;
+}
+
+.hero__star-stroke--yellow-green {
+  transform: translate(-50%, -50%) rotate(-18.5deg) translateX(var(--star-padding));
+  animation: star-stroke-yellow-green-move 2s ease forwards;
+  animation-delay: 2s;
+}
+
+@keyframes star-stroke-yellow-red-move {
+  to {
+    transform: translate(calc(-50% - 45vw), -65%) rotate(137.64deg);
+    opacity: 0.75;
+    width: 7vw;
+  }
+}
+
+@keyframes star-stroke-pink-red-move {
+  to {
+    transform: translate(calc(-50% + 42.5vw), -65%);
+    top: 25%;
+    z-index: 5;
+    opacity: 0.75;
+    width: 7vw;
+  }
+}
+
+@keyframes star-stroke-green-blue-move {
+  to {
+    transform: translate(calc(-50% + 42.5vw), -50%) rotate(49.66deg);
+    top: 25%;
+    opacity: 0.75;
+    width: 7vw;
+  }
+}
+
+@keyframes star-stroke-pink-blue-move {
+  to {
+    transform: translate(calc(-50% - 45vw), -75%) rotate(90deg);
+    z-index: 6;
+    opacity: 0.75;
+    width: 7vw;
+    }
+}
+
+@keyframes star-stroke-yellow-green-move {
+  to {
+    transform: translate(calc(-50% + 100vw), -50%);
+    opacity: 0;
+    width: 7vw;
   }
 }
 
 /* Scale star back to full size when oblongs start moving */
 @keyframes star-scale-to-full {
   from {
-    transform: translateY(-64px) scale(0.5);
+    transform: translateY(-64px);
   }
 
   to {
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
   }
 }
+
 
 /* Continuous floating animations after initial movement */
 
-@keyframes star-oblong-1-float {
+@keyframes star-stroke-yellow-red-float {
   0%, 100% {
-    transform: translate(calc(-50% - 45vw), -65%) rotate(115deg) translateY(0) scale(0.85);
+    transform: translate(calc(-50% - 45vw), -65%) rotate(137.64deg) translateY(0);
   }
 
   50% {
-    transform: translate(calc(-50% - 45vw), -65%) rotate(115deg) translateY(-10px) scale(0.85);
+    transform: translate(calc(-50% - 45vw), -65%) rotate(137.64deg) translateY(-10px);
   }
 }
 
-@keyframes star-oblong-2-float {
+@keyframes star-stroke-pink-red-float {
   0%, 100% {
-    transform: translate(calc(-50% + 40vw), -45%) rotate(-55deg) translateX(var(--star-padding)) translateY(0) scale(0.85);
+    transform: translate(calc(-50% + 42.5vw), -65%) translateY(0);
   }
 
   50% {
-    transform: translate(calc(-50% + 40vw), -45%) rotate(-55deg) translateX(var(--star-padding)) translateY(10px) scale(0.85);
+    transform: translate(calc(-50% + 42.5vw), -65%) translateY(20px);
   }
 }
 
-@keyframes star-oblong-3-float {
+@keyframes star-stroke-green-blue-float {
   0%, 100% {
-    transform: translate(calc(-50% + 45vw), -50%) rotate(106deg) translateX(var(--star-padding)) scale(0.85);
+    transform: translate(calc(-50% + 42.5vw), -50%) rotate(49.66deg) translateX(0);
   }
 
   50% {
-    transform: translate(calc(-50% + 45vw), -50%) rotate(106deg) translateX(calc(var(--star-padding) - 15px)) scale(0.85);
+    transform: translate(calc(-50% + 42.5vw), -50%) rotate(49.66deg) translateX(-10px);
   }
 }
 
-@keyframes star-oblong-4-float {
+@keyframes star-stroke-pink-blue-float {
   0%, 100% {
-    transform: translate(calc(-50% - 45vw), -150%) translateX(0) scale(0.85);
+    transform: translate(calc(-50% - 45vw), -75%) rotate(90deg) translateY(0);
   }
 
   50% {
-    transform: translate(calc(-50% - 45vw), -150%) translateX(-15px) scale(0.85);
+    transform: translate(calc(-50% - 45vw), -75%) rotate(90deg) translateY(15px);
   }
 }
 
-/* Hero title fade-in animation */
-.hero__title {
-  opacity: 0;
-  animation: fade-in 3.75s ease forwards;
-  animation-delay: 2s;
-}
+/* Mobile styles (<= 768px) */
+@media (width <= 768px) {
+  .hero__star {
+    transform: translateY(-40%);
+  }
 
-@keyframes fade-in {
-  to {
-    opacity: 1;
+  .hero__star-stroke {
+    width: 12vw;
+    max-width: 65px;
+  }
+
+  @keyframes star-zoom-in {
+    0% {
+      opacity: 0;
+      transform: translateY(-40%) scale(0.05);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(-40%) scale(.5);
+    }
+  }
+
+  /* Scale star back to full size when oblongs start moving */
+    @keyframes star-scale-to-full {
+      from {
+        transform: translateY(-40%) scale(.5);
+      }
+
+      to {
+        transform: translateY(0) scale(1);
+      }
+    }
+
+  @keyframes star-stroke-yellow-red-move {
+    to {
+      transform: translate(calc(-50% - 49vw), -420px) rotate(137.64deg);
+      opacity: 0.75;
+      width: 16vw;
+      max-width: 85px;
+    }
+  }
+
+  @keyframes star-stroke-pink-red-move {
+    to {
+      transform: translate(calc(-50% + 40vw), 140px);
+      z-index: 5;
+      opacity: 0.75;
+      width: 16vw;
+      max-width: 85px;
+    }
+  }
+
+  @keyframes star-stroke-green-blue-move {
+    to {
+      transform: translate(calc(-50% + 40vw), 160px) rotate(49.66deg);
+      opacity: 0.75;
+      width: 16vw;
+      max-width: 85px;
+    }
+  }
+
+  @keyframes star-stroke-pink-blue-move {
+    to {
+      transform: translate(calc(-50% - 49vw), -400px) rotate(90deg);
+      z-index: 6;
+      opacity: 0.75;
+      width: 16vw;
+      max-width: 85px;
+    }
+  }
+
+  @keyframes star-stroke-yellow-green-move {
+    to {
+      transform: translate(calc(-50% + 100vw), -50%);
+      opacity: 0;
+      width: 16vw;
+      max-width: 85px;
+    }
+  }
+
+  /* Update float animations for mobile */
+  @keyframes star-stroke-yellow-red-float {
+    0%, 100% {
+      transform: translate(calc(-50% - 49vw), -420px) rotate(137.64deg) translateY(0);
+    }
+
+    50% {
+      transform: translate(calc(-50% - 49vw), -420px) rotate(137.64deg) translateY(-10px);
+    }
+  }
+
+  @keyframes star-stroke-pink-red-float {
+    0%, 100% {
+      transform: translate(calc(-50% + 40vw), 140px) translateY(0);
+    }
+
+    50% {
+      transform: translate(calc(-50% + 40vw), 140px) translateY(20px);
+    }
+  }
+
+  @keyframes star-stroke-green-blue-float {
+    0%, 100% {
+      transform: translate(calc(-50% + 40vw), 160px) rotate(49.66deg) translateX(0);
+    }
+
+    50% {
+      transform: translate(calc(-50% + 40vw), 160px) rotate(49.66deg) translateX(-10px);
+    }
+  }
+
+  @keyframes star-stroke-pink-blue-float {
+    0%, 100% {
+      transform: translate(calc(-50% - 49vw), -400px) rotate(90deg) translateY(0);
+    }
+
+    50% {
+      transform: translate(calc(-50% - 49vw), -400px) rotate(90deg) translateY(15px);
+    }
   }
 }
+
+/* Hide strokes on very small screens (<= 375px) before reaching final position */
+@media (width <= 375px) {
+  .hero__star-stroke--yellow-red {
+    animation: star-stroke-yellow-red-move 2s ease forwards, star-stroke-fade-out 0.5s ease forwards;
+    animation-delay: 2s, 2.5s;
+  }
+
+  .hero__star-stroke--pink-red {
+    animation: star-stroke-pink-red-move 2s ease forwards, star-stroke-fade-out 0.5s ease forwards;
+    animation-delay: 2s, 2.5s;
+  }
+
+  .hero__star-stroke--green-blue {
+    animation: star-stroke-green-blue-move 2s ease forwards, star-stroke-fade-out 0.5s ease forwards;
+    animation-delay: 2s, 2.5s;
+  }
+
+  .hero__star-stroke--pink-blue {
+    animation: star-stroke-pink-blue-move 2s ease forwards, star-stroke-fade-out 0.5s ease forwards;
+    animation-delay: 2s, 2.5s;
+  }
+
+  @keyframes star-stroke-fade-out {
+    to {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
+
 

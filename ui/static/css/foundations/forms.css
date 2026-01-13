@@ -1,14 +1,11 @@
-.form { 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.form {
+  gap: 0.5rem;
 
   input[type="text"] {
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     border-radius: var(--border-radius-card);
     border: 2px solid transparent;
     background-color: var(--color-blue-muted);
-    margin-inline: 1rem .5rem;
     width: 200px;
     max-width: 100%;
   }
@@ -26,6 +23,7 @@
 .form__input-group {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
 }
 
 @media (width < 768px) {

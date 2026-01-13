@@ -1,0 +1,48 @@
+<div class="reveal">
+  <button class="cta cta--{{ theme }} reveal__button" type="button" aria-expanded="false" aria-controls="reveal-{{ id }}-content" id="reveal-{{ id }}-button">
+    <span class="cta__inner">{{ buttonText }}
+      <svg class="icon icon--xsmall" aria-hidden="true">
+        <use href="#plus"></use>
+      </svg>
+    </span>
+  </button>
+  <div class="reveal__panel" id="reveal-{{ id }}-content" role="region" aria-labelledby="reveal-{{ id }}-button" aria-hidden="true">
+    <div class="reveal__content">
+      <ul class="reveal__list">
+        {% if bullet1 %}
+          <li class="reveal__item">
+            <svg class="icon icon--small" aria-hidden="true">
+              <use href="#double-tick"></use>
+            </svg>
+            {{ bullet1 }}
+          </li>
+        {% endif %}
+        {% if bullet2 %}
+          <li class="reveal__item">
+            <svg class="icon icon--small" aria-hidden="true">
+              <use href="#double-tick"></use>
+            </svg>
+            {{ bullet2 }}
+          </li>
+        {% endif %}
+        {% if bullet3 %}
+          <li class="reveal__item">
+            <svg class="icon icon--small" aria-hidden="true">
+              <use href="#double-tick"></use>
+            </svg>
+            {{ bullet3 }}
+          </li>
+        {% endif %}
+        {% if bullet4 %}
+          <li class="reveal__item">
+            <svg class="icon icon--small" aria-hidden="true">
+              <use href="#double-tick"></use>
+            </svg>
+            {{ bullet4 }}
+          </li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</div>
+

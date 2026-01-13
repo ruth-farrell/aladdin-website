@@ -33,15 +33,15 @@
 
 .heading-underlined__list {
   margin-top: .5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
 }
 
 .heading-underlined__list-item {
   display: flex;
+  align-items: center;
   gap: .5rem;
-
-  .icon {
-    margin-top: 0.15rem;
-  }
 }
 
 .heading-underlined:has(.heading-underlined__list, .heading-underlined__description) {

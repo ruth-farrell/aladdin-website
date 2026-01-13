@@ -39,6 +39,7 @@
     <path fill="currentColor" d="M64 186.5L64 184L64.1 184C65.3 152.9 91 128 122.5 128L517.5 128C549 128 574.6 152.9 575.9 184L576 184L576 448C576 483.3 547.3 512 512 512L128 512C92.7 512 64 483.3 64 448L64 186.5zM544 239.6L367.3 369.1C339.1 389.7 300.8 389.7 272.7 369.1L96 239.6L96 448C96 465.7 110.3 480 128 480L512 480C529.7 480 544 465.7 544 448L544 239.6zM544 186.5C544 171.9 532.1 160 517.5 160L122.5 160C107.9 160 96 171.9 96 186.5C96 194.9 100 202.9 106.8 207.9L291.6 343.3C308.5 355.7 331.5 355.7 348.4 343.3L533.2 207.8C540 202.8 544 194.9 544 186.4z"/>
   </symbol>
   <symbol id="chevron-down-solid" viewBox="0 0 448 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></symbol>  
+  <symbol id="plus" viewBox="0 0 448 512"><!--!Font Awesome Pro v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2026 Fonticons, Inc.--><path d="M248 56c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 176-176 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l176 0 0 176c0 13.3 10.7 24 24 24s24-10.7 24-24l0-176 176 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-176 0 0-176z"/></symbol>
   
   <!--Oblongs-->
   <symbol id="oblong-yellow-red" viewBox="0 0 193 958">
@@ -91,50 +92,50 @@
     </defs>
   </symbol>
 
-  <svg id="star-stroke-yellow-red" width="258" height="518" viewBox="0 0 258 518">
-    <rect x="154.303" y="-16.8116" width="126.71" height="539.277" rx="63.3549" transform="rotate(18.5 154.303 -16.8116)" fill="url(#paint0_linear_682_95)"/>
+  <symbol id="hero-star-stroke-yellow-red" viewBox="0 0 135 540" fill="none">
+    <rect width="135" height="539.277" rx="67.5" fill="url(#paint0_linear_758_88)"/>
     <defs>
-    <linearGradient id="paint0_linear_682_95" x1="217.658" y1="-16.8116" x2="217.658" y2="522.465" gradientUnits="userSpaceOnUse">
+    <linearGradient id="paint0_linear_758_88" x1="67.5" y1="0" x2="67.5" y2="539.277" gradientUnits="userSpaceOnUse">
     <stop stop-color="#FDBD2C"/>
     <stop offset="1" stop-color="#ED2124"/>
     </linearGradient>
     </defs>
-  </svg>
+  </symbol>
 
-  <symbol id="star-stroke-pink-red" width="465" height="364" viewBox="0 0 465 364">
-    <rect x="416.874" y="-24.8759" width="126.71" height="539.277" rx="63.3549" transform="rotate(55 416.874 -24.8759)" fill="url(#paint0_linear_682_89)"/>
+  <symbol id="hero-star-stroke-pink-red" viewBox="0 0 135 540" fill="none">
+    <rect width="135" height="539.277" rx="67.5" fill="url(#paint0_linear_758_87)"/>
     <defs>
-    <linearGradient id="paint0_linear_682_89" x1="480.229" y1="-24.8759" x2="480.229" y2="514.401" gradientUnits="userSpaceOnUse">
+    <linearGradient id="paint0_linear_758_87" x1="67.5" y1="0" x2="67.5" y2="539.277" gradientUnits="userSpaceOnUse">
     <stop stop-color="#ED2B94"/>
     <stop offset="1" stop-color="#ED1C24"/>
     </linearGradient>
     </defs>
   </symbol>
 
-  <symbol id="star-stroke-pink-blue" width="540" height="127" viewBox="0 0 540 127" fill="none">
-    <rect x="540" width="127" height="540" rx="63.5" transform="rotate(90 540 0)" fill="url(#paint0_linear_682_87)"/>
+  <symbol id="hero-star-stroke-pink-blue" viewBox="0 0 135 540" fill="none">
+    <rect width="135" height="540" rx="67.5" fill="url(#paint0_linear_758_85)"/>
     <defs>
-    <linearGradient id="paint0_linear_682_87" x1="603.5" y1="0" x2="603.5" y2="540" gradientUnits="userSpaceOnUse">
+    <linearGradient id="paint0_linear_758_85" x1="67.5" y1="0" x2="67.5" y2="540" gradientUnits="userSpaceOnUse">
     <stop stop-color="#ED2B94"/>
     <stop offset="1" stop-color="#00A1E4"/>
     </linearGradient>
     </defs>
   </symbol>
 
-  <symbol id="star-stroke-green-blue" width="465" height="364" viewBox="0 0 465 364" fill="none">
-    <rect x="-24.8757" y="78.9188" width="126.71" height="539.277" rx="63.3549" transform="rotate(-55 -24.8757 78.9188)" fill="url(#paint0_linear_682_85)"/>
+  <symbol id="hero-star-stroke-green-blue" viewBox="0 0 135 540" fill="none">
+    <rect width="135" height="539.277" rx="67.5" fill="url(#paint0_linear_758_86)"/>
     <defs>
-    <linearGradient id="paint0_linear_682_85" x1="38.4792" y1="78.9188" x2="38.4792" y2="618.196" gradientUnits="userSpaceOnUse">
+    <linearGradient id="paint0_linear_758_86" x1="67.5" y1="0" x2="67.5" y2="539.277" gradientUnits="userSpaceOnUse">
     <stop stop-color="#00A1E4"/>
     <stop offset="1" stop-color="#00AD8E"/>
     </linearGradient>
     </defs>
   </symbol>
 
-  <symbol id="star-stroke-yellow-green" width="258" height="518" viewBox="0 0 258 518" fill="none">
-    <rect x="-16.8118" y="23.3939" width="126.71" height="539.277" rx="63.3549" transform="rotate(-18.5 -16.8118 23.3939)" fill="url(#paint0_linear_682_91)"/>
+  <symbol id="hero-star-stroke-yellow-green" viewBox="0 0 135 540" fill="none">
+    <rect width="135" height="539.277" rx="67.5" fill="url(#paint0_linear_758_84)"/>
     <defs>
-    <linearGradient id="paint0_linear_682_91" x1="46.5431" y1="23.3939" x2="46.5431" y2="562.671" gradientUnits="userSpaceOnUse">
+    <linearGradient id="paint0_linear_758_84" x1="67.5" y1="0" x2="67.5" y2="539.277" gradientUnits="userSpaceOnUse">
     <stop stop-color="#FDBD2C"/>
     <stop offset="1" stop-color="#00AD8E"/>
     </linearGradient>

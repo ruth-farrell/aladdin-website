@@ -8,6 +8,7 @@
   font-size: var(--font-size-small);
   background: var(--color-background-secondary);
   border-radius: var(--border-radius-medium);
+  z-index: 1;
 }
 
 .accordion__panel {
