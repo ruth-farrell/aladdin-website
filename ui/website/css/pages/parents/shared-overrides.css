@@ -1,0 +1,13 @@
+.accordion {
+  box-shadow: var(--box-shadow-medium);
+  margin-inline: 0.5rem;
+}
+
+.heading-underlined__title {
+  text-transform: initial;
+}
+
+.heading-tagline {
+  padding-bottom: 3rem;
+}
+

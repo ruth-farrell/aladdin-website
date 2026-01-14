@@ -18,7 +18,7 @@ export function initializeBackToTop() {
   }
 
   function switchToDownMode() {
-    // Link to just below the initial viewport (use smooth scroll via JS)
+    // Link to just below the initial viewport
     backToTopButton.setAttribute('href', '#');
     backToTopButton.classList.remove('back-to-top--up');
     
@@ -79,11 +79,9 @@ export function initializeBackToTop() {
       updateButtonState();
     });
 
-    // Handle click for custom scroll target
     backToTopButton.addEventListener('click', handleClick);
   }
 
-  // Wait for page to fully load
   if (document.readyState === 'complete') {
     initialize();
   } else {

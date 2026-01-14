@@ -63,28 +63,28 @@
 .hero__star-stroke--yellow-red {
   transform: translate(-50%, -50%) rotate(18.5deg) translateX(var(--star-padding-negative));
   z-index: 5;
-  animation: star-stroke-yellow-red-move 2s ease forwards, star-stroke-yellow-red-float 3s ease-in-out infinite;
+  animation: star-stroke-yellow-red-move 2s ease forwards, star-stroke-yellow-red-float 5s ease-in-out infinite;
   animation-delay: 2s, 4s;
 }
 
 .hero__star-stroke--pink-red {
   transform: translate(-50%, -50%) rotate(55deg) translateX(var(--star-padding));
   z-index: 3;
-  animation: star-stroke-pink-red-move 2s ease forwards, star-stroke-pink-red-float 3s ease-in-out infinite;
+  animation: star-stroke-pink-red-move 2s ease forwards, star-stroke-pink-red-float 5s ease-in-out infinite;
   animation-delay: 2s, 4s;
 }
 
 .hero__star-stroke--green-blue {
   transform: translate(-50%, -50%) rotate(-55deg) translateX(var(--star-padding-negative));
   z-index: 4;
-  animation: star-stroke-green-blue-move 2s ease forwards, star-stroke-green-blue-float 3s ease-in-out infinite;
+  animation: star-stroke-green-blue-move 2s ease forwards, star-stroke-green-blue-float 5s ease-in-out infinite;
   animation-delay: 2s, 4s;
 }
 
 .hero__star-stroke--pink-blue {
   transform: translate(-50%, -50%) rotate(90deg) translateX(var(--star-padding-negative));
   z-index: 2;
-  animation: star-stroke-pink-blue-move 2s ease forwards, star-stroke-pink-blue-float 3s ease-in-out infinite;
+  animation: star-stroke-pink-blue-move 2s ease forwards, star-stroke-pink-blue-float 5s ease-in-out infinite;
   animation-delay: 2s, 4s;
   will-change: transform;
 }
@@ -97,7 +97,7 @@
 
 @keyframes star-stroke-yellow-red-move {
   to {
-    transform: translate(calc(-50% - 45vw), -65%) rotate(137.64deg);
+    transform: translate(calc(-50% - 43vw), -75%) rotate(137.64deg);
     opacity: 0.75;
     width: 7vw;
   }
@@ -106,7 +106,7 @@
 @keyframes star-stroke-pink-red-move {
   to {
     transform: translate(calc(-50% + 42.5vw), -65%);
-    top: 25%;
+    top: 28%;
     z-index: 5;
     opacity: 0.75;
     width: 7vw;
@@ -115,8 +115,8 @@
 
 @keyframes star-stroke-green-blue-move {
   to {
-    transform: translate(calc(-50% + 42.5vw), -50%) rotate(49.66deg);
-    top: 25%;
+    transform: translate(calc(-50% + 41.5vw), -43%) rotate(49.66deg);
+    top: 30%;
     opacity: 0.75;
     width: 7vw;
   }
@@ -124,7 +124,7 @@
 
 @keyframes star-stroke-pink-blue-move {
   to {
-    transform: translate(calc(-50% - 45vw), -75%) rotate(90deg);
+    transform: translate(calc(-50% - 45vw), -80%) rotate(90deg);
     z-index: 6;
     opacity: 0.75;
     width: 7vw;
@@ -151,15 +151,15 @@
 }
 
 
-/* Continuous floating animations after initial movement */
+/* Continuous stroke floating animations after initial movement */
 
 @keyframes star-stroke-yellow-red-float {
   0%, 100% {
-    transform: translate(calc(-50% - 45vw), -65%) rotate(137.64deg) translateY(0);
+    transform: translate(calc(-50% - 43vw), -75%) rotate(137.64deg) translateY(0);
   }
 
   50% {
-    transform: translate(calc(-50% - 45vw), -65%) rotate(137.64deg) translateY(-10px);
+    transform: translate(calc(-50% - 43vw), -75%) rotate(137.64deg) translateY(-10px);
   }
 }
 
@@ -175,21 +175,21 @@
 
 @keyframes star-stroke-green-blue-float {
   0%, 100% {
-    transform: translate(calc(-50% + 42.5vw), -50%) rotate(49.66deg) translateX(0);
+    transform: translate(calc(-50% + 41.5vw), -43%) rotate(49.66deg) translateY(0);
   }
 
   50% {
-    transform: translate(calc(-50% + 42.5vw), -50%) rotate(49.66deg) translateX(-10px);
+    transform: translate(calc(-50% + 41.5vw), -43%) rotate(49.66deg) translateY(-10px);
   }
 }
 
 @keyframes star-stroke-pink-blue-float {
   0%, 100% {
-    transform: translate(calc(-50% - 45vw), -75%) rotate(90deg) translateY(0);
+    transform: translate(calc(-50% - 45vw), -80%) rotate(90deg) translateY(0);
   }
 
   50% {
-    transform: translate(calc(-50% - 45vw), -75%) rotate(90deg) translateY(15px);
+    transform: translate(calc(-50% - 45vw), -80%) rotate(90deg) translateY(15px);
   }
 }
 
@@ -229,7 +229,7 @@
 
   @keyframes star-stroke-yellow-red-move {
     to {
-      transform: translate(calc(-50% - 49vw), -420px) rotate(137.64deg);
+      transform: translate(calc(-50% - 49vw), -380px) rotate(137.64deg);
       opacity: 0.75;
       width: 16vw;
       max-width: 85px;
@@ -248,7 +248,7 @@
 
   @keyframes star-stroke-green-blue-move {
     to {
-      transform: translate(calc(-50% + 40vw), 160px) rotate(49.66deg);
+      transform: translate(calc(-50% + 40vw), 170px) rotate(49.66deg);
       opacity: 0.75;
       width: 16vw;
       max-width: 85px;
@@ -257,7 +257,7 @@
 
   @keyframes star-stroke-pink-blue-move {
     to {
-      transform: translate(calc(-50% - 49vw), -400px) rotate(90deg);
+      transform: translate(calc(-50% - 52vw), -380px) rotate(90deg);
       z-index: 6;
       opacity: 0.75;
       width: 16vw;
@@ -274,14 +274,13 @@
     }
   }
 
-  /* Update float animations for mobile */
   @keyframes star-stroke-yellow-red-float {
     0%, 100% {
-      transform: translate(calc(-50% - 49vw), -420px) rotate(137.64deg) translateY(0);
+      transform: translate(calc(-50% - 49vw), -380px) rotate(137.64deg) translateY(0);
     }
 
     50% {
-      transform: translate(calc(-50% - 49vw), -420px) rotate(137.64deg) translateY(-10px);
+      transform: translate(calc(-50% - 49vw), -380px) rotate(137.64deg) translateY(-10px);
     }
   }
 
@@ -297,21 +296,21 @@
 
   @keyframes star-stroke-green-blue-float {
     0%, 100% {
-      transform: translate(calc(-50% + 40vw), 160px) rotate(49.66deg) translateX(0);
+      transform: translate(calc(-50% + 40vw), 170px) rotate(49.66deg) translateY(0);
     }
 
     50% {
-      transform: translate(calc(-50% + 40vw), 160px) rotate(49.66deg) translateX(-10px);
+      transform: translate(calc(-50% + 40vw), 170px) rotate(49.66deg) translateY(-10px);
     }
   }
 
   @keyframes star-stroke-pink-blue-float {
     0%, 100% {
-      transform: translate(calc(-50% - 49vw), -400px) rotate(90deg) translateY(0);
+      transform: translate(calc(-50% - 52vw), -380px) rotate(90deg) translateY(0);
     }
 
     50% {
-      transform: translate(calc(-50% - 49vw), -400px) rotate(90deg) translateY(15px);
+      transform: translate(calc(-50% - 52vw), -380px) rotate(90deg) translateY(15px);
     }
   }
 }

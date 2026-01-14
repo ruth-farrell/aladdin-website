@@ -3,9 +3,10 @@
   gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
+  overflow-anchor: none;
 }
 
-.card__wrapper:has(.card__reveal) {
+.card__wrapper:has(.card__reveal .reveal[data-button-hidden="true"]) {
   align-items: flex-start;
 }
 
@@ -20,7 +21,9 @@
   border-radius: var(--border-radius-card);
   padding: 2rem;
   width: 100%;
-  transition: height 0.5s ease;
+  transition: height var(--transition-duration-slow) var(--transition-timing-ease);
+  overflow-anchor: none;
+  contain: layout style paint;
 }
 
 .card__image-wrapper {
@@ -44,6 +47,7 @@
 .card__title {
   font-weight: var(--font-weight-medium);
   font-size: var(--font-size-xlarge);
+  color: var(--card-theme-color, inherit);
 } 
 
 .card__icon {
@@ -53,25 +57,36 @@
   border-radius: var(--border-radius-circle);
 }
 
-/* Theme colors for icons */
-.card--epayments .icon {
-  fill: var(--color-epayments);
+.card__reveal {
+  overflow-anchor: none;
 }
 
-.card--library .icon {
-  fill: var(--color-library);
+.card--epayments {
+  --card-theme-color: var(--color-epayments);
 }
 
-.card--staff-absences .icon {
-  fill: var(--color-staff-absences);
+.card--library {
+  --card-theme-color: var(--color-library);
 }
 
-.card--connect .icon {
-  fill: var(--color-connect);
+.card--staff-absences {
+  --card-theme-color: var(--color-staff-absences);
 }
 
-.card--start .icon {
-  fill: var(--color-start);
+.card--connect {
+  --card-theme-color: var(--color-connect);
+}
+
+.card--start {
+  --card-theme-color: var(--color-start);
+}
+
+.card--frame {
+  --card-theme-color: var(--color-frame);
+}
+
+.card .icon {
+  fill: var(--card-theme-color);
 }
 
 .card__cta {

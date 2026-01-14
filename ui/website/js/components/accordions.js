@@ -34,7 +34,6 @@ function createAccordion(instance) {
       return;
     }
 
-    // Normal accordion behavior
     buttons.forEach(button => {
       const isOpen = openAccordionId === button.id;
       button.setAttribute('aria-expanded', isOpen);

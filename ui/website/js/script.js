@@ -10,14 +10,10 @@ import { initializeSignInShortcut } from './components/signin-shortcut.js';
 import { initializeHeroStar } from './components/hero-star.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // If no hash in URL, explicitly scroll to top to prevent any scroll jumps
-  if (!window.location.hash) {
-    // Use requestAnimationFrame to ensure this happens after any layout calculations
-    requestAnimationFrame(() => {
-      window.scrollTo(0, 0);
-    });
-  }
+      initializeComponents();
+});
 
+function initializeComponents() {
   // Header Navigation and Back to Top
   initializeHamburger();
   initializeSubmenus();
@@ -48,9 +44,15 @@ document.addEventListener('DOMContentLoaded', () => {
   if (document.querySelector('.hero__star')) {
     initializeHeroStar();
   }
-});
+}
 
-// Update active links when hash changes
+// Update active links when hash changes (e.g., browser back/forward or anchor clicks)
+// CSS scroll-margin-top will handle the scroll positioning automatically
+// Use requestAnimationFrame to wait for scroll to complete before updating
 window.addEventListener('hashchange', () => {
-  initializeActiveLinks();
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      initializeActiveLinks();
+    });
+  });
 });

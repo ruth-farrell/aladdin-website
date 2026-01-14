@@ -7,7 +7,7 @@
 .reveal__button {
   margin-inline: auto;
   grid-row: 1;
-  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+  transition: var(--transition-opacity-normal), visibility 0s linear var(--transition-duration-normal);
   scroll-margin-top: 0;
 }
 
@@ -35,13 +35,13 @@
 
 .reveal[data-button-hidden="true"] {
   grid-template-rows: 0fr 1fr;
-  transition: grid-template-rows 0.5s ease;
+  transition: grid-template-rows var(--transition-duration-slow) var(--transition-timing-ease);
 }
 
 .reveal__panel {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 0.5s ease;
+  transition: grid-template-rows var(--transition-duration-slow) var(--transition-timing-ease);
   grid-row: 2;
   overflow-anchor: none;
   scroll-padding-top: 0;
@@ -54,10 +54,9 @@
 
 .reveal__panel,
 .reveal__panel * {
-  overflow: hidden;
+  overflow: hidden; 
 }
 
-.reveal,
 .reveal * {
   overflow: hidden;
 }

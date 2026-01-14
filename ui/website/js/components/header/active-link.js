@@ -4,10 +4,10 @@ export function initializeActiveLinks() {
   const currentHash = window.location.hash;
 
   // Update home link href based on current page
-  const homeLink = document.querySelector('.header__link[href="/"], .header__link[href="#back-to-top"]');
+  const homeLink = document.querySelector('.header__link[href="/"], .header__link[href="/#back-to-top"], .header__link[href="#back-to-top"]');
   if (homeLink) {
     if (currentPath === '/') {
-      homeLink.setAttribute('href', '#back-to-top');
+      homeLink.setAttribute('href', '/#back-to-top');
     } else {
       homeLink.setAttribute('href', '/');
     }
@@ -70,10 +70,13 @@ export function setupLinkClickHandlers() {
     const linkHref = clickedLink.getAttribute('href');
     
     if (linkHref) {
-      // Small delay to allow hash/path to update, then refresh active state
-      setTimeout(() => {
-        initializeActiveLinks();
-      }, 10);
+      // Wait for scroll to complete before updating active state
+      // Use requestAnimationFrame to ensure scroll has settled
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          initializeActiveLinks();
+        });
+      });
     }
   });
 }

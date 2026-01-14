@@ -12,7 +12,6 @@ export function initializeHeroStar() {
 
   const startTime = 2000; // Animation starts at 2s
   const duration = 2000; // Runs for 2s
-  const updateInterval = 16; // ~60fps
 
   const start = { w: 135, h: 540, rx: 67.5, gx: 67.5, gy: 539.277 };
   const end = { w: 193, h: 958, rx: 96.3, gx: 96.3, gy: 957.6 };

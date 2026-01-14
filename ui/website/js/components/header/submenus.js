@@ -7,7 +7,6 @@ export function initializeSubmenus() {
   let submenuOpenId = false; 
   let closeTimeout = null;
 
-  // Check if we're on desktop (>1024px)
   function isDesktop() {
     return window.matchMedia('(min-width: 1024px)').matches;
   }
@@ -19,7 +18,6 @@ export function initializeSubmenus() {
       menu.setAttribute('aria-hidden', isHidden);
       
       // Make all focusable elements non-focusable when menu is hidden (WCAG requirement)
-      // This includes: a, button, input, select, textarea, [tabindex]
       const focusableElements = menu.querySelectorAll('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])');
       focusableElements.forEach(element => {
         if (isHidden) {

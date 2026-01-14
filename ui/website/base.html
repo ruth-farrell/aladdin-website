@@ -24,12 +24,12 @@
   {% block pageStyles %}{% endblock %} 
 </head>
 <body class="{% block pageclass %}{% endblock %}" data-mobile-menu-open="false">
-  <div id="back-to-top" tabindex="-1"></div>
+  <div id="back-to-top" class="u-anchor-link" tabindex="-1"></div>
   <div class="svg-sprite" aria-hidden="true">{% include "components/base/sprite.svg" %}</div>
   
   {% include "components/base/header.html" %}
 
-  <div id="skip-link" tabindex="-1"></div>
+  <div id="skip-link" class="u-anchor-link" tabindex="-1"></div>
   <main>
     {% block content %}{% endblock %}
   </main>

@@ -21,6 +21,12 @@
     margin-top: 1.5rem;
   }
 
+  .header__list li, 
+  .header__list a {
+    width: 100%;
+    display: block;
+  }
+
   .header__panel {
     display: grid;
     grid-template-rows: 0fr;

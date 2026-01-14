@@ -17,7 +17,7 @@
 .tabs__panel {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.5s ease, visibility 0s linear 0.5s;
+  transition: opacity var(--transition-duration-slow) var(--transition-timing-ease), visibility 0s linear var(--transition-duration-slow);
   pointer-events: none;
   z-index: 1;
 }
@@ -27,7 +27,7 @@
   visibility: visible;
   pointer-events: auto;
   z-index: 2;
-  transition: opacity 0.5s ease 0.2s, visibility 0s linear 0s;
+  transition: opacity var(--transition-duration-slow) var(--transition-timing-ease) 0.2s, visibility 0s linear 0s;
 }
 
 .tabs__panel[aria-hidden="true"] {
@@ -35,7 +35,7 @@
   visibility: hidden;
   pointer-events: none;
   z-index: 1;
-  transition: opacity 0.5s ease, visibility 0s linear 0.5s;
+  transition: opacity var(--transition-duration-slow) var(--transition-timing-ease), visibility 0s linear var(--transition-duration-slow);
 }
 
 /* Respect reduced motion preference */
@@ -46,11 +46,11 @@
 }
 
 .tabs__tab {
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color var(--transition-duration-normal) var(--transition-timing-ease), color var(--transition-duration-normal) var(--transition-timing-ease);
 }
 
 .tabs__tab[aria-selected="true"] {
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color var(--transition-duration-normal) var(--transition-timing-ease), color var(--transition-duration-normal) var(--transition-timing-ease);
 }
 
 .tabs__tab[aria-selected="false"]:hover {

@@ -8,7 +8,7 @@
 
 header { 
   .skip-link {
-    left: -1000px;
+    left: -5000px;
     margin-top: .25rem;
     overflow: hidden;
     position: absolute;

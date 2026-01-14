@@ -44,6 +44,7 @@
   gap: .5rem;
 }
 
-.heading-underlined:has(.heading-underlined__list, .heading-underlined__description) {
+.heading-underlined:has(.heading-underlined__list, 
+.heading-underlined__description) {
   padding-bottom: 3rem;
 }

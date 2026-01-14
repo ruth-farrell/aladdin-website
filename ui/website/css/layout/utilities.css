@@ -94,3 +94,35 @@
   }
 }
 
+/* Apply scroll-margin-top to anchor link targets to account for fixed header */
+.u-anchor-link {
+  scroll-margin-top: calc(var(--header-height) + 3rem);
+}
+
+
+@media (width < 1024px) {
+  .u-anchor-link {
+    scroll-margin-top: calc(var(--header-height-mobile) + 2rem);
+  }
+}
+
+/* Large screens: Anchor links inside padded sections need additional scroll-margin-top */
+/* This adds extra margin beyond the base header + 3rem */
+@media (width >= 768px) {
+  .u-padding-xxl .u-anchor-link {
+    scroll-margin-top: calc(var(--header-height) + 12rem); 
+  }
+
+  .u-padding-xl .u-anchor-link {
+    scroll-margin-top: calc(var(--header-height) + 8rem); 
+  }
+
+  .u-padding-lg .u-anchor-link {
+    scroll-margin-top: calc(var(--header-height) + 6rem);
+  }
+
+  .u-padding-md .u-anchor-link {
+    scroll-margin-top: calc(var(--header-height) + 4rem);
+  }
+}
+
