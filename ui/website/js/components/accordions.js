@@ -21,6 +21,7 @@ function createAccordion(instance) {
   );
 
   let openAccordionId = initiallyOpen?.id || null;
+  let lastIsMobile = isMobile();
 
   function update() {
     // For mobile-only accordions on desktop, always show panels
@@ -64,7 +65,15 @@ function createAccordion(instance) {
   // Handle Resize (for mobile-only accordions) 
   function onResize() {
     if (isMobileOnly) {
-      openAccordionId = null; // Reset state on breakpoint change
+      const nowIsMobile = isMobile();
+
+      // Mobile browsers can fire resize while scrolling (address bar show/hide).
+      // Only reset state when we actually cross the breakpoint.
+      if (nowIsMobile !== lastIsMobile) {
+        openAccordionId = null;
+        lastIsMobile = nowIsMobile;
+      }
+
       update();
     }
   }
