@@ -10,7 +10,7 @@
   z-index: 99;
   border-radius: var(--border-radius-pill);
   padding: 0.75rem 2rem;
-  width: calc(var(--container-width) - var(--container-padding));
+  width: calc(var(--container-width) - 2rem);
   margin-top: 1rem;
   max-width: calc(100% - 2rem);
   box-shadow: var(--box-shadow-header);

@@ -1,0 +1,25 @@
+<section class="u-background-white u-padding-xl">
+  <div class="shapes__container--left" aria-hidden="true">
+    {% include "components/shared/shapes/pink-blue-shapes.html" %}
+  </div>
+  <div class="shapes__container--right" aria-hidden="true">
+    {% include "components/shared/shapes/pink-blue-shapes.html" %}
+  </div>
+  <div class="u-container">
+    {% include "components/shared/headings/underlined.html" with
+      icon="rocket-launch"
+      title="Have a setup code?" align="center" %}
+    <form action="/signup" method="get" class="form u-flex-center">
+      <label for="id_access_code">
+        Enter it here and click go:
+      </label>
+      <div class="form__input-group">
+        <input type="text" id="id_access_code" size="10" name="code" aria-required="true">
+        <button class="cta cta--start" type="submit" id="btnSubmit">
+          <span class="cta__inner">Go</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+

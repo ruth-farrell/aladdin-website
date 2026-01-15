@@ -1,4 +1,5 @@
-.add-ons, .add-ons__content { 
+.add-ons, 
+.add-ons__content { 
   overflow-anchor: none;
   contain: layout style;
 }

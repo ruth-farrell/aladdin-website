@@ -61,7 +61,12 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'ui' / 'website'],
+        # Page templates live outside ui/website to match CMS structure.
+        # Keep ui/website in the search path for base.html and components/* includes.
+        'DIRS': [
+            BASE_DIR / 'ui',
+            BASE_DIR / 'ui' / 'website',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

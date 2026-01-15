@@ -42,8 +42,7 @@ form {
   margin: 0;
 }
 
-input[type="text"],
-input[type="submit"] {
+input[type="text"] {
   margin: 0;
   padding: 0;
   border: 0;
@@ -51,8 +50,4 @@ input[type="submit"] {
   font: inherit;
   color: inherit;
   outline: none;
-}
-
-input[type="submit"] {
-  cursor: pointer;
 }
