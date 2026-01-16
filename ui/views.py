@@ -14,3 +14,6 @@ def misc(request):
 
 def get_started(request):
     return render(request, "ordernow.html")
+
+def signin(request):
+    return render(request, "signin.html")

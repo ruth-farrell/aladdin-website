@@ -2,14 +2,17 @@ export function initializeActiveLinks() {
   const headerLinks = document.querySelectorAll('.header__link');
   const currentPath = window.location.pathname;
   const currentHash = window.location.hash;
+  const isHomePath = (pathname) => pathname === '/' || pathname === '/index.html';
 
   // Update home link href based on current page
-  const homeLink = document.querySelector('.header__link[href="/"], .header__link[href="/#back-to-top"], .header__link[href="#back-to-top"]');
+  const homeLink = document.querySelector(
+    '.header__link[href="/index.html"], .header__link[href="/"], .header__link[href="/index.html#back-to-top"], .header__link[href="/#back-to-top"], .header__link[href="#back-to-top"]'
+  );
   if (homeLink) {
-    if (currentPath === '/') {
-      homeLink.setAttribute('href', '/#back-to-top');
+    if (isHomePath(currentPath)) {
+      homeLink.setAttribute('href', '#back-to-top');
     } else {
-      homeLink.setAttribute('href', '/');
+      homeLink.setAttribute('href', '/index.html');
     }
   }
 
@@ -19,7 +22,7 @@ export function initializeActiveLinks() {
 
   // Special case: back-to-top and back-to-content should keep home active
   if (currentHash && (currentHash === '#back-to-top' || currentHash === '#back-to-content')) {
-    if (currentPath === '/') {
+    if (isHomePath(currentPath)) {
       if (homeLink) {
         homeLink.classList.add('header__link--active');
       }
@@ -27,8 +30,8 @@ export function initializeActiveLinks() {
     return;
   }
 
-  if (currentHash && currentPath === '/') {
-    const matchingLink = document.querySelector(`.header__link[href="/${currentHash}"], .header__link[href="${currentHash}"]`);
+  if (currentHash && isHomePath(currentPath)) {
+    const matchingLink = document.querySelector(`.header__link[href="/index.html${currentHash}"], .header__link[href="${currentHash}"]`);
     if (matchingLink) {
       matchingLink.classList.add('header__link--active');
     } else {
@@ -40,7 +43,7 @@ export function initializeActiveLinks() {
     return;
   }
 
-  if (currentPath === '/') {
+  if (isHomePath(currentPath)) {
     if (homeLink) {
       homeLink.classList.add('header__link--active');
     }

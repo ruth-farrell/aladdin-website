@@ -192,7 +192,7 @@ Call-to-action buttons with multiple theme options.
 For header navigation buttons:
 
 ```html
-<a class="header__cta header__cta--primary" href="/signin">Sign In</a>
+<a class="header__cta header__cta--primary" href="/signin.html">Sign In</a>
 <a class="header__cta header__cta--secondary" href="/contact">Contact</a>
 ```
 

@@ -4,11 +4,27 @@ from . import views
 
 urlpatterns = [
     path("", views.index, name="index"),
-    path("careers", views.careers, name="careers"),
-    path("misc", views.misc, name="misc"), 
-    path("parents", views.parents, name="parents"), 
-    path("ordernow", views.get_started, name="get_started"),
-    # Back-compat: /sign-in should canonicalize to /signin
-    path("sign-in", RedirectView.as_view(url="/signin", permanent=True)),
-    path("sign-in/", RedirectView.as_view(url="/signin", permanent=True)),
+    path("index.html", views.index, name="index_html"),
+
+    path("careers.html", views.careers, name="careers_html"),
+    path("misc.html", views.misc, name="misc_html"),
+    path("parents.html", views.parents, name="parents_html"),
+    path("ordernow.html", views.get_started, name="get_started_html"),
+    path("signin.html", views.signin, name="signin_html"),
+
+    # Back-compat: no-extension URLs should canonicalize to .html
+    path("careers", RedirectView.as_view(url="/careers.html", permanent=True)),
+    path("careers/", RedirectView.as_view(url="/careers.html", permanent=True)),
+    path("misc", RedirectView.as_view(url="/misc.html", permanent=True)),
+    path("misc/", RedirectView.as_view(url="/misc.html", permanent=True)),
+    path("parents", RedirectView.as_view(url="/parents.html", permanent=True)),
+    path("parents/", RedirectView.as_view(url="/parents.html", permanent=True)),
+    path("ordernow", RedirectView.as_view(url="/ordernow.html", permanent=True)),
+    path("ordernow/", RedirectView.as_view(url="/ordernow.html", permanent=True)),
+    path("signin", RedirectView.as_view(url="/signin.html", permanent=True)),
+    path("signin/", RedirectView.as_view(url="/signin.html", permanent=True)),
+
+    # Back-compat: /sign-in should canonicalize to /signin.html
+    path("sign-in", RedirectView.as_view(url="/signin.html", permanent=True)),
+    path("sign-in/", RedirectView.as_view(url="/signin.html", permanent=True)),
 ]
