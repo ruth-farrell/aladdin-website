@@ -1,32 +1,63 @@
 .parents-tabs {
   --color-accent: var(--color-connect);
-
-  .shapes {
-    right: -12rem;
-    left: unset;
-    bottom: 180px;
-    top: unset;
-  }
-
-  .shapes .shapes__oblong--yellow-green {
-    bottom: 3%;
-    top: auto;
-  }
-
-  .shapes .shapes__oblong--yellow-red {
-    bottom: 4%;
-    top: auto;
-  }
 }
 
 .parents-tabs__wrapper {
   position: relative;
-  display: flex;
-  gap: 1rem;
+  padding-bottom: 6rem;
+  display: grid;
+  align-items: stretch;
+  gap: 2rem 1.5rem;
+  grid-template-columns: 2.25fr 5fr;
+  grid-template-areas:
+    "overview panels"
+    "cards panels"
+    "cta panels";
 }
 
-.tabs__panels {
-  flex: 5;
+.parents-tabs__overview {
+  grid-area: overview;
+  align-self: start;
+}
+
+.parents-tabs__panels {
+  grid-area: panels;
+  height: 100%;
+  position: relative;
+  overflow: visible;
+}
+
+.parents-tabs__panels .shapes {
+  right: -12rem;
+  left: unset;
+  bottom: -6rem;
+  top: unset;
+}
+
+.parents-tabs__panels .tabs__panels {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+}
+
+.parents-tabs__panels .shapes .shapes__oblong--yellow-green {
+  bottom: 3%;
+  top: auto;
+}
+
+.parents-tabs__panels .shapes .shapes__oblong--yellow-red {
+  bottom: 4%;
+  top: auto;
+}
+
+.parents-tabs__sidebar-cards {
+  grid-area: cards;
+  align-self: start;
+}
+
+.parents-tabs__question-cta {
+  grid-area: cta;
+  align-self: start;
 }
 
 .tabs__list {
@@ -73,33 +104,36 @@
 .parents-tabs__image {
   position: absolute;
   right: 0;
-  bottom: 300px;
+  bottom: 0;
   width: 100%;
   max-width: 350px;
 }
 
 @media (width <= 1024px) {
+  .parents-tabs__panels .shapes {
+    right: 0rem;
+    bottom: -4rem;
+  }
+
   .benefits-families, 
   .getting-started {
     grid-template-columns: 1fr;
     gap: 0;
   }
 
-  .parents-tabs .shapes {
-    right: -50px;
-    bottom: 275px;
-  }
-
   .parents-tabs__image {
     position: static;
     margin: 2rem auto;
   }
-}
 
-@media (width <= 768px) {
   .parents-tabs__wrapper {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 3rem;
+    grid-template-areas:
+      "overview"
+      "panels"
+      "cards"
+      "cta";
   }
 
   /* Allow tab panels to size to content on mobile */
@@ -117,7 +151,6 @@
     height: auto;
   }
 
-  /* Hidden panels should not affect layout */
   .parents-tabs .tabs__panels .tabs__panel[aria-hidden="true"] {
     position: absolute;
     width: 0;
@@ -130,6 +163,18 @@
     position: relative;
     width: 100%;
     height: auto;
+  }
+}
+
+@media (768px < width <= 1024px) {
+  .parents-tabs__sidebar-cards.sidebar {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .parents-tabs__sidebar-cards.sidebar .sidebar__card {
+    height: 100%;
   }
 }
 

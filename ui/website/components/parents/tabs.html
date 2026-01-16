@@ -1,7 +1,6 @@
 <section class="parents-tabs u-background-white" data-tabs>
   <div class="parents-tabs__wrapper u-container u-padding-md">
-    {% include "components/shared/shapes/yellow-shapes.html" %}
-    <div class="sidebar">
+    <div class="parents-tabs__overview sidebar">
       <section class="sidebar__card">
         <h2 class="sidebar__card-heading">Overview</h2>
         <div class="sidebar__card-content tabs__list" role="tablist">
@@ -32,25 +31,32 @@
           </button>
         </div>
       </section>
-      {% include "components/parents/sidebar-continued.html" %}
     </div>
 
-    <section class="tabs__panels">
-      <div class="tabs__panel" id="aladdin-connect" aria-hidden="false" role="tabpanel" aria-labelledby="tab-aladdin-connect">
-        {% include "components/parents/tabpanels/aladdin-connect.html" %}
-      </div>
-      <div class="tabs__panel" id="benefits-families" aria-hidden="true" role="tabpanel" aria-labelledby="tab-benefits-families">
-        {% include "components/parents/tabpanels/benefits-families.html" %}
-      </div>
-      <div class="tabs__panel" id="getting-started" aria-hidden="true" role="tabpanel" aria-labelledby="tab-getting-started">
-        {% include "components/parents/tabpanels/getting-started.html" %}
-      </div>
-      <div class="tabs__panel" id="security-privacy" aria-hidden="true" role="tabpanel" aria-labelledby="tab-security-privacy">
-        {% include "components/parents/tabpanels/security-privacy.html" %}
-      </div>
-    </section>
-    <section class="u-mobile-only"> 
-      {% include "components/parents/question-cta.html" %} 
-    </section>
+    <div class="parents-tabs__panels">
+      {% include "website/components/shared/shapes/yellow-shapes.html" %}
+      <section class="tabs__panels">
+        <div class="tabs__panel" id="aladdin-connect" aria-hidden="false" role="tabpanel" aria-labelledby="tab-aladdin-connect">
+          {% include "website/components/parents/tabpanels/aladdin-connect.html" %}
+        </div>
+        <div class="tabs__panel" id="benefits-families" aria-hidden="true" role="tabpanel" aria-labelledby="tab-benefits-families">
+          {% include "website/components/parents/tabpanels/benefits-families.html" %}
+        </div>
+        <div class="tabs__panel" id="getting-started" aria-hidden="true" role="tabpanel" aria-labelledby="tab-getting-started">
+          {% include "website/components/parents/tabpanels/getting-started.html" %}
+        </div>
+        <div class="tabs__panel" id="security-privacy" aria-hidden="true" role="tabpanel" aria-labelledby="tab-security-privacy">
+          {% include "website/components/parents/tabpanels/security-privacy.html" %}
+        </div>
+      </section>
+    </div>
+
+    <div class="parents-tabs__sidebar-cards sidebar">
+      {% include "website/components/parents/sidebar-continued.html" %}
+    </div>
+
+    <div class="parents-tabs__question-cta">
+      {% include "website/components/parents/question-cta.html" %}
+    </div>
   </div>
 </section>

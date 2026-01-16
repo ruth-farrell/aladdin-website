@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "website/base.html" %}
 {% load static %}
 {% block title %}Get Started | Aladdin Schools{% endblock %}
 {% block metaDescription %}Start your journey with Aladdin Schools by entering your setup code.{% endblock %}
@@ -7,8 +7,8 @@
 {% endblock %}
 
 {% block content %}
-  {% include "components/shared/hero.html" with theme="green-blue" title="Get Started" %}
-  {% include "components/ordernow/content.html" %}
+  {% include "website/components/shared/hero.html" with theme="green-blue" title="Get Started" %}
+  {% include "website/components/ordernow/content.html" %}
 {% endblock %}
 
 

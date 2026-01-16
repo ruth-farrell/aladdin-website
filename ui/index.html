@@ -1,19 +1,19 @@
-{% extends "base.html" %}
+{% extends "website/base.html" %}
 {% load static %}
 {% block title %}The software supporting great schools | Aladdin Schools{% endblock %}
 {% block metaDescription %}Discover Aladdin Schools - the all-in-one platform simplifying administration for Irish primary schools. Manage attendance, communication, and student information with ease.{% endblock %}
 {% block pageStyles %}
-  <link rel="stylesheet" href="{% static 'css/pages/home/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'website/css/pages/home/styles.css' %}">
 {% endblock %}
 
 {% block content %}
-  {% include "components/home/hero.html" %}
-  {% include "components/home/about.html" %}
-  {% include "components/home/packages.html" %}
-  {% include "components/home/add-ons.html" %}
-  {% include "components/home/inbox.html" %}
-  {% include "components/home/faqs.html" %}
-  {% include "components/home/contact.html" %}
+  {% include "website/components/home/hero.html" %}
+  {% include "website/components/home/about.html" %}
+  {% include "website/components/home/packages.html" %}
+  {% include "website/components/home/add-ons.html" %}
+  {% include "website/components/home/inbox.html" %}
+  {% include "website/components/home/faqs.html" %}
+  {% include "website/components/home/contact.html" %}
 {% endblock %}
 
 

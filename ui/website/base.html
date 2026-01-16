@@ -9,7 +9,7 @@
     <!-- Open Graph (Facebook, LinkedIn) -->
   <meta property="og:title" content="Page Title">
   <meta property="og:description" content="Page description">
-  <meta property="og:image" content="https://aladdin.ie/files/website/images/og-image.webp">
+  <meta property="og:image" content="https://www.aladdin.ie/files/website/images/og-image.webp">
   <meta property="og:url" content="https://www.aladdin.ie{{ request.path }}">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Aladdin Schools">
@@ -17,17 +17,18 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Page Title">
   <meta name="twitter:description" content="Page description">
-  <meta name="twitter:image" content="https://aladdin.ie/files/website/images/twitter-image.webp">
+  <meta name="twitter:image" content="https://www.aladdin.ie/files/website/images/twitter-image.webp">
 
+  <link rel="preload" as="image" href="https://www.aladdin.ie/files/website/images/logo-long.webp" type="image/webp" fetchpriority="high"/>
   <link rel="shortcut icon" href="https://www.aladdin.ie/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'website/css/styles.css' %}">
   {% block pageStyles %}{% endblock %} 
 </head>
 <body class="{% block pageclass %}{% endblock %}" data-mobile-menu-open="false">
   <div id="back-to-top" class="u-anchor-link" tabindex="-1"></div>
-  <div class="svg-sprite" aria-hidden="true">{% include "components/base/sprite.svg" %}</div>
+  <div class="svg-sprite" aria-hidden="true">{% include "website/components/base/sprite.svg" %}</div>
   
-  {% include "components/base/header.html" %}
+  {% include "website/components/base/header.html" %}
 
   <div id="skip-link" class="u-anchor-link" tabindex="-1"></div>
   <main>
@@ -39,8 +40,8 @@
     <span class="visually-hidden">Go to content</span>
   </a>
 
-  {% include "components/base/footer.html" %}
-  <script type="module" src="{% static 'js/script.js' %}"></script>
+  {% include "website/components/base/footer.html" %}
+  <script type="module" src="{% static 'website/js/script.js' %}"></script>
   {% block pageScripts %}{% endblock %}
   <script type="application/ld+json">
     {

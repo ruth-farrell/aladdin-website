@@ -1,14 +1,12 @@
 <section class="u-background-white u-padding-xl">
   <div class="shapes__container--left" aria-hidden="true">
-    {% include "components/shared/shapes/pink-blue-shapes.html" %}
+    {% include "website/components/shared/shapes/pink-blue-shapes.html" %}
   </div>
   <div class="shapes__container--right" aria-hidden="true">
-    {% include "components/shared/shapes/pink-blue-shapes.html" %}
+    {% include "website/components/shared/shapes/pink-blue-shapes.html" %}
   </div>
   <div class="u-container">
-    {% include "components/shared/headings/underlined.html" with
-      icon="rocket-launch"
-      title="Have a setup code?" align="center" %}
+    {% include "website/components/shared/headings/underlined.html" with icon="rocket-launch" title="Have a setup code?" align="center" %}
     <form action="/signup" method="get" class="form u-flex-center">
       <label for="id_access_code">
         Enter it here and click go:

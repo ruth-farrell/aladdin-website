@@ -24,18 +24,11 @@
     </svg>{{ phone }}</p>{% endif %}
   {% if reveal_text and reveal_bullet1 %}
     <div class="card__reveal">
-      {% include "components/shared/reveal.html" with 
-        id=card_id|default:"card-reveal" 
-        theme=theme 
-        bullet1=reveal_bullet1
-        bullet2=reveal_bullet2
-        bullet3=reveal_bullet3
-        bullet4=reveal_bullet4
-        buttonText=reveal_text %}
+      {% include "website/components/shared/reveal.html" with id=card_id|default:"card-reveal" theme=theme bullet1=reveal_bullet1 bullet2=reveal_bullet2 bullet3=reveal_bullet3 bullet4=reveal_bullet4 buttonText=reveal_text %}
     </div>
   {% else %}
     <div class="card__cta">
-      {% include "components/shared/cta.html" with theme=cta_theme link=cta_link text=cta_text %}
+      {% include "website/components/shared/cta.html" with theme=cta_theme link=cta_link text=cta_text %}
     </div>
   {% endif %}
 </div>

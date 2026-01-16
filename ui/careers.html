@@ -1,16 +1,16 @@
-{% extends "base.html" %}
+{% extends "website/base.html" %}
 {% load static %}
 {% block title %}Join our team | Aladdin Schools{% endblock %}
 {% block metaDescription %}Join the Aladdin Schools team and help support Irish primary schools. View open positions and learn about life at Aladdin.{% endblock %}
 {% block pageStyles %}
-  <link rel="stylesheet" href="{% static 'css/pages/careers/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'website/css/pages/careers/styles.css' %}">
 {% endblock %}
 
 {% block content %}
-  {% include "components/careers/hero.html" %}
-  {% include "components/careers/join.html" %}
-  {% include "components/careers/open-positions.html" %}
-  {% include "components/careers/life.html" %}
+  {% include "website/components/careers/hero.html" %}
+  {% include "website/components/careers/join.html" %}
+  {% include "website/components/careers/open-positions.html" %}
+  {% include "website/components/careers/life.html" %}
 {% endblock %}
 
 {% block pageScripts %} 

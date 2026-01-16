@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "website/base.html" %}
 {% load static %}
 {% block title %}Miscelaneous Page Title | Aladdin Schools{% endblock %}
 {% block metaDescription %}Page description goes here. Keep it between 150-160 characters for optimal SEO.{% endblock %}
@@ -7,8 +7,8 @@
 {% endblock %}
 
 {% block content %}
-  {% include "components/shared/hero.html" with theme="pink-red" title="Misc Page Example" %}
-  {% include "components/misc/content.html" %}
+  {% include "website/components/shared/hero.html" with theme="pink-red" title="Misc Page Example" %}
+  {% include "website/components/misc/content.html" %}
 {% endblock %}
 
 

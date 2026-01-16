@@ -1,27 +1,21 @@
 <section class="join u-background-white u-padding-xl">
-  {% include "components/shared/shapes/yellow-shapes.html" %}
+  {% include "website/components/shared/shapes/yellow-shapes.html" %}
   <div class="join__top-wrapper u-container">
     <div class="join__text">
-      {% include "components/shared/headings/tagline.html" with 
-        title="Join Aladdin" 
-        tagline="A passionate, people-first team supporting Irish primary schools."
-        description="At Aladdin, everything we do is built around helping schools run smoothly and helping people thrive, and that includes our team. Whether you're building new tools, supporting customers, or shaping how schools communicate, your work here will have real impact. We're proud to be 100% Irish-owned, and even prouder of the talented, kind, and collaborative team behind it all." %}
+      {% include "website/components/shared/headings/tagline.html" with title="Join Aladdin" tagline="A passionate, people-first team supporting Irish primary schools." description="At Aladdin, everything we do is built around helping schools run smoothly and helping people thrive, and that includes our team. Whether you're building new tools, supporting customers, or shaping how schools communicate, your work here will have real impact. We're proud to be 100% Irish-owned, and even prouder of the talented, kind, and collaborative team behind it all." %}
     </div>
     <div class="join__media">
       <img src="https://aladdin.ie/files/website/images/careers-team.webp" alt="Aladdin team photo" width="500" height="500" fetchpriority="high"/>
     </div>
   </div>
   <div class="join__bottom-wrapper u-container">
-    {% include "components/shared/headings/underlined.html" with 
-      title="What We Value" 
-      align="center"
-      description="Our STAR values shape how we collaborate, how we support schools, and how we treat each other as teammates. These are the qualities we look for, nurture, and celebrate at Aladdin." %}
+    {% include "website/components/shared/headings/underlined.html" with title="What We Value" align="center" description="Our STAR values shape how we collaborate, how we support schools, and how we treat each other as teammates. These are the qualities we look for, nurture, and celebrate at Aladdin." %}
     <div class="star">
       <ul class="star__list">
-        {% include "components/careers/star-item.html" with theme="blue-green" letter="S" title="Service with Care" description="We go out of our way to help, whether it's a principal, a parent, or a teammate. We take pride in being kind, patient, and reliable." %}
-        {% include "components/careers/star-item.html" with theme="pink-red" letter="T" title="Teamwork & Collaboration" description="We work best when we work together. Everyone pitches in, shares ideas, and supports each other to get the job done." %}
-        {% include "components/careers/star-item.html" with theme="yellow-red" letter="A" title="Adaptable Innovation" description="We stay practical and open-minded. We always look for improvements that make a real difference — even if they're small." %}
-        {% include "components/careers/star-item.html" with theme="blue-pink" letter="R" title="Reliable Leadership" description="We take responsibility for our work and follow through. Leadership at Aladdin means being open, honest, and showing good judgement — no matter your role." %}
+        {% include "website/components/careers/star-item.html" with theme="blue-green" letter="S" title="Service with Care" description="We go out of our way to help, whether it's a principal, a parent, or a teammate. We take pride in being kind, patient, and reliable." %}
+        {% include "website/components/careers/star-item.html" with theme="pink-red" letter="T" title="Teamwork & Collaboration" description="We work best when we work together. Everyone pitches in, shares ideas, and supports each other to get the job done." %}
+        {% include "website/components/careers/star-item.html" with theme="yellow-red" letter="A" title="Adaptable Innovation" description="We stay practical and open-minded. We always look for improvements that make a real difference — even if they're small." %}
+        {% include "website/components/careers/star-item.html" with theme="blue-pink" letter="R" title="Reliable Leadership" description="We take responsibility for our work and follow through. Leadership at Aladdin means being open, honest, and showing good judgement — no matter your role." %}
       </ul>
     </div>
   </div>

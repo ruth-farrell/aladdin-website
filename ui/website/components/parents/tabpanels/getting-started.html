@@ -1,40 +1,12 @@
 <section class="getting-started">
   <div class="getting-started__steps">
-    {% include "components/shared/headings/tagline.html" with
-      title="Getting Started with Aladdin Connect"
-      description="Your school will provide everything you need to get started. Just follow the steps below to create your account and start using Aladdin Connect."
-    %}
-    {% include "components/shared/headings/underlined.html" with
-      icon="envelope-open-text"
-      title="Read the Information Letter"
-      description="Before Aladdin Connect is launched, your school will send you a letter explaining what the service is and how it works.<br> This is your opportunity to update any contact details or talk through family situations with your school — including situations involving stepparents, blended families, or legal arrangements. If needed, your school can disable features like family sharing to restrict access."
-    %}
-    {% include "components/shared/headings/underlined.html" with
-      icon="email"
-      title="Receive Your Unique Registration Link"
-      description="After the letter, you'll receive a text or email with your own registration link.<br>Each parent or guardian receives a separate link that connects to their personal account. These links are unique and cannot be shared with other parents, even within the same family or school."
-    %}
-    {% include "components/shared/headings/underlined.html" with
-      icon="globe-pointer"
-      title="Register and Set Your Password"
-      description="Click the link in your message to begin registration.<br>You'll create a password during setup, which — along with your email — will be used to securely access Aladdin Connect."
-    %}
-    {% include "components/shared/headings/underlined.html" with
-      icon="mobile-screen"
-      title="Download the App"
-      description="Once you've registered, you'll receive an email with links to download the Aladdin Connect app. <br>While optional, the app makes it easier to receive instant message alerts from your school. To enable notifications, you'll need to verify your mobile phone number."
-    %}
+    {% include "website/components/shared/headings/underlined.html" with icon="envelope-open-text" title="1. Read the Information Letter" description="Before Aladdin Connect is launched, your school will send you a letter explaining what the service is and how it works.<br> This is your opportunity to update any contact details or talk through family situations with your school — including situations involving stepparents, blended families, or legal arrangements. If needed, your school can disable features like family sharing to restrict access." %}
+    {% include "website/components/shared/headings/underlined.html" with icon="email" title="2. Receive Your Unique Registration Link" description="After the letter, you'll receive a text or email with your own registration link.<br>Each parent or guardian receives a separate link that connects to their personal account. These links are unique and cannot be shared with other parents, even within the same family or school." %}
+    {% include "website/components/shared/headings/underlined.html" with icon="globe-pointer" title="3. Register and Set Your Password" description="Click the link in your message to begin registration.<br>You'll create a password during setup, which — along with your email — will be used to securely access Aladdin Connect." %}
   </div>
   <div class="getting-started__important">
-    {% include "components/shared/headings/underlined.html" with
-      title="Important to Know"
-      bullet1="Each parent or guardian must register using their own unique link."
-      bullet2="During registration, you will be asked to confirm your child's name and DOB, this must match what your school has on file exactly."
-      bullet3="Your school controls what information is visible and who can access it."
-      bullet4="If you have multiple children in one school, they will all appear under one login."
-      bullet5="If contact sharing is enabled, you'll have full control over your privacy settings."
-      bullet6="Schools control what features and information are shared through Connect."
-    %}
+    {% include "website/components/shared/headings/underlined.html" with icon="mobile-screen" title="4. Download the App" description="Once you've registered, you'll receive an email with links to download the Aladdin Connect app. <br>While optional, the app makes it easier to receive instant message alerts from your school. To enable notifications, you'll need to verify your mobile phone number." %}
+    {% include "website/components/shared/headings/underlined.html" with title="Important to Know" icon="lightbulb-exclamation" bullet1="Each parent or guardian must register using their own unique link." bullet2="During registration, you will be asked to confirm your child's name and DOB, this must match what your school has on file exactly." bullet3="Your school controls what information is visible and who can access it." bullet4="If you have multiple children in one school, they will all appear under one login." bullet5="If contact sharing is enabled, you'll have full control over your privacy settings." bullet6="Schools control what features and information are shared through Connect." %}
   </div>
   <img class="parents-tabs__image" src="https://aladdin.ie/files/website/images/parents-3.webp" alt="" loading="lazy" />
 </section>

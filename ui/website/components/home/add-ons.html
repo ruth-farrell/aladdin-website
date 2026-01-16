@@ -1,47 +1,19 @@
 <section class="add-ons u-background-white u-padding-xxl u-anchor-link" id="add-ons">
   <div class="shapes__container--left" aria-hidden="true">
-    {% include "components/shared/shapes/pink-blue-shapes.html" %}
+    {% include "website/components/shared/shapes/pink-blue-shapes.html" %}
   </div>
   <div class="shapes__container--right" aria-hidden="true">
-    {% include "components/shared/shapes/pink-blue-shapes.html" %}
+    {% include "website/components/shared/shapes/pink-blue-shapes.html" %}
   </div>
   <div class="u-container">
     <div class="add-ons__content">
       <div class="add-ons__heading">
-        {% include "components/shared/headings/underlined.html" with title="Add-ons" align="center" description="Aladdin's add-ons offer targeted solutions for key school needs. Whether you're managing payments, tracking absences or running a school library, extend your platform with tools that work seamlessly with the rest of Aladdin." %}
+        {% include "website/components/shared/headings/underlined.html" with title="Add-ons" align="center" description="Aladdin's add-ons offer targeted solutions for key school needs. Whether you're managing payments, tracking absences or running a school library, extend your platform with tools that work seamlessly with the rest of Aladdin." %}
       </div>
       <div class="card__wrapper" data-reveals>
-        {% include "components/shared/card.html" with 
-          image="https://aladdin.ie/files/website/images/epay-logo.webp" 
-          title="ePayments" 
-          description="Collect money for books, fees, tours and more — all within Aladdin. Reduce cash handling and simplify reporting." 
-          theme="epayments" 
-          reveal_text="More Info"
-          reveal_bullet1="Collect credit / debit card ePayments from parents online via Aladdin."
-          reveal_bullet2="Collected money is deposited directly to school bank account"
-          reveal_bullet3="Flexible collection options such as payment due dates and variable amounts."
-          card_id="epayments-reveal" %}
-        {% include "components/shared/card.html" with 
-          image="https://aladdin.ie/files/website/images/lib-logo.webp" 
-          title="Library" 
-          description="Easily manage your school's book collection with lending, tracking and returns all in one place." 
-          theme="library" 
-          reveal_text="More Info"
-          reveal_bullet1="Organise your school or classroom libraries"
-          reveal_bullet2="Keep track of your school book rentals and manage your scheme with ease."
-          reveal_bullet3="Streamline checking books in/out with individual student library cards."
-          card_id="library-reveal" %}
-        {% include "components/shared/card.html" with 
-          image="https://aladdin.ie/files/website/images/abs-logo.webp" 
-          title="Staff Absences" 
-          description="Record leave, view patterns, and support school planning with integrated absence tracking." 
-          theme="staff-absences" 
-          reveal_text="More Info"
-          reveal_bullet1="Absences to date are easily tracked."
-          reveal_bullet2="Teachers can enter requests for planned absence in advance"
-          reveal_bullet3="Flexible access options for who can see and approve absences"
-          reveal_bullet4="Absence reasons on Aladdin are kept up to date with those provided by the OLCS"
-          card_id="staff-absences-reveal" %}
+        {% include "website/components/shared/card.html" with image="https://aladdin.ie/files/website/images/epay-logo.webp" title="ePayments" description="Collect money for books, fees, tours and more — all within Aladdin. Reduce cash handling and simplify reporting." theme="epayments" reveal_text="More Info" reveal_bullet1="Collect credit / debit card ePayments from parents online via Aladdin." reveal_bullet2="Collected money is deposited directly to school bank account" reveal_bullet3="Flexible collection options such as payment due dates and variable amounts." card_id="epayments-reveal" %}
+        {% include "website/components/shared/card.html" with image="https://aladdin.ie/files/website/images/lib-logo.webp" title="Library" description="Easily manage your school's book collection with lending, tracking and returns all in one place." theme="library" reveal_text="More Info" reveal_bullet1="Organise your school or classroom libraries" reveal_bullet2="Keep track of your school book rentals and manage your scheme with ease." reveal_bullet3="Streamline checking books in/out with individual student library cards." card_id="library-reveal" %}
+        {% include "website/components/shared/card.html" with image="https://aladdin.ie/files/website/images/abs-logo.webp" title="Staff Absences" description="Record leave, view patterns, and support school planning with integrated absence tracking." theme="staff-absences" reveal_text="More Info" reveal_bullet1="Absences to date are easily tracked." reveal_bullet2="Teachers can enter requests for planned absence in advance" reveal_bullet3="Flexible access options for who can see and approve absences" reveal_bullet4="Absence reasons on Aladdin are kept up to date with those provided by the OLCS" card_id="staff-absences-reveal" %}
       </div>
     </div>
   </div>

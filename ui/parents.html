@@ -1,14 +1,14 @@
-{% extends "base.html" %}
+{% extends "website/base.html" %}
 {% load static %}
 {% block title %}Information for parents & guardians | Aladdin Schools{% endblock %}
 {% block metaDescription %}Learn how Aladdin Connect helps parents and guardians stay connected with their child's school. Get information about the app, registration, and features.{% endblock %}
 {% block pageStyles %}
-  <link rel="stylesheet" href="{% static 'css/pages/parents/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'website/css/pages/parents/styles.css' %}">
 {% endblock %}
 
 {% block content %}
-  {% include "components/parents/hero.html" %}
-  {% include "components/parents/tabs.html" %}
+  {% include "website/components/parents/hero.html" %}
+  {% include "website/components/parents/tabs.html" %}
 {% endblock %}
 
 

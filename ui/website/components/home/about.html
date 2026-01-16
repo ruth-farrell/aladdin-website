@@ -1,21 +1,21 @@
 <section class="about u-background-white u-padding-xl u-anchor-link" id="about">
   <div class="about__shapes" aria-hidden="true">
-    {% include "components/shared/shapes/yellow-shapes.html" %}
+    {% include "website/components/shared/shapes/yellow-shapes.html" %}
   </div>
   <div class="about__wrapper u-container">
     <div class="about__text">
-        {% include "components/shared/headings/tagline.html" with title="About Aladdin" tagline="An Irish company proudly supporting Irish primary schools since 2009." description="Every day, Aladdin helps thousands of Irish primary schools run smoothly with our all-in-one platform that takes the stress out of admin, improves communication, and helps schools focus on what really matters — teaching and learning." %}
+        {% include "website/components/shared/headings/tagline.html" with title="About Aladdin" tagline="An Irish company proudly supporting Irish primary schools since 2009." description="Every day, Aladdin helps thousands of Irish primary schools run smoothly with our all-in-one platform that takes the stress out of admin, improves communication, and helps schools focus on what really matters — teaching and learning." %}
         <ul class="about__statistics">
-            {% include "components/home/about-statistic-item.html" with stat="15+" theme="lightblue-green" text="years serving Irish education" %}
-            {% include "components/home/about-statistic-item.html" with stat="2,900+" theme="pink-red" text="schools across Ireland" %}
-            {% include "components/home/about-statistic-item.html" with stat="30,000+" theme="yellow-red" text="school staff signing in daily" %}
-            {% include "components/home/about-statistic-item.html" with stat="500,000+" theme="lightblue-pink" text="primary school students supported" %}
+            {% include "website/components/home/about-statistic-item.html" with stat="15+" theme="lightblue-green" text="years serving Irish education" %}
+            {% include "website/components/home/about-statistic-item.html" with stat="2,900+" theme="pink-red" text="schools across Ireland" %}
+            {% include "website/components/home/about-statistic-item.html" with stat="30,000+" theme="yellow-red" text="school staff signing in daily" %}
+            {% include "website/components/home/about-statistic-item.html" with stat="500,000+" theme="lightblue-pink" text="primary school students supported" %}
         </ul>
     </div>
     <div class="about__media">
       <div class="about__graphic">
         <div class="about__image">
-          <img src="https://aladdin.ie/files/website/images/star-team-image.webp" loading="lazy" alt="Aladdin team photo" width="530" height="530"/>
+          <img src="https://aladdin.ie/files/website/images/star-team-image.webp" fetchpriority="high" decoding="async" alt="Aladdin team photo" width="530" height="530"/>
         </div>
         <p class="about__caption">No Genies! Just us.<br>Aladdin is built and run by real people. Right here, in Ireland.</p>
         <div class="about__arrow">

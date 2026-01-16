@@ -61,12 +61,10 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        # Page templates live outside ui/website to match CMS structure.
-        # Keep ui/website in the search path for base.html and components/* includes.
-        'DIRS': [
-            BASE_DIR / 'ui',
-            BASE_DIR / 'ui' / 'website',
-        ],
+        # Templates live under ui/, with CMS-compatible paths like:
+        # - top-level pages: index.html, careers.html, etc.
+        # - everything else: website/...
+        'DIRS': [BASE_DIR / 'ui'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -130,7 +128,8 @@ USE_TZ = True
 STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_DIRS = [
-    BASE_DIR / "ui" / "website",
+    # Serve static assets with CMS-compatible paths like: website/css/..., website/js/...
+    BASE_DIR / "ui",
 ]
 
 # Use WhiteNoise compressed storage only in production
