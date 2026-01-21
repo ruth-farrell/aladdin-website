@@ -39,18 +39,18 @@ aladdin/
 │   ├── misc.html                 # Page template (starter for new pages)
 │   └── website/
 │       ├── base.html             # Base template extended by all pages
-│       ├── components/           # Template partials (included via {% include %})
+│       ├── components/           # Template partials (included via Django template includes)
 │       │   ├── base/             # Header, footer, sprite
 │       │   ├── shared/           # Reusable components
 │       │   ├── home/             # Homepage components
 │       │   ├── parents/          # Parents page components
 │       │   └── careers/          # Careers page components
-│       ├── css/                  # Stylesheets (served via {% static 'website/css/...' %})
+│       ├── css/                  # Stylesheets (served via Django static paths like website/css/...)
 │       │   ├── foundations/
 │       │   ├── layout/
 │       │   ├── pages/
 │       │   └── shared/
-│       └── js/                   # JavaScript (served via {% static 'website/js/...' %})
+│       └── js/                   # JavaScript (served via Django static paths like website/js/...)
 │           ├── components/
 │           └── script.js
 └── docs/                         # This documentation
@@ -59,6 +59,6 @@ aladdin/
 ### Template + Static Path Conventions
 
 - **Templates (repo path)**: `ui/website/...`
-- **Templates (Django include path)**: `website/...` (e.g. `{% include "website/components/shared/hero.html" %}`)
+- **Templates (Django include path)**: `website/...` (e.g. {% raw %}`{% include "website/components/shared/hero.html" %}`{% endraw %})
 - **Static (repo path)**: `ui/website/{css,js}/...`
-- **Static (Django static path)**: `website/{css,js}/...` (e.g. `{% static 'website/css/styles.css' %}`)
+- **Static (Django static path)**: `website/{css,js}/...` (e.g. {% raw %}`{% static 'website/css/styles.css' %}`{% endraw %})
