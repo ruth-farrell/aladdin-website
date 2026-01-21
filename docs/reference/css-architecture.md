@@ -5,7 +5,7 @@ Documentation for the CSS structure, organization, and conventions.
 ## 📁 File Structure
 
 ```
-ui/static/css/
+ui/website/css/
 ├── styles.css              # Main stylesheet (imports all)
 ├── foundations/            # Base styles
 │   ├── normalize.css
@@ -13,6 +13,7 @@ ui/static/css/
 │   ├── colors.css
 │   ├── typography.css
 │   ├── buttons.css
+│   ├── forms.css
 │   ├── tokens.css          # CSS custom properties
 │   └── icons.css
 ├── layout/                 # Layout utilities
@@ -27,6 +28,8 @@ ui/static/css/
     ├── tabs.css
     ├── card.css
     ├── shapes.css
+    ├── image-gallery.css
+    ├── reveal.css
     ├── base/               # Header, footer
     ├── hero/               # Hero components
     └── headings/           # Heading components
@@ -34,14 +37,14 @@ ui/static/css/
 
 ### Key Files
 
-- **`ui/templates/base.html`** - Base template extended by all pages
-- **`ui/static/css/styles.css`** - Main stylesheet (imports all CSS)
-- **`ui/static/js/script.js`** - Main JavaScript entry point
-- **`ui/static/css/foundations/tokens.css`** - CSS custom properties (tokens)
+- **`ui/website/base.html`** - Base template extended by all pages
+- **`ui/website/css/styles.css`** - Main stylesheet (imports all CSS)
+- **`ui/website/js/script.js`** - Main JavaScript entry point
+- **`ui/website/css/foundations/tokens.css`** - CSS custom properties (tokens)
 
 ## 🎯 CSS Import Order
 
-**File:** `ui/static/css/styles.css`
+**File:** `ui/website/css/styles.css`
 
 Import order matters:
 
@@ -52,6 +55,7 @@ Import order matters:
 @import 'foundations/colors.css';
 @import 'foundations/typography.css';
 @import 'foundations/buttons.css';
+@import 'foundations/forms.css';
 @import 'foundations/tokens.css';
 @import 'foundations/icons.css';
 
@@ -64,6 +68,8 @@ Import order matters:
 @import 'shared/tabs.css';
 @import 'shared/card.css';
 @import 'shared/shapes.css';
+@import 'shared/image-gallery.css';
+@import 'shared/reveal.css';
 
 /* 4. Shared Hero */
 @import 'shared/hero/hero.css';
@@ -105,7 +111,7 @@ Block Element Modifier (BEM) naming:
 
 ### 2. CSS Custom Properties (Tokens)
 
-All design tokens are defined in `ui/static/css/foundations/tokens.css`. Use CSS custom properties for consistent styling:
+All design tokens are defined in `ui/website/css/foundations/tokens.css`. Use CSS custom properties for consistent styling:
 
 ```css
 .my-component {
@@ -115,12 +121,12 @@ All design tokens are defined in `ui/static/css/foundations/tokens.css`. Use CSS
 }
 ```
 
-**Location:** `ui/static/css/foundations/tokens.css`  
-**Full list:** See `ui/static/css/foundations/tokens.css`
+**Location:** `ui/website/css/foundations/tokens.css`  
+**Full list:** See `ui/website/css/foundations/tokens.css`
 
 ### 3. Utility Classes
 
-Utility classes are defined in `ui/static/css/layout/utilities.css` for common patterns.
+Utility classes are defined in `ui/website/css/layout/utilities.css` for common patterns.
 
 #### Container & Spacing
 
@@ -183,8 +189,8 @@ When two adjacent sections share the same padding class and background, the top 
 <section class="u-background-white u-padding-xl">Section 2</section>
 ```
 
-**Location:** `ui/static/css/layout/utilities.css`  
-**Full list:** See `ui/static/css/layout/utilities.css`
+**Location:** `ui/website/css/layout/utilities.css`  
+**Full list:** See `ui/website/css/layout/utilities.css`
 
 ## 📐 CSS Organization
 
@@ -240,7 +246,7 @@ pages/
 
 ### Create Page Stylesheet
 
-**File:** `ui/static/css/pages/[page]/styles.css`
+**File:** `ui/website/css/pages/[page]/styles.css`
 
 ```css
 /* Import component styles */
@@ -254,7 +260,7 @@ pages/
 {% raw %}
 ```django
 {% block pageStyles %}
-  <link rel="stylesheet" href="{% static 'css/pages/[page]/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'website/css/pages/[page]/styles.css' %}">
 {% endblock %}
 ```
 {% endraw %}
@@ -279,7 +285,7 @@ pages/
 
 ### Standard Breakpoints
 
-Breakpoints are documented in `ui/static/css/foundations/tokens.css`:
+Breakpoints are documented in `ui/website/css/foundations/tokens.css`:
 
 | Breakpoint | Value | Usage |
 |------------|-------|-------|

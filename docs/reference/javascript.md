@@ -5,13 +5,15 @@ Documentation for the JavaScript structure and components.
 ## 📁 File Structure
 
 ```
-ui/static/js/
+ui/website/js/
 ├── script.js              # Main entry point
 └── components/
     ├── accordions.js      # Accordion functionality
     ├── tabs.js            # Tab functionality
     ├── inbox.js           # Email inbox animation
     ├── back-to-top.js     # Back to top button
+    ├── reveal.js          # Click-to-reveal hidden content (one-way reveal)
+    ├── hero-star.js       # Homepage hero star animation
     └── header/
         ├── hamburger.js   # Mobile menu toggle
         ├── submenus.js    # Dropdown submenus
@@ -20,7 +22,7 @@ ui/static/js/
 
 ## 🎯 Main Entry Point
 
-**File:** `ui/static/js/script.js`
+**File:** `ui/website/js/script.js`
 
 The main script initializes all components on page load:
 
@@ -32,27 +34,24 @@ import { initializeBackToTop } from './components/back-to-top.js';
 import { initializeTabs } from './components/tabs.js';
 import { initializeAccordions } from './components/accordions.js';
 import { initializeInbox } from './components/inbox.js';
+import { initializeReveals } from './components/reveal.js';
+import { initializeSignInShortcut } from './components/signin-shortcut.js';
+import { initializeHeroStar } from './components/hero-star.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Always initialized
   initializeHamburger();
   initializeSubmenus();
   initializeActiveLinks();
   setupLinkClickHandlers();
   initializeBackToTop();
+  initializeSignInShortcut();
 
   // Conditionally initialized (only if elements exist)
-  if (document.querySelector('[data-tabs]')) {
-    initializeTabs();
-  }
-
-  if (document.querySelector('[data-accordions]')) {
-    initializeAccordions();
-  }
-
-  if (document.querySelector('[data-inbox]')) {
-    initializeInbox();
-  }
+  if (document.querySelector('[data-tabs]')) initializeTabs();
+  if (document.querySelector('[data-accordions]')) initializeAccordions();
+  if (document.querySelector('[data-inbox]')) initializeInbox();
+  if (document.querySelector('[data-reveals]')) initializeReveals();
+  if (document.querySelector('.hero__star')) initializeHeroStar();
 });
 ```
 
@@ -79,7 +78,7 @@ function create[Component](instance) {
 
 ### Accordions
 
-**File:** `ui/static/js/components/accordions.js`  
+**File:** `ui/website/js/components/accordions.js`  
 **Selector:** `[data-accordions]`  
 **Function:** `initializeAccordions()`
 
@@ -98,7 +97,7 @@ Features:
 
 ### Tabs
 
-**File:** `ui/static/js/components/tabs.js`  
+**File:** `ui/website/js/components/tabs.js`  
 **Selector:** `[data-tabs]`  
 **Function:** `initializeTabs()`
 
@@ -122,7 +121,7 @@ Features:
 
 ### Inbox
 
-**File:** `ui/static/js/components/inbox.js`  
+**File:** `ui/website/js/components/inbox.js`  
 **Selector:** `[data-inbox]`  
 **Function:** `initializeInbox()`
 
@@ -142,40 +141,59 @@ Features:
 
 ### Back to Top
 
-**File:** `ui/static/js/components/back-to-top.js`  
+**File:** `ui/website/js/components/back-to-top.js`  
 **Function:** `initializeBackToTop()`
 
 Features:
-- Auto-detects `#back-to-content` element
-- Switches between "up" and "down" modes
+- Switches between "up" and "down" modes based on scroll position
 - Smooth scrolling
 
 **Usage:**
 ```html
 <a class="back-to-top" href="#back-to-top">...</a>
 <div id="back-to-top" tabindex="-1"></div>
-<div id="back-to-content" tabindex="-1"></div> <!-- Optional -->
 ```
+
+### Reveal (Click-to-Reveal)
+
+**File:** `ui/website/js/components/reveal.js`  
+**Selector:** `[data-reveals]`  
+**Function:** `initializeReveals()`
+
+Features:
+- One-way reveal: clicking the reveal button shows the hidden panel and hides the button
+- ARIA attributes managed (`aria-expanded`, `aria-hidden`)
+- Supports multiple reveal instances within a container
+
+**Usage (common pattern):**
+
+```html
+<div data-reveals>
+  <!-- One or more .reveal instances inside -->
+</div>
+```
+
+Real-world example: Add-ons cards use reveal inside `ui/website/components/shared/card.html` (see `ui/website/components/home/add-ons.html`).
 
 ### Header Components
 
 #### Hamburger Menu
 
-**File:** `ui/static/js/components/header/hamburger.js`  
+**File:** `ui/website/js/components/header/hamburger.js`  
 **Function:** `initializeHamburger()`
 
 Manages mobile menu toggle.
 
 #### Submenus
 
-**File:** `ui/static/js/components/header/submenus.js`  
+**File:** `ui/website/js/components/header/submenus.js`  
 **Function:** `initializeSubmenus()`
 
 Manages dropdown submenus in navigation.
 
 #### Active Links
 
-**File:** `ui/static/js/components/header/active-link.js`  
+**File:** `ui/website/js/components/header/active-link.js`  
 **Functions:** `initializeActiveLinks()`, `setupLinkClickHandlers()`
 
 Manages active link highlighting based on current page/hash.
@@ -184,7 +202,7 @@ Manages active link highlighting based on current page/hash.
 
 ### Step 1: Create Component File
 
-Create `ui/static/js/components/[name].js`:
+Create `ui/website/js/components/[name].js`:
 
 ```javascript
 export function initialize[Component]() {

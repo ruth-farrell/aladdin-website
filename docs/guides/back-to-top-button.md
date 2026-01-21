@@ -4,25 +4,23 @@ The back-to-top button is a floating button that appears on all pages, allowing 
 
 ## How It Works
 
-The button is automatically included on all pages via `base.html`. It has two modes:
+The button is automatically included on all pages via `ui/website/base.html`. It has two modes:
 
-1. **Back to Top** (default): Always available, links to `#back-to-top` at the top of the page
-2. **Back to Content** (optional): Links to `#back-to-content` when that element exists on the page
+1. **Down mode** (at the very top): Smooth-scrolls the user to just below the initial viewport
+2. **Up mode** (after the user scrolls): Links to `#back-to-top` at the top of the page
 
 ### Automatic Behavior
 
-- **Without `#back-to-content`**: Button always shows "back to top" (points up)
-- **With `#back-to-content`**: Button automatically switches based on scroll position:
-  - When at the top: Button points **down** to content (`#back-to-content`)
-  - When at content: Button points **up** to top (`#back-to-top`)
+- **At the top (scrollY = 0)**: Button is in **down mode** (points down) and scrolls to content
+- **After scrolling (scrollY > 0)**: Button switches to **up mode** (points up) and links to `#back-to-top`
 
 ## Basic Setup (Already Included)
 
-The button is already set up in `base.html`:
+The button is already set up in `ui/website/base.html`:
 
 ```html
 <!-- At the top of the page -->
-<div id="back-to-top" tabindex="-1"></div>
+<div id="back-to-top" class="u-anchor-link" tabindex="-1"></div>
 
 <!-- At the bottom of the page (footer area) -->
 <a class="back-to-top u-flex-center" href="#back-to-top">  
@@ -35,55 +33,18 @@ The button is already set up in `base.html`:
 
 **No action needed** - this works on all pages automatically.
 
-## Adding a "Back to Content" Link
-
-If you want the button to also link to a main content area (like on the homepage), add a `#back-to-content` element where you want users to jump to.
-
-### Example: Homepage
-
-On the homepage, the "back to content" element is placed above the About section:
-
-{% raw %}
-```html
-<section class="about u-background-white u-padding-xl">
-  <div id="back-to-content" aria-hidden="true"></div>
-  <div class="about__wrapper u-container">
-    <!-- About section content -->
-  </div>
-</section>
-```
-{% endraw %}
-
-### Where to Place It
-
-Place `#back-to-content` at the start of your main content section, typically:
-- Above the first major section after the hero
-- Before the primary content you want users to jump to
-- On the homepage: above the "About" section
-- On other pages: above the main content area (if desired)
-
-### Complete Example
-
-**Homepage** (`components/home/about.html`):
-- Has `#back-to-content` above About section
-- Button switches between top and content
-
-**Parents/Careers pages**:
-- No `#back-to-content` element
-- Button always shows "back to top"
-
 ## Button States
 
 The button automatically updates based on scroll position:
 
-| State | Icon Direction | Link | When Shown |
+| State | Icon Direction | Behavior | When Shown |
 |-------|---------------|------|------------|
-| **Up mode** | Points up (rotated 180°) | `#back-to-top` | When `#back-to-content` is in viewport, or if no `#back-to-content` exists |
-| **Down mode** | Points down | `#back-to-content` | When `#back-to-top` is in viewport and `#back-to-content` exists |
+| **Up mode** | Points up (rotated 180°) | Links to `#back-to-top` | When `scrollY > 0` |
+| **Down mode** | Points down | Smooth-scrolls to just below the initial viewport | When `scrollY = 0` |
 
 ## Styling
 
-The button styles are in `css/layout/base.css`:
+The button styles are in `ui/website/css/layout/base.css`:
 - Fixed position (bottom right)
 - Circular button with border
 - Icon rotates 180° in "up" mode
@@ -91,16 +52,14 @@ The button styles are in `css/layout/base.css`:
 
 ## JavaScript
 
-The `initializeBackToTop()` function in `js/components/back-to-top.js`:
-- Detects if `#back-to-content` exists
-- Uses IntersectionObserver to track viewport visibility
-- Automatically switches button mode and icon direction
-- Updates accessible text ("Go back to top" vs "Go to content")
+The `initializeBackToTop()` function in `ui/website/js/components/back-to-top.js`:
+- Measures the initial viewport height and scrolls just below it in **down mode**
+- Switches to **up mode** after the user scrolls
+- Updates the accessible text ("Go back to top" vs "Go to content")
 
 ## See Also
 
-- Component: `components/base.html` (button included here)
-- CSS: `css/layout/base.css`
-- JavaScript: `js/components/back-to-top.js`
-- Example: Homepage has `#back-to-content` in `components/home/about.html`
+- Template: `ui/website/base.html` (button included here)
+- CSS: `ui/website/css/layout/base.css`
+- JavaScript: `ui/website/js/components/back-to-top.js`
 

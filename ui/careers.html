@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block content %}
-  {% include "website/components/careers/hero.html" %}
+  {% include "website/components/shared/hero.html" with theme="green-blue" title="Join our Team" %}
   {% include "website/components/careers/join.html" %}
   {% include "website/components/careers/open-positions.html" %}
   {% include "website/components/careers/life.html" %}
@@ -16,5 +16,3 @@
 {% block pageScripts %} 
   <script src="https://aladdinschools.bamboohr.com/js/embed.js" type="text/javascript" async defer></script>
 {% endblock%}  
-
-

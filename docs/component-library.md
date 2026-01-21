@@ -22,7 +22,7 @@ Display a hero section with a title and optional shimmer effect.
 
 {% raw %}
 ```django
-{% include "components/shared/hero.html" with 
+{% include "website/components/shared/hero.html" with 
   theme="rainbow-shimmer" 
   title="Your Page Title" %}
 ```
@@ -38,7 +38,7 @@ Display a hero section with a title and optional shimmer effect.
 
 {% raw %}
 ```django
-{% include "components/shared/hero.html" with 
+{% include "website/components/shared/hero.html" with 
   theme="rainbow-shimmer" 
   title="The software supporting great schools" %}
 ```
@@ -69,7 +69,8 @@ For more control, create a custom hero:
 {% endraw %}
 
 **Location:** `components/shared/hero.html`  
-**CSS:** `css/shared/hero/hero.css`, `hero-title-shimmer.css`
+**Location:** `ui/website/components/shared/hero.html`  
+**CSS:** `ui/website/css/shared/hero/hero.css`, `ui/website/css/shared/hero/hero-title-shimmer.css`
 
 ---
 
@@ -81,7 +82,7 @@ Display content in a card layout with optional icon, image, heading, description
 
 {% raw %}
 ```django
-{% include "components/shared/card.html" with 
+{% include "website/components/shared/card.html" with 
   title="Card Title"
   description="Card description text"
   icon="chart-up"
@@ -110,7 +111,7 @@ Display content in a card layout with optional icon, image, heading, description
 
 {% raw %}
 ```django
-{% include "components/shared/card.html" with 
+{% include "website/components/shared/card.html" with 
   title="Feature Name"
   description="Feature description goes here."
   icon="chart-up"
@@ -124,7 +125,7 @@ Display content in a card layout with optional icon, image, heading, description
 
 {% raw %}
 ```django
-{% include "components/shared/card.html" with 
+{% include "website/components/shared/card.html" with 
   title="Contact Us"
   description="Get in touch with our team."
   image="https://example.com/image.webp"
@@ -136,8 +137,8 @@ Display content in a card layout with optional icon, image, heading, description
 ```
 {% endraw %}
 
-**Location:** `components/shared/card.html`  
-**CSS:** `css/shared/card.css`
+**Location:** `ui/website/components/shared/card.html`  
+**CSS:** `ui/website/css/shared/card.css`
 
 ---
 
@@ -149,7 +150,7 @@ Call-to-action buttons with multiple theme options.
 
 {% raw %}
 ```django
-{% include "components/shared/cta.html" with 
+{% include "website/components/shared/cta.html" with 
   theme="epayments"
   link="#contact"
   text="Get Started" %}
@@ -174,13 +175,13 @@ Call-to-action buttons with multiple theme options.
 {% raw %}
 ```django
 {# Regular gradient #}
-{% include "components/shared/cta.html" with 
+{% include "website/components/shared/cta.html" with 
   theme="epayments"
   link="#contact"
   text="Learn More" %}
 
 {# Dark variant with border effect #}
-{% include "components/shared/cta.html" with 
+{% include "website/components/shared/cta.html" with 
   theme="start-dark"
   link="#packages"
   text="View Packages" %}
@@ -196,8 +197,8 @@ For header navigation buttons:
 <a class="header__cta header__cta--secondary" href="/contact">Contact</a>
 ```
 
-**Location:** `components/shared/cta.html`  
-**CSS:** `css/foundations/buttons.css`
+**Location:** `ui/website/components/shared/cta.html`  
+**CSS:** `ui/website/css/foundations/buttons.css`
 
 ---
 
@@ -209,7 +210,7 @@ Headings with an underline decoration, optional icon, description, and bullet po
 
 {% raw %}
 ```django
-{% include "components/shared/headings/underlined.html" with 
+{% include "website/components/shared/headings/underlined.html" with 
   title="Section Title"
   align="center"
   description="Optional description text"
@@ -233,7 +234,7 @@ Headings with an underline decoration, optional icon, description, and bullet po
 
 {% raw %}
 ```django
-{% include "components/shared/headings/underlined.html" with 
+{% include "website/components/shared/headings/underlined.html" with 
   title="Our Features"
   align="center"
   description="Everything you need to manage your school."
@@ -243,8 +244,8 @@ Headings with an underline decoration, optional icon, description, and bullet po
 ```
 {% endraw %}
 
-**Location:** `components/shared/headings/underlined.html`  
-**CSS:** `css/shared/headings/underlined.css`
+**Location:** `ui/website/components/shared/headings/underlined.html`  
+**CSS:** `ui/website/css/shared/headings/underlined.css`
 
 ### Tagline Heading
 
@@ -252,7 +253,7 @@ Simple heading with optional tagline and description.
 
 {% raw %}
 ```django
-{% include "components/shared/headings/tagline.html" with 
+{% include "website/components/shared/headings/tagline.html" with 
   title="Join Aladdin"
   tagline="A passionate, people-first team"
   description="Longer description text here." %}
@@ -271,15 +272,15 @@ Simple heading with optional tagline and description.
 
 {% raw %}
 ```django
-{% include "components/shared/headings/tagline.html" with 
+{% include "website/components/shared/headings/tagline.html" with 
   title="Join Our Team"
   tagline="Supporting Irish primary schools"
   description="At Aladdin, everything we do is built around helping schools run smoothly." %}
 ```
 {% endraw %}
 
-**Location:** `components/shared/headings/tagline.html`  
-**CSS:** `css/shared/headings/tagline.css`
+**Location:** `ui/website/components/shared/headings/tagline.html`  
+**CSS:** `ui/website/css/shared/headings/tagline.css`
 
 ---
 
@@ -292,7 +293,7 @@ Collapsible content sections. See [Adding Accordions Guide](./guides/adding-acco
 {% raw %}
 ```django
 <div data-accordions>
-  {% include "components/shared/accordion.html" with 
+  {% include "website/components/shared/accordion.html" with 
     id="1"
     title="Question"
     description="Answer content"
@@ -301,9 +302,9 @@ Collapsible content sections. See [Adding Accordions Guide](./guides/adding-acco
 ```
 {% endraw %}
 
-**Location:** `components/shared/accordion.html`  
-**CSS:** `css/shared/accordion.css`  
-**JS:** `js/components/accordions.js`
+**Location:** `ui/website/components/shared/accordion.html`  
+**CSS:** `ui/website/css/shared/accordion.css`  
+**JS:** `ui/website/js/components/accordions.js`
 
 **Note:** Accordions come with comprehensive built-in styling and will look consistent across all pages.
 
@@ -327,8 +328,8 @@ Tabbed interface for switching between content panels. See [Adding Tabs Guide](.
 ```
 
 **Location:** See [Adding Tabs Guide](./guides/adding-tabs.md)  
-**CSS:** `css/shared/tabs.css`  
-**JS:** `js/components/tabs.js`
+**CSS:** `ui/website/css/shared/tabs.css`  
+**JS:** `ui/website/js/components/tabs.js`
 
 **Note:** Tabs come with minimal built-in styling. You'll need to add custom CSS for your specific design. See the Packages and Parents pages for examples of different tab styles.
 
@@ -344,7 +345,7 @@ Yellow-green and yellow-red oblong shapes.
 
 {% raw %}
 ```django
-{% include "components/shared/shapes/yellow-shapes.html" %}
+{% include "website/components/shared/shapes/yellow-shapes.html" %}
 ```
 {% endraw %}
 
@@ -354,7 +355,7 @@ Pink-red and green-blue oblong shapes.
 
 {% raw %}
 ```django
-{% include "components/shared/shapes/pink-blue-shapes.html" %}
+{% include "website/components/shared/shapes/pink-blue-shapes.html" %}
 ```
 {% endraw %}
 
@@ -363,7 +364,7 @@ Pink-red and green-blue oblong shapes.
 {% raw %}
 ```django
 <section class="about u-padding-xl">
-  {% include "components/shared/shapes/yellow-shapes.html" %}
+  {% include "website/components/shared/shapes/yellow-shapes.html" %}
   <div class="u-container">
     <!-- Content -->
   </div>
@@ -371,8 +372,8 @@ Pink-red and green-blue oblong shapes.
 ```
 {% endraw %}
 
-**Location:** `components/shared/shapes/`  
-**CSS:** `css/shared/shapes.css`
+**Location:** `ui/website/components/shared/shapes/`  
+**CSS:** `ui/website/css/shared/shapes.css`
 
 ---
 
@@ -383,16 +384,16 @@ Pink-red and green-blue oblong shapes.
 {% raw %}
 ```django
 <section class="features u-background-white u-padding-xl">
-  {% include "components/shared/shapes/yellow-shapes.html" %}
+  {% include "website/components/shared/shapes/yellow-shapes.html" %}
   <div class="u-container">
     
-    {% include "components/shared/headings/underlined.html" with 
+    {% include "website/components/shared/headings/underlined.html" with 
       title="Our Features"
       align="center"
       description="Everything you need for your school." %}
     
     <div class="features__grid">
-      {% include "components/shared/card.html" with 
+      {% include "website/components/shared/card.html" with 
         title="Feature 1"
         description="Description"
         icon="chart-up"
@@ -400,7 +401,7 @@ Pink-red and green-blue oblong shapes.
         cta_link="#contact"
         cta_text="Learn More" %}
       
-      {% include "components/shared/card.html" with 
+      {% include "website/components/shared/card.html" with 
         title="Feature 2"
         description="Description"
         icon="chats"
@@ -418,10 +419,10 @@ Pink-red and green-blue oblong shapes.
 ## Component File Locations
 
 All shared components are located in:
-- **Templates:** `components/shared/`
-- **CSS:** `css/shared/`
-- **JS:** `js/components/`
+- **Templates (repo):** `ui/website/components/shared/`
+- **CSS:** `ui/website/css/shared/`
+- **JS:** `ui/website/js/components/`
 
 For page-specific components:
-- **Templates:** `components/[page-name]/`
-- **CSS:** `css/pages/[page-name]/`
+- **Templates (repo):** `ui/website/components/[page-name]/`
+- **CSS:** `ui/website/css/pages/[page-name]/`

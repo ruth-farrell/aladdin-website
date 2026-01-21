@@ -4,7 +4,7 @@ This guide shows how to use existing icons and how to add new SVG icons (e.g., f
 
 ## Using Existing Icons
 
-All icons are stored in the sprite at `components/base/sprite.svg` and are automatically included on every page via `base.html`.
+All icons are stored in the sprite at `ui/website/components/base/sprite.svg` and are automatically included on every page via `ui/website/base.html`.
 
 ### Basic Usage
 
@@ -58,7 +58,7 @@ For decorative icons (icons that don't convey meaning), add `aria-hidden="true"`
 
 ### Available Icons
 
-Check `components/base/sprite.svg` for all available icon IDs. Common icons include:
+Check `ui/website/components/base/sprite.svg` for all available icon IDs. Common icons include:
 - `chevron-down` - Dropdown/accordion indicator
 - `arrow-up-right-from-square` - External link
 - `file-pdf` - PDF file
@@ -74,7 +74,7 @@ Check `components/base/sprite.svg` for all available icon IDs. Common icons incl
 
 ## Quick Start
 1. Copy the raw SVG for the icon.
-2. Add it to the sprite at `components/base/sprite.svg`.
+2. Add it to the sprite at `ui/website/components/base/sprite.svg`.
 3. Reference it in HTML with `<use href="#your-icon-id"></use>`.
 
 ## Step-by-Step

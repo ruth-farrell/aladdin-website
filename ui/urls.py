@@ -10,7 +10,6 @@ urlpatterns = [
     path("misc.html", views.misc, name="misc_html"),
     path("parents.html", views.parents, name="parents_html"),
     path("ordernow.html", views.get_started, name="get_started_html"),
-    path("signin.html", views.signin, name="signin_html"),
 
     # Back-compat: no-extension URLs should canonicalize to .html
     path("careers", RedirectView.as_view(url="/careers.html", permanent=True)),
@@ -21,10 +20,4 @@ urlpatterns = [
     path("parents/", RedirectView.as_view(url="/parents.html", permanent=True)),
     path("ordernow", RedirectView.as_view(url="/ordernow.html", permanent=True)),
     path("ordernow/", RedirectView.as_view(url="/ordernow.html", permanent=True)),
-    path("signin", RedirectView.as_view(url="/signin.html", permanent=True)),
-    path("signin/", RedirectView.as_view(url="/signin.html", permanent=True)),
-
-    # Back-compat: /sign-in should canonicalize to /signin.html
-    path("sign-in", RedirectView.as_view(url="/signin.html", permanent=True)),
-    path("sign-in/", RedirectView.as_view(url="/signin.html", permanent=True)),
 ]

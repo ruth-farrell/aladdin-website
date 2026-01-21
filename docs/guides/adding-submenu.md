@@ -4,7 +4,7 @@ This guide shows how to convert an existing header navigation item into a dropdo
 
 ## Quick Start
 
-1. Find the existing navigation item in `components/base/header.html`
+1. Find the existing navigation item in `ui/website/components/base/header.html`
 2. Convert the `<a>` link to a `<button>` with submenu structure
 3. Add `data-submenu` attribute to the `<li>`
 4. Add the submenu container with links
@@ -120,11 +120,11 @@ The "Products" item in the header is already a submenu:
 
 - **JavaScript:** The `initializeSubmenus()` function automatically finds all `[data-submenu]` elements and handles interactions
 - **Accessibility:** Full keyboard navigation and ARIA attributes for screen readers
-- **Styling:** Submenu styles are in `css/shared/base/submenus.css`
+- **Styling:** Submenu styles are in `ui/website/css/shared/base/submenus.css`
 
 ## See Also
 
-- Component template: `components/base/header.html`
-- CSS: `css/shared/base/submenus.css`
-- JavaScript: `js/components/header/submenus.js`
+- Template (repo): `ui/website/components/base/header.html` (included as `website/components/base/header.html`)
+- CSS: `ui/website/css/shared/base/submenus.css`
+- JavaScript: `ui/website/js/components/header/submenus.js`
 

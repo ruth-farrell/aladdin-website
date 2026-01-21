@@ -14,7 +14,7 @@ Accordions are collapsible content sections. They can be used individually or gr
 
 {% raw %}
 ```html
-{% include "components/shared/accordion.html" with 
+{% include "website/components/shared/accordion.html" with 
   id="1"
   title="Your Question Here"
   description="Your answer content here"
@@ -27,13 +27,13 @@ Accordions are collapsible content sections. They can be used individually or gr
 {% raw %}
 ```html
 <div data-accordions>
-  {% include "components/shared/accordion.html" with 
+  {% include "website/components/shared/accordion.html" with 
     id="1"
     title="First Question"
     description="First answer"
     open=False %}
     
-  {% include "components/shared/accordion.html" with 
+  {% include "website/components/shared/accordion.html" with 
     id="2"
     title="Second Question"
     description="Second answer"
@@ -49,7 +49,7 @@ For accordions that should only collapse on mobile (but not appear as an accordi
 {% raw %}
 ```html
 <div data-accordions data-accordions-mobile-only>
-  {% include "components/shared/accordion.html" with 
+  {% include "website/components/shared/accordion.html" with 
     id="1"
     title="Section Title"
     description="Content that stays open on desktop"
@@ -81,11 +81,11 @@ For a working example see the FAQs on the homepage.
 
 1. **HTML Structure:** The accordion component uses proper ARIA attributes for accessibility
 2. **JavaScript:** The `initializeAccordions()` function finds all `[data-accordions]` containers
-3. **Styling:** CSS in `ui/static/css/shared/accordion.css` handles the animations
+3. **Styling:** CSS in `ui/website/css/shared/accordion.css` handles the animations
 
 ## Styling
 
-The accordion component comes with **comprehensive built-in styling** in `css/shared/accordion.css`. This includes:
+The accordion component comes with **comprehensive built-in styling** in `ui/website/css/shared/accordion.css`. This includes:
 - Button styles and hover states
 - Panel animations (slide open/close)
 - Chevron icon rotation
@@ -100,7 +100,7 @@ The accordion uses a **CSS Grid-based animation technique** for smooth open/clos
 
 ## See Also
 
-- Component template: `ui/templates/components/shared/accordion.html`
-- CSS: `ui/static/css/shared/accordion.css`
-- JavaScript: `ui/static/js/components/accordions.js`
+- Template (repo): `ui/website/components/shared/accordion.html` (included as `website/components/shared/accordion.html`)
+- CSS: `ui/website/css/shared/accordion.css`
+- JavaScript: `ui/website/js/components/accordions.js`
 

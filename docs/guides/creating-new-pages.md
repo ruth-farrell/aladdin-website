@@ -18,7 +18,7 @@ Copy `misc.html` as your new page. Here's what it contains:
 
 {% raw %}
 ```html
-{% extends "base.html" %}
+{% extends "website/base.html" %}
 {% load static %}
 {% block title %}Your Page Title | Aladdin Schools{% endblock %}
 {% block pageStyles %}
@@ -26,8 +26,8 @@ Copy `misc.html` as your new page. Here's what it contains:
 {% endblock %}
 
 {% block content %}
-  {% include "components/misc/hero.html" %}
-  {% include "components/misc/content.html" %}
+  {% include "website/components/shared/hero.html" with theme="pink-red" title="Misc Page Example" %}
+  {% include "website/components/misc/content.html" %}
 {% endblock %}
 ```
 {% endraw %}
@@ -46,7 +46,7 @@ Change the title block:
 
 You can either:
 - **Use the misc components** as-is and modify them
-- **Create new components** in `components/[your-page]/`
+- **Create new components** in `ui/website/components/[your-page]/`
 - **Use shared components** directly
 
 #### Option A: Use Shared Components Directly
@@ -54,13 +54,13 @@ You can either:
 {% raw %}
 ```html
 {% block content %}
-  {% include "components/shared/hero.html" with 
+  {% include "website/components/shared/hero.html" with 
     theme="rainbow-shimmer" 
     title="Your Page Title" %}
     
   <section class="my-section u-background-white u-padding-xl" id="my-section">
     <div class="u-container">
-      {% include "components/shared/headings/underlined.html" with 
+      {% include "website/components/shared/headings/underlined.html" with 
         title="Section Title"
         align="center"
         description="Section description" %}
@@ -78,7 +78,7 @@ Create `components/[your-page]/hero.html`:
 
 {% raw %}
 ```html
-{% include "components/shared/hero.html" with 
+{% include "website/components/shared/hero.html" with 
   theme="rainbow-shimmer" 
   title="Your Page Title" %}
 ```
@@ -89,8 +89,8 @@ Then use it in your page:
 {% raw %}
 ```html
 {% block content %}
-  {% include "components/[your-page]/hero.html" %}
-  {% include "components/[your-page]/content.html" %}
+  {% include "website/components/[your-page]/hero.html" %}
+  {% include "website/components/[your-page]/content.html" %}
 {% endblock %}
 ```
 {% endraw %}
@@ -135,20 +135,20 @@ Apply utility classes for consistent styling. See [Utility Classes](../README.md
 
 {% raw %}
 ```html
-{% extends "base.html" %}
+{% extends "website/base.html" %}
 {% load static %}
 {% block title %}Our Services | Aladdin Schools{% endblock %}
 
 {% block content %}
   <!-- Hero Section -->
-  {% include "components/shared/hero.html" with 
+  {% include "website/components/shared/hero.html" with 
     theme="rainbow-shimmer" 
     title="Our Services" %}
   
   <!-- Overview Section -->
   <section class="services-overview u-background-white u-padding-xl" id="overview">
     <div class="u-container">
-      {% include "components/shared/headings/underlined.html" with 
+      {% include "website/components/shared/headings/underlined.html" with 
         title="What We Offer" 
         align="center" 
         description="Comprehensive solutions for Irish primary schools." %}
@@ -158,12 +158,12 @@ Apply utility classes for consistent styling. See [Utility Classes](../README.md
   <!-- Services List Section -->
   <section class="services-list u-padding-xl" id="services">
     <div class="u-container">
-      {% include "components/shared/headings/underlined.html" with 
+      {% include "website/components/shared/headings/underlined.html" with 
         title="Our Services"
         align="center" %}
       
       <div class="services__grid">
-        {% include "components/shared/card.html" with 
+        {% include "website/components/shared/card.html" with 
           title="Service 1"
           description="Service description"
           icon="chart-up"
@@ -171,7 +171,7 @@ Apply utility classes for consistent styling. See [Utility Classes](../README.md
           cta_link="#contact"
           cta_text="Learn More" %}
         
-        {% include "components/shared/card.html" with 
+        {% include "website/components/shared/card.html" with 
           title="Service 2"
           description="Service description"
           icon="chats"
@@ -198,9 +198,9 @@ Use this pattern for consistent sections:
 {% raw %}
 ```html
 <section class="section-name u-background-white u-padding-xl" id="section-name">
-  {% include "components/shared/shapes/yellow-shapes.html" %}
+  {% include "website/components/shared/shapes/yellow-shapes.html" %}
   <div class="u-container">
-    {% include "components/shared/headings/underlined.html" with 
+    {% include "website/components/shared/headings/underlined.html" with 
       title="Section Title"
       align="center" %}
     

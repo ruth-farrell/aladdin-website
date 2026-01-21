@@ -126,6 +126,42 @@ Tabs allow users to switch between different content panels. Each tab panel shou
 | Tab Panel | `aria-labelledby` | button-id | Matches button's `id` |
 | Tab Panel | `aria-hidden` | `"true"` or `"false"` | `"false"` for active panel |
 
+### Optional Attributes
+
+| Element | Attribute | Value | Notes |
+|---------|-----------|-------|-------|
+| Container | `data-tabs-autoplay` | (none) | Opt-in autoplay that cycles through tabs automatically |
+| Container | `data-tabs-autoplay-interval` | number (ms) | Optional. Defaults to `4000`. Values under `1500` are ignored |
+
+## Autoplay
+
+Autoplay is **opt-in** and only runs when there are **2+ tab panels**.
+
+### Enable Autoplay
+
+Add `data-tabs-autoplay` to the tabs container:
+
+```html
+<div class="tabs" data-tabs data-tabs-autoplay>
+  <!-- tablist + panels -->
+</div>
+```
+
+### Change the Autoplay Duration
+
+Add `data-tabs-autoplay-interval` in milliseconds:
+
+```html
+<div class="tabs" data-tabs data-tabs-autoplay data-tabs-autoplay-interval="6000">
+  <!-- tablist + panels -->
+</div>
+```
+
+Notes:
+- **Default**: `4000`ms
+- **Minimum**: `1500`ms (lower values are ignored and the default is used)
+- **Stops permanently on user intent**: any pointer interaction inside the tabs, or keyboard focus within the tabs, disables autoplay for that tabs instance
+
 ### ID Naming Convention
 
 - **Button ID:** Use descriptive name like `"button-features"` or `"button-pricing"`
@@ -147,7 +183,7 @@ The JavaScript:
 
 ## Real-World Example
 
-See `ui/templates/components/home/packages.html` for a full example:
+See `ui/website/components/home/packages.html` for a full example:
 
 ## Multiple Tab Sets on Same Page
 
@@ -171,10 +207,11 @@ You can have multiple tab sets on the same page. Each needs its own `data-tabs` 
 - **Keyboard navigation:** Arrow keys supported
 - **URL updates:** Hash is updated on tab click (no page reload)
 - **Hash change:** Tab updates when URL hash changes
+- **Autoplay (optional):** When `data-tabs-autoplay` is present, tabs cycle automatically until the user interacts (pointer/tap/click anywhere in the tabs instance, or keyboard focus), then autoplay stops.
 
 ## Styling
 
-The tabs component comes with **minimal built-in styling** in `css/shared/tabs.css`. This is intentional because tabs are used in different contexts with very different visual designs:
+The tabs component comes with **minimal built-in styling** in `ui/website/css/shared/tabs.css`. This is intentional because tabs are used in different contexts with very different visual designs:
 
 - **Packages page:** Gradient backgrounds, pill-shaped buttons, positioned tabs
 - **Parents page:** Different color scheme and layout
@@ -184,11 +221,11 @@ You'll need to add **custom CSS** for your specific use case. The base styles pr
 - ARIA state management
 - Accessibility features
 
-**Example:** See `css/pages/home/packages.css` and `css/pages/parents/tabs.css` for how tabs are styled differently on each page.
+**Example:** See `ui/website/css/pages/home/packages.css` and `ui/website/css/pages/parents/tabs.css` for how tabs are styled differently on each page.
 
 ## See Also
 
-- CSS: `ui/static/css/shared/tabs.css`
-- JavaScript: `ui/static/js/components/tabs.js`
-- Example: `ui/templates/components/home/packages.html`
+- CSS: `ui/website/css/shared/tabs.css`
+- JavaScript: `ui/website/js/components/tabs.js`
+- Example: `ui/website/components/home/packages.html`
 

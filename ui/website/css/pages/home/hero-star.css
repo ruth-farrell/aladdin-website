@@ -1,8 +1,25 @@
 /* Hero title fade-in animation */
-.hero__title {
+.hero__title--fade-in {
   opacity: 0;
   animation: hero-title-fade-in 3.75s ease forwards;
   animation-delay: 2s;
+}
+
+.hero__title--fade-in.hero__title--rainbow-shimmer {
+  animation: hero-title-fade-in 3.75s ease 2s forwards, shimmer 10s linear 5.75s infinite;
+}
+
+.hero__title--fade-in.hero__title--pink-red-shimmer,
+.hero__title--fade-in.hero__title--green-blue-shimmer {
+  animation: hero-title-fade-in 3.75s ease 2s forwards, shimmerTwoTone 10s linear 5.75s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Avoid leaving the title invisible when animations are disabled */
+  .hero__title--fade-in {
+    opacity: 1;
+    animation: none;
+  }
 }
 
 @keyframes hero-title-fade-in {
@@ -152,7 +169,6 @@
 
 
 /* Continuous stroke floating animations after initial movement */
-
 @keyframes star-stroke-yellow-red-float {
   0%, 100% {
     transform: translate(calc(-50% - 43vw), -75%) rotate(137.64deg) translateY(0);

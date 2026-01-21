@@ -4,14 +4,14 @@ This guide shows you how to add a new product (like Start, Connect, Frame) or ad
 
 ## Quick Start
 
-1. Add color variables to `css/foundations/colors.css`
-2. Add button styles to `css/foundations/buttons.css`
-3. For products: Add a tab to `components/home/packages.html` and styles to `css/pages/home/packages.css`
-4. For add-ons: Add a card to `components/home/add-ons.html` and styles to `css/pages/home/add-ons.css`
+1. Add color variables to `ui/website/css/foundations/colors.css`
+2. Add button styles to `ui/website/css/foundations/buttons.css`
+3. For products: Add a tab to `ui/website/components/home/packages.html` and styles to `ui/website/css/pages/home/packages.css`
+4. For add-ons: Add a card to `ui/website/components/home/add-ons.html` and styles to `ui/website/css/pages/home/add-ons.css`
 
 ## Step 1: Add Colors to `colors.css`
 
-Open `css/foundations/colors.css` and add your product/add-on color variables.
+Open `ui/website/css/foundations/colors.css` and add your product/add-on color variables.
 
 ### For a New Product (e.g., "Analyze")
 
@@ -45,7 +45,7 @@ Add-ons typically need:
 
 ## Step 2: Add Button Styles to `buttons.css`
 
-Open `css/foundations/buttons.css` and add button styles for your new product/add-on.
+Open `ui/website/css/foundations/buttons.css` and add button styles for your new product/add-on.
 
 ### For Products (Dark Variant)
 
@@ -105,7 +105,7 @@ Add-ons use regular variant buttons (solid gradient backgrounds). Add these styl
 
 ### 3a. Add Tab Button and Panel to HTML
 
-Open `components/home/packages.html` and add your new tab button and panel:
+Open `ui/website/components/home/packages.html` and add your new tab button and panel:
 
 **Add button to the tab list:**
 ```html
@@ -127,7 +127,7 @@ Open `components/home/packages.html` and add your new tab button and panel:
   
   <!-- Add your new panel -->
   <div class="tabs__panel tabs__panel--analyze" id="analyze" aria-hidden="true" role="tabpanel" aria-labelledby="button-analyze">
-    {% include "components/home/packages-tab-content.html" with 
+    {% include "website/components/home/packages-tab-content.html" with 
       title="Your product title" 
       cta_theme="analyze-dark" 
       description="Product description here" 
@@ -153,7 +153,7 @@ Open `components/home/packages.html` and add your new tab button and panel:
 
 ### 3b. Add Tab Styles to `packages.css`
 
-Open `css/pages/home/packages.css` and add styles for your new tab:
+Open `ui/website/css/pages/home/packages.css` and add styles for your new tab:
 
 ```css
 .tabs__tab--analyze[aria-selected="true"] {
@@ -170,7 +170,7 @@ Open `css/pages/home/packages.css` and add styles for your new tab:
 
 ### 4a. Add Card to HTML
 
-Open `components/home/add-ons.html` and add your new card:
+Open `ui/website/components/home/add-ons.html` and add your new card:
 
 {% raw %}
 ```html
@@ -178,7 +178,7 @@ Open `components/home/add-ons.html` and add your new card:
   <!-- Existing cards -->
   
   <!-- Add your new card -->
-  {% include "components/shared/card.html" with 
+  {% include "website/components/shared/card.html" with 
     image="https://example.com/reports-logo.webp" 
     title="Reports" 
     description="Generate comprehensive reports and analytics for your school." 
@@ -201,7 +201,7 @@ Open `components/home/add-ons.html` and add your new card:
 
 ### 4b. Add Card Styles to `add-ons.css`
 
-Open `css/pages/home/add-ons.css` and add styles for your new card:
+Open `ui/website/css/pages/home/add-ons.css` and add styles for your new card:
 
 ```css
 .add-ons {
@@ -213,12 +213,12 @@ Open `css/pages/home/add-ons.css` and add styles for your new card:
 
 ## File Locations Summary
 
-- **Colors:** `css/foundations/colors.css`
-- **Button Styles:** `css/foundations/buttons.css`
-- **Packages HTML:** `components/home/packages.html`
-- **Packages CSS:** `css/pages/home/packages.css`
-- **Add-ons HTML:** `components/home/add-ons.html`
-- **Add-ons CSS:** `css/pages/home/add-ons.css`
+- **Colors:** `ui/website/css/foundations/colors.css`
+- **Button Styles:** `ui/website/css/foundations/buttons.css`
+- **Packages HTML:** `ui/website/components/home/packages.html`
+- **Packages CSS:** `ui/website/css/pages/home/packages.css`
+- **Add-ons HTML:** `ui/website/components/home/add-ons.html`
+- **Add-ons CSS:** `ui/website/css/pages/home/add-ons.css`
 
 ## Testing
 

@@ -32,10 +32,18 @@
   flex-direction: column;
 }
 
-.footer__address-contact a {
+.footer__address a {
   text-decoration: none;
   color: var(--color-text-primary);
   font-weight: var(--font-weight-regular);
+}
+
+.footer__address a:hover {
+  text-decoration: underline;
+}
+
+.footer__address-link {
+  display: inline-block;
 }
 
 .footer__nav {
