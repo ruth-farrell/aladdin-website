@@ -10,6 +10,8 @@ URL: https://www.aladdin.ie
 
 Github Pages **(Docs)**: https://ruth-farrell.github.io/aladdin-website/ 
 
+Deployment is managed outside this repo. 
+
 ## Technology Stack
 
 (No frameworks)
@@ -24,8 +26,8 @@ Github Pages **(Docs)**: https://ruth-farrell.github.io/aladdin-website/
 aladdin/
 ├── mysite/           # Django project settings
 ├── ui/               # Main Django app
-│   ├── static/       # Static files (CSS, JS, images)
-│   └── templates/    # Django templates
+│   ├── *.html        # Top-level page templates (index.html, careers.html, etc.)
+│   └── website/      # Templates + static assets (components, css, js)
 ├── venv/             # Python virtual environment (not in repo)
 └── manage.py         # Django management script
 ```
@@ -53,7 +55,7 @@ aladdin/
 
 3. Install dependencies:
    ```bash
-   pip install django
+   pip install -r requirements.txt
    ```
 
 4. Run migrations (if needed):
