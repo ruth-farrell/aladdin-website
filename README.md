@@ -1,22 +1,18 @@
 # Aladdin Schools Website
 
-A Django-based website for Aladdin Schools. 
+A Django-based website for Aladdin Schools Software. 
 
 ## Deployment
 
-Status: In development
+Status: Live 
 
-Railway (Website testing URL): https://web-production-c01f0.up.railway.app/
-
-- Homepage: https://web-production-c01f0.up.railway.app/
-- Parents: https://web-production-c01f0.up.railway.app/parents
-- Careers: https://web-production-c01f0.up.railway.app/careers
-- Misc: https://web-production-c01f0.up.railway.app/misc
+URL: https://www.aladdin.ie
 
 Github Pages **(Docs)**: https://ruth-farrell.github.io/aladdin-website/ 
 
 ## Technology Stack
 
+(No frameworks)
 - **Backend**: Django 4.2.26
 - **Frontend**: HTML, CSS (with CSS Custom Properties), JavaScript (ES6 modules)
 - **Styling**: CSS with BEM methodology
